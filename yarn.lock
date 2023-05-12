@@ -5591,10 +5591,6 @@ gatsby-source-filesystem@^5.9.0:
     valid-url "^1.0.9"
     xstate "^4.37.1"
 
-gatsby-starter-theme-workspace@/home/sanyam/projects/personal/base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-starter-theme-workspace-v0.0.1.tgz:
-  version "0.0.1"
-  resolved "/home/sanyam/projects/personal/base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-starter-theme-workspace-v0.0.1.tgz#87d9712590dfba567e451d6e886d4d6f0b7cede5"
-
 gatsby-telemetry@^4.9.0:
   version "4.9.0"
   resolved "https://tunnpmstg.onco.com/gatsby-telemetry/-/gatsby-telemetry-4.9.0.tgz#49ee1ff1fff03a5127d708bbaa16bed9f57c3280"
@@ -5613,9 +5609,9 @@ gatsby-telemetry@^4.9.0:
     lodash "^4.17.21"
     node-fetch "^2.6.9"
 
-"gatsby-theme-replica@file:../../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica/gatsby-theme-replica-v0.0.1.tgz":
+gatsby-theme-replica@../../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica/gatsby-theme-replica-v0.0.1.tgz:
   version "0.0.1"
-  resolved "file:../../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica/gatsby-theme-replica-v0.0.1.tgz#d50b8b87190216064b28e560736f9a7d8bff5a52"
+  resolved "../../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica/gatsby-theme-replica-v0.0.1.tgz#4e2cf55a4b0ce5b491e323970510faa347be8031"
   dependencies:
     "@mdx-js/react" "^2.3.0"
     babel-plugin-styled-components "^2.1.1"

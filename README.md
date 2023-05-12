@@ -3,11 +3,21 @@
 
 ### TODO:
 
++ links without text associated, render with font-colour black, change to blue
+
 - orchestrate a better workflow than this for local development:
   - connect-deps is promising
   - currently need to run yarn pack --> then run yarn add path to tar.gz
   - package.json has a relative path to the theme:
-    ./../../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica/gatsby-theme-replica-v0.0.1.tgz
+    <!-- ./../../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica/gatsby-theme-replica-v0.0.1.tgz -->
+- workflow for testing an update is even worse:
+  - need to delete the yarn cache for the plugin as well 
+  - yarn does not update the code since the md5 for the project does not match for the same version :(
+    and skips updating the code for the theme in the node_modules of this dependency
+  - also need to clear it from yarn lock --> to manage integrity conflicts :(
+  - so the command
+  rm -rf node_modules/gatsby-theme-replica ~/.cache/yarn/v6/npm-gatsby-theme-replica-0.0.1-e582f510ce1ad6b15eaa1800a677f4dddb8e7121 node_modules .cache && 
+  yarn cache clean && 
   
 
 + publish with a better name: **_gatsby-theme-github-replica_**
