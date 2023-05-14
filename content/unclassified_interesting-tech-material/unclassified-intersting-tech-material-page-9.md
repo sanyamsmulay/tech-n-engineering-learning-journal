@@ -15,6 +15,39 @@ continued from:
 
 ## Unclassified trinkets
 
+
+### number 97      
+termux is awesome: time to switch ?       
+####### Saturday 13 May 2023 12:09:27 AM IST #######
+
+[termux demo youtube link](https://www.youtube.com/watch?v=DzNmUNvnB04)
+
+### number 98   
+gatsby-plugin-mdx bug:    
+####### Saturday 13 May 2023 12:07:16 AM IST #######
+
+- by default the plugin provides github flavoured markdown + ids added to headings
+- but it seems an extra '-' is added to the id
+- need to trace it
+- current status of the trace is that:    
+  + mdx --> converts the code to md-->ast 
+  + mdx --> is converted to hast
+  + hast node toString is used by rehypeSlug to generate the id
+  + my hunch is that this step is the culprit
+  + but need lot of setup to figure this out and fix
+  + but would be a major fix from gatsby and contribution point of view  
+  + let's see if I get time to fix this
+  + trace of this in code:    
+  https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx#mdxoptions    
+  https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-mdx/src/remark-mdx-html-plugin.ts#L11    
+  https://github.com/syntax-tree/mdast-util-to-hast#tohasttree-options    
+  https://github.com/rehypejs/rehype-minify/tree/HEAD/packages/hast-util-to-string     
+  https://github.com/rehypejs/rehype-slug/blob/main/index.js#L33
+  
+  
+  
+
+
 ### number 99.
 yarn warning   
 Pattern [] is trying to unpack in the same destination "" as pattern []. This could result in non-deterministic behavior, skipping.  
