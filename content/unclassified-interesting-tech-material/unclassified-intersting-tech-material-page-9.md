@@ -16,8 +16,246 @@ continued from:
 ## Unclassified trinkets
 
 
-### number 87
-linux - getting the temperature of various components on the motherboard   
+### #74 - Programming best practices 
+####### Friday 23 June 2023 12:08:42 AM IST #######
+
+- always good to revise best practices from time to time and compare with your experience / remind yourself to be mindful of them
+- [https://www.youtube.com/watch?v=q1qKv5TBaOA](https://www.youtube.com/watch?v=q1qKv5TBaOA)
+- use standards
+- learn principles
+- apply patterns
+- adequate names
+- test
+- realistic time
+- appropriate speed
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+
+### #75 - Writing space proof code 
+####### Thursday 22 June 2023 11:03:31 PM IST #######
+
+- [https://www.youtube.com/watch?v=GWYhtksrmhE](https://www.youtube.com/watch?v=GWYhtksrmhE)
+- #01 Simple Control Flow
+  - no recursion, goto, setjmp, longjmp
+- #02 Limit All Loops
+- #03 Don't use the Heap
+- #04 Limit Function Size
+- #05 Practice Data Hiding
+  - declare variables at the lowest possible scope
+- #06 Check Return Values
+- #07 Limit the Preprocessor
+  - the pre-processor is a powerful obfuscation tool :D :lol
+- #08 Restrict Pointers Use
+  - no function pointers
+  - dereference pointers one level at a time
+- #09 Be Pedantic - compile in pedantic mode
+- test test test
+- Interaction Reminder
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+
+
+### #76 - Code visualization - codebase as a graph or a subs-sytem like matlab 
+####### Tuesday 20 June 2023 06:19:01 PM IST #######
+
+- two things are critical in understanding a code base:
+  - code flow 
+  - data flow
+- makes reading / following the code easy
+- want to do it for Onco's codebase for visualization
+- will look into the tools in this point:
+  - will dedicate a full page to the process and comments on the available tools
+  - link: 
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #77 - android finger print reader vulnerability
+####### Friday 16 June 2023 01:15:04 PM IST #######
+
+- [https://www.youtube.com/shorts/bJ7IPt_X8U4](https://www.youtube.com/shorts/bJ7IPt_X8U4)
+- no limit on fingerprint attempts
+- can try to use genetic algorithms to get finger prints of related people ?!
+- may be even train a NN to get fingerprints of people related to each other ?! may be..
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #78 - React native - million times faster - by a high school kid
+####### Friday 16 June 2023 01:15:04 PM IST #######
+
+- [https://www.youtube.com/watch?v=VkezQMb1DHw](https://www.youtube.com/watch?v=VkezQMb1DHw)
+- too optimized to be true ?
+- okay a little bit..
+- a better virtual dom implementation
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+
+### #79 - String overflow vulnerabilities in C
+####### Friday 16 June 2023 11:24:16 AM IST #######
+
+- [https://www.youtube.com/watch?v=fjMrDDj47E8](https://www.youtube.com/watch?v=fjMrDDj47E8)
+- what weird design choices
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+
+
+### #80 - Github outage - 21st Oct 2018   
+####### Thursday 15 June 2023 06:53:20 PM IST #######
+
+- [https://www.youtube.com/watch?v=dsHyUgGMht0](https://www.youtube.com/watch?v=dsHyUgGMht0)
+- write primary db cluster in one datacenter disconnected due to a network switch failure (east-zone)  
+(manual or automatic - not clear)
+- failover - was never tested / designed to be across zones 
+- many processes were local to east zone
+- both the db clusters had diverged now.. 
+- restoring to a consistent state - was an issue
+
+my thoughts:
+- dunno why they not made the west the primary and migrated jobs and service to the primary
+
+also,
+- a good intro to github db topology and structure
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+
+### #81 - Creating blank spaces in markdown    
+####### Thursday 15 June 2023 01:09:09 PM IST #######
+
+- good collection:   
+[https://stackoverflow.com/a/48583859](https://stackoverflow.com/a/48583859)
+- gist below:
+```
+# RAW
+## Creates 2 Lines that CAN be selected as text
+## -------------------------------------------------
+### The non-breaking space ASCII character
+&nbsp;
+&nbsp;
+
+### HTML <(br)/> tag
+<br />
+<br />
+
+## Creates 2 Lines that CANNOT be selected as text
+## -------------------------------------------------
+### HTML Entity &NewLine;
+&NewLine;
+&NewLine;
+
+### Backticks with a space inside followed by two spaces
+`(space)`(space)(space)
+`(space)`(space)(space)
+#### sample:
+` `  
+` `
+
+# End
+```
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+
+### #82 - Shell, console, terminal, terminal emulator    
+####### Thursday 15 June 2023 12:00:48 PM IST #######   
+
+- [https://www.youtube.com/watch?v=Z6_ja-c2pLc](https://www.youtube.com/watch?v=Z6_ja-c2pLc)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;   
+&nbsp;   
+
+
+### #81 - 60-30-10 in UI / UX design
+
+- [https://www.youtube.com/watch?v=UWwNIMHFdW4](https://www.youtube.com/watch?v=UWwNIMHFdW4)
+
+-x-x-x-
+
+ 
+
+### #82 - Javascript is a shitty language - from the developer of - JSON   
+I agree sir   
+####### Monday 12 June 2023 09:36:09 PM IST #######
+
+[https://www.youtube.com/watch?v=lc5Np9OqDHU](https://www.youtube.com/watch?v=lc5Np9OqDHU)
+
+-x-x-x-
+
+### #83 - A good explanation of prompt to image generation machine learning paradigms    
+####### Wednesday 07 June 2023 11:05:32 PM IST #######
+
+[https://www.youtube.com/watch?v=1CIpzeNxIhU](https://www.youtube.com/watch?v=1CIpzeNxIhU)
+
+- very good explanation for how things like stable diffusion, dall-e, etc work
+- I generally refrain from calling things Artificial Intelligence if to me it just seems like data science / mathematics / function discovery
+
+
+-x-x-x-
+
+
+### # 84 - Watch your animations in slow motion in the browser   
+####### Sunday 04 June 2023 01:10:16 PM IST #######
+
+- so cool !   
+[https://blog.jim-nielsen.com/2023/slow-motion-animations-with-chrome-devtools/?utm_source=tldrnewsletter](https://blog.jim-nielsen.com/2023/slow-motion-animations-with-chrome-devtools/?utm_source=tldrnewsletter)
+
+
+-x-x-x-
+
+### #85 - Blogger has an API !   
+####### Sunday 04 June 2023 12:09:18 AM IST #######
+
+[https://developers.google.com/blogger/docs/3.0/reference](https://developers.google.com/blogger/docs/3.0/reference)    
+so surprised !!
+
+
+### #86 - chrome debugger and node process don't disconnect cleanly   
+####### Saturday 03 June 2023 02:24:52 PM IST #######
+
+- TODO: find a good way to do this cleanly and reliably
+- 
+
+-x-x-x
+
+
+
+### #87 - linux - getting the temperature of various components on the motherboard   
 ####### Sunday 28 May 2023 08:03:08 AM IST #######
 
 - been using lmsensors for a long time now but had not logged it
@@ -26,8 +264,7 @@ linux - getting the temperature of various components on the motherboard
 source: [https://www.cyberciti.biz/faq/how-to-check-cpu-temperature-on-ubuntu-linux/](https://www.cyberciti.biz/faq/how-to-check-cpu-temperature-on-ubuntu-linux/)
 
 -x-x-x-
-### number 88
-android emulator error: device unauthorized   
+### #88 - android emulator error: device unauthorized   
 ####### Sunday 28 May 2023 07:59:08 AM IST #######
 
 - to retry the authentication flow on the emulator   
@@ -40,8 +277,7 @@ source: [https://stackoverflow.com/a/52278380](https://stackoverflow.com/a/52278
 
 -x-x-x-
 
-### number 89
-Install packages as per package-lock.json   
+### #89 - Install packages as per package-lock.json   
 ####### Sunday 28 May 2023 06:54:00 AM IST ####### 
 
 - useful for CI / CD pipelines
@@ -51,8 +287,7 @@ Install packages as per package-lock.json
 -x-x-x-
 
 
-### number 90
-Self hosting git  
+### #90 - Self hosting git  
 ####### Saturday 27 May 2023 05:38:48 PM IST #######
 
 - [gogs](https://github.com/gogs/gogs)
@@ -74,16 +309,14 @@ all rolled into one
 
 -x-x-x-
 
-### number 91
-Awesome self hosted   
+### #91 - Awesome self hosted   
 ####### Saturday 27 May 2023 05:20:24 PM IST #######
 
 Collection of self softwares that can be self hosted:   
 [https://github.com/awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
 
 
-### number 92
-React Native Error   
+### #92 - React Native Error   
 \<name-of-package\>:verifyReleaseResources FAILED
 
 - the `compileSdkVersion` and `buildToolsVersion` should match between your build.gradle and the dependency   
@@ -92,8 +325,7 @@ React Native Error
 
 - -x-x-x-
 
-### number 93
-setting up android dev for device   
+### #93 - setting up android dev for device   
 ####### Thursday 25 May 2023 09:33:57 PM IST #######
 
 + this has gotten better over time   
@@ -114,25 +346,26 @@ sudo apt-get install android-sdk-platform-tools-common
 
 
 
-### number 94   
-Cool !! workerPool implementation in Javascript   
+### #94 - Cool !! workerPool implementation in Javascript   
 
 
 - well maintained library !
 - intuitive api  
-
+- repo:    
 [https://github.com/josdejong/workerpool](https://github.com/josdejong/workerpool)
 
 
-### number 95   
-emulator terminated with exit code 139   
+### #95 - emulator terminated with exit code 139   
 ####### Thursday 18 May 2023 01:55:04 PM IST #######
 - most likely the android emulator ran out of space on the internal storage
 - android 11 base image with google services need 35 GB of space to run well
+- update:     
+####### Thursday 15 June 2023 01:16:51 PM IST #######   
+the emulator was leaking memory :face_palm   
+can run well will 2-3GB of space
 
 
-### number 96
-Android development from a terminal 
+### #96 - Android development from a terminal 
 ####### Thursday 18 May 2023 12:26:24 PM IST #######
 
 - stop emulator from cli   
@@ -158,14 +391,12 @@ thread:
 
 
 
-### number 97      
-termux is awesome: time to switch ?       
+### #97 - termux is awesome: time to switch ?       
 ####### Saturday 13 May 2023 12:09:27 AM IST #######
 
 [tmux demo youtube link](https://www.youtube.com/watch?v=DzNmUNvnB04)
 
-### number 98   
-gatsby-plugin-mdx bug:    
+### #98 - gatsby-plugin-mdx bug:    
 ####### Saturday 13 May 2023 12:07:16 AM IST #######
 
 - by default the plugin provides github flavoured markdown + ids added to headings
@@ -190,8 +421,7 @@ gatsby-plugin-mdx bug:
   
 
 
-### number 99.
-yarn warning   
+### #99 - yarn warning   
 Pattern [] is trying to unpack in the same destination "" as pattern []. This could result in non-deterministic behavior, skipping.  
 ####### Wednesday 10 May 2023 04:39:05 PM IST #######  
 
@@ -220,8 +450,7 @@ https://github.com/yarnpkg/yarn/blob/158d96dce95313d9a00218302631cd263877d164/sr
 
 
 
-### number 100.
-Working with the IcoMoon library   
+### #100 - Working with the IcoMoon library   
 ####### Wednesday 10 May 2023 01:25:30 PM IST #######   
 
 TODO: find out an easier way to download a glyph icon.
