@@ -3,6 +3,8 @@
 
 ### TODO:
 
++ table of contents - remove sticky position - hopefully from thechild project and not the theme libray project
+
 + links without text associated, render with font-colour black, change to blue
 
 - orchestrate a better workflow than this for local development:

@@ -16,6 +16,68 @@ continued from:
 ## Unclassified trinkets
 
 
+### #70 - Counting files in a dir - recursive 
+####### Tuesday 11 July 2023 08:24:48 PM IST #######   
+
+- very handy trying to tally if rsync got it right
+
+```bash
+
+find DIR_NAME -type f | wc -l
+```
+- source:
+[https://stackoverflow.com/a/9157162](https://stackoverflow.com/a/9157162)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #71 - AWS Cost Explorer - EC2 Other breakdown into components 
+####### Wednesday 05 July 2023 01:02:13 AM IST #######
+
+- AWS trying to make cost optimization cumbersome for devs
+- [https://stackoverflow.com/a/57191286](https://stackoverflow.com/a/57191286)
+  - do check out the comments as well on the post
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #72 - Nginx syntax to pass on the page rendering to the routing of the web application
+####### Wednesday 05 July 2023 12:54:01 AM IST #######
+
+- links to #73   
+TODO: figure out how to reference the below link here
+- also this is neat little trick with nginx   
+[https://stackoverflow.com/a/43954597](https://stackoverflow.com/a/43954597)
+
+```
+location / {
+  try_files $uri /index.html;
+}
+```
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #73 - Deploying to sub-directory was surprisingly seamless with React + webpack 
+####### Wednesday 05 July 2023 12:54:01 AM IST #######
+
+- [https://zero2603.medium.com/how-to-deploy-reactjs-app-into-subdirectory-with-webpack-58d5ce32c655](https://zero2603.medium.com/how-to-deploy-reactjs-app-into-subdirectory-with-webpack-58d5ce32c655)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
 ### #74 - Programming best practices 
 ####### Friday 23 June 2023 12:08:42 AM IST #######
 
