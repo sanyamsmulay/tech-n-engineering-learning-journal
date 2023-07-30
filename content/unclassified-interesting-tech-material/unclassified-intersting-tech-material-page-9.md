@@ -16,6 +16,64 @@ continued from:
 ## Unclassified trinkets
 
 
+### #67 - doing everything from the terminal 
+####### Sunday 30 July 2023 09:51:26 AM IST #######   
+
+- neo mutt
+- neo vim
+	- nv chad starter config (https://www.youtube.com/watch?v=c4OyfL5o7DU)[https://www.youtube.com/watch?v=c4OyfL5o7DU]
+- terijira - jira on the terminal
+- timetrap
+- idea - for ideas, duh !
+- [https://www.youtube.com/shorts/Tjl_z_HFLi8](https://www.youtube.com/shorts/Tjl_z_HFLi8)
+- neo emacs ?
+	- I just find the insert mode and command mode concept annoying
+	- 
+- terminal based borwsers
+	- 
+	
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #68 - byobu - play mozart doing eye of the tiger stuff 
+####### Sunday 30 July 2023 08:57:58 AM IST #######   
+
+- [https://www.byobu.org](https://www.byobu.org)
+- it is like I have been trying to find something like this for about 2 years
+- mind =  blown !! completely
+- built as a wrapper around screen + tmux 
+- from the author and maintainer himself   
+	[https://superuser.com/a/423397](https://superuser.com/a/423397)
+- tmux [https://github.com/tmux/tmux](https://github.com/tmux/tmux)
+- using tmux: [https://www.youtube.com/watch?v=DzNmUNvnB04](https://www.youtube.com/watch?v=DzNmUNvnB04)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #69 - Javascript - Arror functions vs Regular functions 
+####### Sunday 30 July 2023 08:57:58 AM IST #######   
+
+- [https://www.freecodecamp.org/news/the-difference-between-arrow-functions-and-normal-functions/](https://www.freecodecamp.org/news/the-difference-between-arrow-functions-and-normal-functions/)
+- TLDR;
+	- arrow functions: 
+	- do not have arguments object
+	- don't have own this binding; so the previous one in context can work
+	- cannot be used and constructors
+	- cannot be declared
+	- cannot be used before initialization - no hoisting
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
 ### #70 - Counting files in a dir - recursive 
 ####### Tuesday 11 July 2023 08:24:48 PM IST #######   
 
