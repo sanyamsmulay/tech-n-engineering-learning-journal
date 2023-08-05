@@ -16,6 +16,136 @@ continued from:
 ## Unclassified trinkets
 
 
+
+### #59 - changing bash prompt     
+####### Saturday 05 August 2023 06:49:54 PM IST #######   
+
+- TLDR; PS1, PS2    
+[https://linuxconfig.org/bash-prompt-basics](https://linuxconfig.org/bash-prompt-basics)
+
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #60 - django async    
+####### Saturday 05 August 2023 06:07:07 PM IST #######   
+
+- TODO: study in detail    
+[https://docs.djangoproject.com/en/4.2/topics/async/](https://docs.djangoproject.com/en/4.2/topics/async/)
+
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #61 - raison d'etre for www-data    
+####### Saturday 05 August 2023 05:17:29 PM IST #######   
+
+- A distinct group and user from root and the owner of files
+- provides secure  read access without having write and ownership
+- also a distinct user helps instantly connect the files to a possibly being used for a web server    
+[https://askubuntu.com/a/873846](https://askubuntu.com/a/873846)    
+[https://askubuntu.com/questions/873839/what-is-the-www-data-user](https://askubuntu.com/questions/873839/what-is-the-www-data-user)
+ 
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #62 - Uncomplicated Fire Wall - ufw tips and tricks    
+####### Saturday 05 August 2023 04:31:23 PM IST #######   
+
+- many posts say that there is no way to know what will be blocked if you enable ufw
+- not true, those are old posts, since 2019
+- ufw show added     
+[https://askubuntu.com/a/533664](https://askubuntu.com/a/533664)
+ 
+
+- also a general primer on ufw    
+[https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands#allow-ssh](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands#allow-ssh)
+ 
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #63 - Google workspace - Transfer files and delete user    
+####### Wednesday 02 August 2023 11:12;14 PM IST #######   
+
+- [https://gist.github.com/sanyamsmulay/d25e43c580da6cb6705fa02843d87606](https://gist.github.com/sanyamsmulay/d25e43c580da6cb6705fa02843d87606)
+ 
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #64 - Google workspace API documentation is shitty    
+####### Wednesday 02 August 2023 11:12;14 PM IST #######   
+
+- Managed to scrape information together somehow
+- Enable the API -    
+[https://developers.google.com/workspace/guides/enable-apis#admin-sdk-api](https://developers.google.com/workspace/guides/enable-apis#admin-sdk-api)
+- create credentials to access the API     
+[https://developers.google.com/workspace/guides/create-credentials](https://developers.google.com/workspace/guides/create-credentials)
+- Data transfer API    
+[https://developers.google.com/admin-sdk/data-transfer/v1/transfer-data](https://developers.google.com/admin-sdk/data-transfer/v1/transfer-data)    
+[https://googleapis.github.io/google-api-python-client/docs/dyn/admin_datatransfer_v1.html](https://googleapis.github.io/google-api-python-client/docs/dyn/admin_datatransfer_v1.html) 
+very hard to navigate    
+[https://googleapis.github.io/google-api-python-client/docs/dyn/admin_datatransfer_v1.transfers.html](https://googleapis.github.io/google-api-python-client/docs/dyn/admin_datatransfer_v1.transfers.html)    
+[https://googleapis.github.io/google-api-python-client/docs/dyn/admin_datatransfer_v1.applications.html](https://googleapis.github.io/google-api-python-client/docs/dyn/admin_datatransfer_v1.applications.html)
+very weird structure - dunno why this is a separate entity - always return like 4 entries for each user 
+- users API    
+[https://developers.google.com/admin-sdk/directory/reference/rest/v1/users](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users)    
+[https://googleapis.github.io/google-api-python-client/docs/dyn/admin_directory_v1.users.html#delete](https://googleapis.github.io/google-api-python-client/docs/dyn/admin_directory_v1.users.html#delete)
+- some quick start code - did not have my use case     
+[https://github.com/googleworkspace/python-samples/blob/main/admin_sdk/directory/quickstart.py](https://github.com/googleworkspace/python-samples/blob/main/admin_sdk/directory/quickstart.py)    
+may be can contribute to this project
+- some guideline on data transfer     
+[https://stackoverflow.com/questions/74120744/google-workspace-admin-sdk-documentation-and-samples-for-data-transfer-api-pyt](https://stackoverflow.com/questions/74120744/google-workspace-admin-sdk-documentation-and-samples-for-data-transfer-api-pyt)     
+[https://stackoverflow.com/questions/74270126/how-to-transfers-files-with-google-workspace-admin-sdk-python](https://stackoverflow.com/questions/74270126/how-to-transfers-files-with-google-workspace-admin-sdk-python)    
+
+- how the transfer works internally     
+[https://support.google.com/a/answer/1247799?sjid=9509305659967038448-AP#bulk_transfer_steps](https://support.google.com/a/answer/1247799?sjid=9509305659967038448-AP#bulk_transfer_steps)
+ 
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #65 - dealing with Cumulative Layout Shift CLS   
+####### Sunday 30 July 2023 10:15:14 AM IST #######   
+
+- [https://pagespeed.web.dev/](https://pagespeed.web.dev/)
+		- good over all resource for optimizing a page
+		- gives out a pictorial representation of the CLS - very helpful
+- this should have worked with lighthouse in chrome - but :( 
+ 
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #66 - pulumi and ansible 
+####### Sunday 30 July 2023 10:15:14 AM IST #######   
+
+- TODO: compare
+	
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
 ### #67 - doing everything from the terminal 
 ####### Sunday 30 July 2023 09:51:26 AM IST #######   
 
@@ -29,7 +159,7 @@ continued from:
 - neo emacs ?
 	- I just find the insert mode and command mode concept annoying
 	- 
-- terminal based borwsers
+- terminal based browsers
 	- 
 	
 -x-x-x-
