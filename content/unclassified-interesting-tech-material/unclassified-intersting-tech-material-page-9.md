@@ -17,6 +17,435 @@ continued from:
 
 
 
+
+
+
+### #41 - Generating UML / ER diagram from JSON/swagger        
+####### Monday 28 August 2023 02:20:56 PM IST #######    
+
+- python library: 
+	- [https://github.com/nlohmann/swagger_to_uml](https://github.com/nlohmann/swagger_to_uml)
+- nodejs library: 
+	- [https://github.com/nrekretep/pikturr](https://github.com/nrekretep/pikturr)
+- plantuml - mostly the base for all diagramming and graphing tools:
+	- [https://github.com/plantuml/plantuml](https://github.com/plantuml/plantuml)
+
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #42 - javascript doc-strings        
+####### Sunday 27 August 2023 08:33:32 PM IST #######    
+
+- how to write doc-strings for a function / class    
+[https://dev.to/stephencweiss/write-your-own-javascript-contracts-and-docstrings-42ho](https://dev.to/stephencweiss/write-your-own-javascript-contracts-and-docstrings-42ho)
+
+- TLDR;
+```
+There’s // for a single line comment.
+
+There’s /* */ for single or multi-line comment.
+
+Lastly, there’s /** */. This is a description. I think of it as Javascript’s equivalent to Python’s docstring.
+```
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #43 - tools for handling sqlite databases       
+####### Sunday 27 August 2023 06:56:59 AM IST #######    
+
+- cpp based gui - written in qt
+[https://github.com/sqlitebrowser/sqlitebrowser#ubuntu-and-derivatives](https://github.com/sqlitebrowser/sqlitebrowser#ubuntu-and-derivatives)
+
+- web + php based (like phpmyadmin)    
+[https://github.com/phpLiteAdmin/pla](https://github.com/phpLiteAdmin/pla) 
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #44 - google picked up a url for a variable in <script> not sure how       
+####### Sunday 27 August 2023 06:56:59 AM IST #######    
+
+- not sure how this happened but google picked up url from code like below:    
+inside a script tag in the html
+```javascript
+const appDomain = "https://application.com";
+const apiUrl = appDomain+"/lead/api/init-signup";
+```
+
+- only good test found so far:    
+[https://searchengineland.com/tested-googlebot-crawls-javascript-heres-learned-220157](https://searchengineland.com/tested-googlebot-crawls-javascript-heres-learned-220157)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #45 - wordpress which folder to used for custom js / css       
+####### Thursday 24 August 2023 07:37:32 PM IST #######    
+
+- generally accepted    
+/wp-content/uploads/<your-project>-scripts/<script-name>.js 
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #46 - python module discovery       
+####### Tuesday 22 August 2023 01:05:07 PM IST #######    
+
+- set the path to add the parent directory of the module you'd be expecting
+	- path can be set in bash 
+	- or in python with `sys` library 
+- `__init__.py` file in the directory
+- all the .py files in the folder will be visible to python and can be imported
+- practical example checkout next point for a practical example    
+ 
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #47 - django tips      
+####### Sunday 20 August 2023 03:59:42 PM IST #######    
+
+- django transactions management    
+[https://docs.djangoproject.com/en/4.2/topics/db/transactions/#django.db.transaction.atomic](https://docs.djangoproject.com/en/4.2/topics/db/transactions/#django.db.transaction.atomic)    
+as decorator and context manager
+
+- need a utility like get_or_create_object --> where only the object gets created and not saved in the db
+
+- using django models in a script    
+```python
+# load the environment before the rest of the code
+import os
+import sys
+
+# setup the django environment
+import django
+from pathlib import Path
+# import os # already imported
+# add django project dir to path
+BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.append(str(BASE_DIR))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_project.settings')
+django.setup()
+```
+[https://stackoverflow.com/a/19426755](https://stackoverflow.com/a/19426755)    
+the entire thread is useful:     
+[https://stackoverflow.com/questions/16853649/how-to-execute-a-python-script-from-the-django-shell](https://stackoverflow.com/questions/16853649/how-to-execute-a-python-script-from-the-django-shell)
+
+
+- another way of running a django script
+```python
+$ ./manage.py shell < myscript.py
+You could also do:
+
+$ ./manage.py shell
+...
+>>> execfile('myscript.py')
+For python3 you would need to use
+
+>>> exec(open('myscript.py').read())
+```
+
+- these tasks could be also done as django management commands below, but I wanted a way of using django without making it into a webapp    
+basically, another project using django as a library, and not a django project using others as a library    
+[https://docs.djangoproject.com/en/dev/howto/custom-management-commands/](https://docs.djangoproject.com/en/dev/howto/custom-management-commands/)
+
+
+- squash migrations    
+not working very well for migrations that use --> runpython; dunno why :(
+
+
+- django configuration management    
+[https://django-configurations.readthedocs.io/en/0.2.1/](https://django-configurations.readthedocs.io/en/0.2.1/)
+	- interesting design, allows a lot of flexibility
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #47 - autofill job applications     
+####### Monday 14 August 2023 02:12:55 PM IST #######    
+
+- Simplify    
+[https://simplify.jobs/autofill](https://simplify.jobs/autofill)
+- TealHq    
+[https://www.tealhq.com/how-it-works](https://www.tealhq.com/how-it-works)
+- Kumquat    
+[https://chrome.google.com/webstore/detail/kumquat/mkjkimankkfhefaabddppkhbobffaadp?hl=en](https://chrome.google.com/webstore/detail/kumquat/mkjkimankkfhefaabddppkhbobffaadp?hl=en)    
+[https://github.com/rpeng220/kaleidoscope](https://github.com/rpeng220/kaleidoscope)    
+[https://www.reddit.com/r/berkeley/comments/ly5bce/i_made_a_chrome_extension_that_autofills_job_apps/](https://www.reddit.com/r/berkeley/comments/ly5bce/i_made_a_chrome_extension_that_autofills_job_apps/)
+
+- I am trying to make a plugin for auto-filling workday forms for job applications
+	- 
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #48 - getting data out of linkedin    
+####### Monday 14 August 2023 02:12:55 PM IST #######    
+
+- nice plugin    
+[https://github.com/joshuatz/linkedin-to-jsonresume](https://github.com/joshuatz/linkedin-to-jsonresume)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #49 - automating a react form - from outside react    
+####### Monday 14 August 2023 12:04:26 PM IST #######    
+
+- setting the value for the input and firing events has not worked    
+(most stackoverflow suggestions)
+
+- Planning to try react testing libraries
+	- [https://github.com/testing-library/react-testing-library](https://github.com/testing-library/react-testing-library)
+
+- noting on the internet worked:
+	- finally the below method worked
+	- select the input element in the html inspector 
+	- store the element as a global variable
+	- find the '__reactProps' variable for the dom element
+	- `Object.keys(containerEle).find(key => key.includes('__reactProps'));`
+	- there will be onBlur, onChange, onFocus, onKeyPress,... etc implemented on the input element
+	- goto the definition of these functions in order of most likely (as listed above)
+		- find the event that has the .setState({data}) lines
+		- and understand the input data required for the function to setState correctly.
+		- one way to observe that is to add break points and trigger the functions as a user
+	- **IMP** events fired on the element have been buffered by react in the latest versions
+	
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #50 - django - create initial data for a model / table     
+####### Thursday 10 August 2023 04:03:17 AM IST #######
+
+
+- TLDR;    
+migrations --> operations --> runPython
+
+- detailed thread and docs    
+[https://stackoverflow.com/questions/39739439/how-to-define-default-data-for-django-models](https://stackoverflow.com/questions/39739439/how-to-define-default-data-for-django-models)    
+[https://docs.djangoproject.com/en/3.2/topics/migrations/#data-migrations](https://docs.djangoproject.com/en/3.2/topics/migrations/#data-migrations)    
+[https://docs.djangoproject.com/en/3.2/ref/migration-operations/#django.db.migrations.operations.RunPython](https://docs.djangoproject.com/en/3.2/ref/migration-operations/#django.db.migrations.operations.RunPython)
+
+- example:
+```python
+# initial warehouses
+initial_warehouses = [
+    {
+        "name": "External Purchase",
+        "code": "PURCHASE",
+        "location": "virtual"
+    },
+    {
+        "name": "External Sale",
+        "code": "SALE",
+        "location": "virtual"
+    },
+    {
+        "name": "Suspense head",
+        "code": "SUSPENSE",
+        "location": "virtual"
+    },
+]
+
+def create_default_warehouses(apps, schema_editor):
+    Warehouse = apps.get_model('inventory', 'Warehouse')
+    for wh_data in initial_warehouses:
+        new_wh = Warehouse(**wh_data)
+        new_wh.save()
+```
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #51 - proposed structure for a django application - for early stage development     
+####### Thursday 10 August 2023 02:20:45 AM IST #######
+
+
+- layer 1 - urls and views
+	- urls routing - keep this generally stable - design around crud for principle entities
+	- example for principle entities - user, roles 
+	- basically the nodes of a UML diagram for the project, or the entity relationship diagram
+- layer 2 - library / glue layer
+	- each app to use function based views to reply to requests
+	- each installed app to have a lib --> with functions that call on models to generate responses
+	- allows for the underlying models to change without changing the response structure
+- layer 3 - models / db calls
+	- is the most dynamic layer at the initial stages
+	- can change a lot wit compatibility changes happening at the lib (layer 2) level
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #52 - django models - warehouse and inventory management     
+####### Thursday 10 August 2023 02:14:32 AM IST #######   
+
+
+- greater wms    
+[https://github.com/GreaterWMS/GreaterWMS](https://github.com/GreaterWMS/GreaterWMS)
+- oodo    
+[https://github.com/odoo/odoo](https://github.com/odoo/odoo)
+	- much more than an inventory management system
+	- a general 
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #53 - pythonic mysql connector     
+####### Thursday 10 August 2023 01:31:33 AM IST #######   
+
+
+- good docs and good api
+- [https://github.com/PyMySQL/PyMySQL](https://github.com/PyMySQL/PyMySQL)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #54 - amazon seller / vendor api     
+####### Thursday 10 August 2023 01:31:33 AM IST #######   
+
+
+- creating an oauth app and getting access    
+[https://developer-docs.amazon.com/sp-api/docs](https://developer-docs.amazon.com/sp-api/docs)
+	- uses AWS components - deliberate attempt to get AWS accounts created
+	- auth precedure is complicated - but does provide granularity of access
+		- one good way of confirming auth - try to make requests to sandbox
+		- [https://deltologic.com/blog/how-to-connect-to-amazon-sp-api-and-make-requests](https://deltologic.com/blog/how-to-connect-to-amazon-sp-api-and-make-requests)
+		- common auth pitfalls: [https://developer-docs.amazon.com/sp-api-blog/docs/troubleshooting-selling-partner-api-authorization-errors#access-to-requested-resource-is-denied](https://developer-docs.amazon.com/sp-api-blog/docs/troubleshooting-selling-partner-api-authorization-errors#access-to-requested-resource-is-denied)
+	- sandbox is well documented
+	- schema is well documented    
+	Eg. (https://github.com/amzn/selling-partner-api-models/blob/main/models/orders-api-model/ordersV0.json#L26)[https://github.com/amzn/selling-partner-api-models/blob/main/models/orders-api-model/ordersV0.json#L26]
+	- the api request and response structures documented very well 
+	- api versions documented well
+	- common use-cases: [https://developer-docs.amazon.com/sp-api-blog/docs/prepare-your-sp-api-application-for-holiday-shoppers](https://developer-docs.amazon.com/sp-api-blog/docs/prepare-your-sp-api-application-for-holiday-shoppers)
+- python wrapper to interact with the api    
+[https://github.com/saleweaver/python-amazon-sp-api](https://github.com/saleweaver/python-amazon-sp-api)
+	- very well built
+	- good design for abstracting out the complexities of the seller api
+	- retries, rate limits, pagination handled very well 
+	- the config system is a bit screwed up 
+		- path to config file is hard coded :D weird
+
+- TODO: generate a UML / ER diagram for the api
+	- look for swagger --> UML
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #55 - python set environment variable in code     
+####### Thursday 10 August 2023 01:31:33 AM IST #######   
+
+
+- TLDR;     
+```python
+import os
+
+# Set environment variables
+os.environ['API_USER'] = 'username'
+
+# os has other useful features for handling environment variables
+```
+[https://able.bio/rhett/how-to-set-and-get-environment-variables-in-python--274rgt5](https://able.bio/rhett/how-to-set-and-get-environment-variables-in-python--274rgt5)
+
+- with multi threading / sub-processes    
+[https://stackoverflow.com/questions/8365394/set-environment-variable-in-python-script](https://stackoverflow.com/questions/8365394/set-environment-variable-in-python-script)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #56 - code generators, AI auto-complete to try in 2023     
+####### Thursday 10 August 2023 01:31:53 AM IST #######   
+
+- TODO: try
+- git hub co-pilot
+- cogram
+- Sonar Cube
+- chat-gpt
+[https://www.youtube.com/watch?v=iO1mwxPNP5A](https://www.youtube.com/watch?v=iO1mwxPNP5A)
+	- chat-gpt custom pseudo-code language to write react apps 
+	- 
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #57 - git and multiple keys ssh for each project     
+####### Tuesday 08 August 2023 06:39:32 AM IST #######   
+
+- git can take ssh keys from a ssh config
+- so all the variations supported by ssh config can be used by git    
+[https://stackoverflow.com/questions/4565700/how-to-specify-the-private-ssh-key-to-use-when-executing-shell-command-on-git](https://stackoverflow.com/questions/4565700/how-to-specify-the-private-ssh-key-to-use-when-executing-shell-command-on-git)
+- checking ssh access to git shell   
+[https://support.atlassian.com/bitbucket-cloud/docs/set-up-personal-ssh-keys-on-linux/#Check-that-your-SSH-authentication-works](https://support.atlassian.com/bitbucket-cloud/docs/set-up-personal-ssh-keys-on-linux/#Check-that-your-SSH-authentication-works)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
+### #58 - git and file permissions / modes     
+####### Tuesday 08 August 2023 06:39:32 AM IST #######   
+
+- interesting discussion
+- useful for ntfs mounted on linux
+- bash on windows..     
+[https://stackoverflow.com/questions/1580596/how-do-i-make-git-ignore-file-mode-chmod-changes](https://stackoverflow.com/questions/1580596/how-do-i-make-git-ignore-file-mode-chmod-changes)
+- TLDR; 
+```bash
+git config core.fileMode false
+```
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+
 ### #59 - changing bash prompt     
 ####### Saturday 05 August 2023 06:49:54 PM IST #######   
 
