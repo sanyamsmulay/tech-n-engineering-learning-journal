@@ -20,6 +20,144 @@ continued from:
 
 
 
+### #33 - md5 util linux        
+####### Tuesday 05 September 2023 09:11:19 PM IST #######    
+
+- md5 utility linux
+- [https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/](https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/)
+- compare files without actually comparing files
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #34 - vs code - switch side in diff/compare editor        
+####### Thursday 31 August 2023 10:39:57 PM IST #######    
+
+- workbench.action.compareEditor.focusOtherSide
+- diffEditor.switchSide
+- TODO: 
+	- issue: cusrsor moves to its previous state in the target buffer
+	- [https://stackoverflow.com/a/70631020](https://stackoverflow.com/a/70631020)
+	- move the cursor to viewport center
+
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #35 - bash - get paths relative to executing file        
+####### Thursday 31 August 2023 10:08:48 PM IST #######    
+
+- TLDR: `BASH_SOURCE[0]`   
+- - if symlink handling required: `readlink`
+- details:  [https://stackoverflow.com/questions/24112727/relative-paths-based-on-file-location-instead-of-current-working-directory](https://stackoverflow.com/questions/24112727/relative-paths-based-on-file-location-instead-of-current-working-directory)
+
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #36 - bash edit a file in-place - don't do it        
+####### Thursday 31 August 2023 08:02:26 PM IST #######    
+
+- not a good idea
+- produce an intermediate file (anyway good for testing, debugging and good for restoring the original)
+- clean-up afterwards
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #37 - restore a arangodb database without its indices and generate them in the background        
+####### Thursday 31 August 2023 08:02:26 PM IST #######    
+
+- output redirection in bash 
+	- detailed article
+	- [https://thoughtbot.com/blog/input-output-redirection-in-the-shell](https://thoughtbot.com/blog/input-output-redirection-in-the-shell)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #37 - restore a arangodb database without its indices and generate them in the background        
+####### Thursday 31 August 2023 08:02:26 PM IST #######    
+
+```bash
+#!/bin/bash
+
+# get a  backup of the structure files
+find ./ -name "*.structure.json" -exec bash -c "cat {} > {}.bkp;" \;
+
+# debug
+## find ./ -name "*.structure.json.bkp" -exec bash -c "echo {} | sed -r 's/.bkp//g';" \;
+
+# read from backup remove indexes key from the structure files and overwrite
+find ./ -name "*.structure.json.bkp" | awk '{print "cat " $1 " | jq --compact-output \"setpath([\\\"indexes\\\"]; [])\" > $(echo \"" $1 "\" | sed -r \"s/.bkp//g\")"}' | bash -x
+sync;
+
+```
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #38 - find --exec -- is not a complete bash environment        
+####### Thursday 31 August 2023 08:02:26 PM IST #######    
+
+- I wasted a few hours with this
+- everything that works with bash (on a terminal / command line) will not 
+work with `find --exec` since it is not a full fledged bash environment 
+	- Eg. completions / executions of back quoted expressions etc
+	- command substitution definitely does not work `$(<expression>)`
+	- [https://stackoverflow.com/questions/42845148/sed-not-working-properly-inside-finds-exec](https://stackoverflow.com/questions/42845148/sed-not-working-properly-inside-finds-exec)
+	- [https://unix.stackexchange.com/questions/587308/sed-command-does-not-work-with-find-exec](https://unix.stackexchange.com/questions/587308/sed-command-does-not-work-with-find-exec)
+- rather use `| bash -x`
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #39 - jq tips and tricks        
+####### Thursday 31 August 2023 07:30:07 PM IST #######    
+
+- online jq editor and tester
+	- [https://jqplay.org/](https://jqplay.org/)
+- docs
+	- [https://jqlang.github.io/jq/manual/v1.6/](https://jqlang.github.io/jq/manual/v1.6/)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #40 - grep tips and tricks        
+####### Thursday 31 August 2023 07:23:04 PM IST #######    
+
+- exclude, include
+	- `grep pattern -r --include=\*.cpp --include=\*.h rootdir`
+	- The syntax for `--exclude` is identical.
+	- [https://stackoverflow.com/a/221929](https://stackoverflow.com/a/221929)
+	
+- exclude-dir
+	- `grep -rI --exclude-dir="\.svn" "pattern" *`
+	- same stackoverflow thread as above
+- exclude binary -> -I
+	- example above
+
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
 ### #41 - Generating UML / ER diagram from JSON/swagger        
 ####### Monday 28 August 2023 02:20:56 PM IST #######    
 
@@ -64,6 +202,7 @@ Lastly, there’s /** */. This is a description. I think of it as Javascript’s
 
 - web + php based (like phpmyadmin)    
 [https://github.com/phpLiteAdmin/pla](https://github.com/phpLiteAdmin/pla) 
+
 
 -x-x-x-
 &nbsp;   
