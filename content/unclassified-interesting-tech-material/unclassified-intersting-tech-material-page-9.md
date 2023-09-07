@@ -20,6 +20,22 @@ continued from:
 
 
 
+### #32 - keep awake        
+###### Friday 08 September 2023 12:35:01 AM IST #######    
+
+- brilliant python utility
+- [https://bazaar.launchpad.net/~ferncasado/keep.awake/trunk/files/head:/v4](https://bazaar.launchpad.net/~ferncasado/keep.awake/trunk/files/head:/v4)
+- why not on github ?
+- [https://launchpad.net/keep.awake](https://launchpad.net/keep.awake)
+- where it started: [https://askubuntu.com/questions/576525/is-there-any-way-to-make-ubuntu-not-to-suspend-while-a-download-in-progress](https://askubuntu.com/questions/576525/is-there-any-way-to-make-ubuntu-not-to-suspend-while-a-download-in-progress)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+
+
 ### #33 - md5 util linux        
 ####### Tuesday 05 September 2023 09:11:19 PM IST #######    
 
