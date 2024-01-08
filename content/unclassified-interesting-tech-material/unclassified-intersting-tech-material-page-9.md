@@ -455,7 +455,7 @@ templates:
 &nbsp;   
 &nbsp;
  
-### #32 - gitea installation tips and tricks       
+### #31.4 - gitea installation tips and tricks       
 ####### Tuesday 12 September 2023 02:30:03 PM IST #######    
 
 - install as binary
@@ -510,7 +510,7 @@ templates:
 &nbsp;   
 &nbsp;
  
-### #33 - best way to give nginx access to your folders        
+### #31.5 - best way to give nginx access to your folders        
 ####### Sunday 10 September 2023 01:30:16 PM IST #######    
 
 - [https://stackoverflow.com/a/46083622](https://stackoverflow.com/a/46083622)
@@ -542,6 +542,20 @@ Ubuntu / Debian
 &nbsp;   
 &nbsp;   
 &nbsp;
+
+### #32 - keep awake        
+###### Friday 08 September 2023 12:35:01 AM IST #######    
+
+- brilliant python utility
+- [https://bazaar.launchpad.net/~ferncasado/keep.awake/trunk/files/head:/v4](https://bazaar.launchpad.net/~ferncasado/keep.awake/trunk/files/head:/v4)
+- why not on github ?
+- [https://launchpad.net/keep.awake](https://launchpad.net/keep.awake)
+- where it started: [https://askubuntu.com/questions/576525/is-there-any-way-to-make-ubuntu-not-to-suspend-while-a-download-in-progress](https://askubuntu.com/questions/576525/is-there-any-way-to-make-ubuntu-not-to-suspend-while-a-download-in-progress)
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp; 
  
 ### #33 - md5 util linux        
 ####### Tuesday 05 September 2023 09:11:19 PM IST #######    
@@ -704,7 +718,7 @@ work with `find --exec` since it is not a full fledged bash environment
 [https://dev.to/stephencweiss/write-your-own-javascript-contracts-and-docstrings-42ho](https://dev.to/stephencweiss/write-your-own-javascript-contracts-and-docstrings-42ho)
 
 - TLDR;
-```javascript
+```
 There’s // for a single line comment.
 
 There’s /* */ for single or multi-line comment.
@@ -732,7 +746,7 @@ Lastly, there’s /** */. This is a description. I think of it as Javascript’s
 &nbsp;   
 &nbsp;
  
-### #44 - google picked up a url for a variable in `<script>` not sure how       
+### #44 - google picked up a url for a variable in <script> not sure how       
 ####### Sunday 27 August 2023 06:56:59 AM IST #######    
 
 - not sure how this happened but google picked up url from code like below:    
@@ -754,7 +768,7 @@ const apiUrl = appDomain+"/lead/api/init-signup";
 ####### Thursday 24 August 2023 07:37:32 PM IST #######    
 
 - generally accepted    
-`/wp-content/uploads/<your-project>-scripts/<script-name>.js`
+/wp-content/uploads/<your-project>-scripts/<script-name>.js 
 
 -x-x-x-
 &nbsp;   
@@ -852,7 +866,7 @@ not working very well for migrations that use --> runpython; dunno why :(
 [https://www.reddit.com/r/berkeley/comments/ly5bce/i_made_a_chrome_extension_that_autofills_job_apps/](https://www.reddit.com/r/berkeley/comments/ly5bce/i_made_a_chrome_extension_that_autofills_job_apps/)
 
 - I am trying to make a plugin for auto-filling workday forms for job applications
-	- TODO: complete this
+	- 
 
 -x-x-x-
 &nbsp;   
@@ -889,7 +903,7 @@ not working very well for migrations that use --> runpython; dunno why :(
 	- `Object.keys(containerEle).find(key => key.includes('__reactProps'));`
 	- there will be onBlur, onChange, onFocus, onKeyPress,... etc implemented on the input element
 	- goto the definition of these functions in order of most likely (as listed above)
-		- find the event that has the `.setState({data})` lines
+		- find the event that has the .setState({data}) lines
 		- and understand the input data required for the function to setState correctly.
 		- one way to observe that is to add break points and trigger the functions as a user
 	- **IMP** events fired on the element have been buffered by react in the latest versions
@@ -1024,16 +1038,8 @@ def create_default_warehouses(apps, schema_editor):
 	- the config system is a bit screwed up 
 		- path to config file is hard coded :D weird
 
-- reports quirks
-	- ####### Wednesday 20 September 2023 09:47:15 AM IST #######
-	- sends out an empty report without errors if the `report request` has error :face_palm
-	-  
-
-
 - TODO: generate a UML / ER diagram for the api
 	- look for swagger --> UML
-	- decent attempt
-		- [https://support.daasity.com/knowledge/integration-amazon-seller-central-reports-api-fba-inventory#schema-fba-fulfilled-inventory](https://support.daasity.com/knowledge/integration-amazon-seller-central-reports-api-fba-inventory#schema-fba-fulfilled-inventory)
 
 -x-x-x-
 &nbsp;   
@@ -1654,9 +1660,7 @@ all rolled into one
 
 -x-x-x-
 + choosing to try out [gitea](https://github.com/go-gitea/gitea) first
-+ docs: [https://docs.gitea.com/](https://docs.gitea.com/) 
-+ features: [https://docs.gitea.com/#features](https://docs.gitea.com/#features)
-+ extensions and plugins: [https://gitea.com/gitea/awesome-gitea](https://gitea.com/gitea/awesome-gitea)
+
 
 -x-x-x-
 
