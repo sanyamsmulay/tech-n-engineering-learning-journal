@@ -20,6 +20,529 @@ continued from:
 
 
 
+### #12- grafana and related ecosystem            
+####### Thursday 04 January 2024 06:49:45 PM IST #######     
+
+
+- Grafna - visualisation and querying
+	- [https://grafana.com/](https://grafana.com/)
+- Loki - store similar to Prometheus for logs 
+- promtail - similar to logstash
+- grafana agent - inspired by terraform
+- many log stores supported - like cloud watch, etc. there are lots
+- good plugin ecosystem 
+- 
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #13- deploying single page applications - to load routes            
+####### Thursday 04 January 2024 05:42:27 PM IST #######     
+
+
+- of-course the feature should be available in the library
+- the trick is to get the single page application router to take over
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #14- angular 17 - goodies            
+####### Thursday 04 January 2024 05:27:39 PM IST #######    
+
+
+- [https://www.youtube.com/watch?v=gShezTqbRyE](https://www.youtube.com/watch?v=gShezTqbRyE)
+- standalone components
+	- can be shifted to incrementally 
+- signals - simplified rxjs
+	- no subscribe and unsubscribe 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #14- remote desktop for windows - rust-desk            
+####### Monday 01 January 2024 05:17:29 PM IST #######    
+
+
+- Rust Desk - good open source utility 
+- runs well on windows
+	- so good for sharing a windows desktop with linux
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #15- convert fat32 to NTFS and resize fat32            
+####### Monday 01 January 2024 05:17:29 PM IST #######    
+
+
+- windows convert utility
+- handy with good performance
+- `convert <Drive>: /FS:NTFS`
+	- [https://superuser.com/questions/538220/linux-convert-fat32-to-ntfs-without-loss-data](https://superuser.com/questions/538220/linux-convert-fat32-to-ntfs-without-loss-data)
+	- [https://askubuntu.com/questions/303091/convert-fat32-partition-to-ntfs-without-data-loss](https://askubuntu.com/questions/303091/convert-fat32-partition-to-ntfs-without-data-loss)
+- resize fat32
+	- disks failed
+	- windows does not have a fat resize tool
+- [https://askubuntu.com/questions/962829/resizing-fat32-partition-in-command-line-without-losing-data](https://askubuntu.com/questions/962829/resizing-fat32-partition-in-command-line-without-losing-data)
+	- did not work, errored out for my case
+- [https://answers.microsoft.com/en-us/windows/forum/all/how-many-files-can-a-folder-hold/25368d4b-83e3-47b3-b7a3-a0fb8c7286a7](https://answers.microsoft.com/en-us/windows/forum/all/how-many-files-can-a-folder-hold/25368d4b-83e3-47b3-b7a3-a0fb8c7286a7)
+	- file and folder limitations for FAT32 and NTFS
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #16- ubuntu - gnome-remote-desktop - not working with wayland           
+####### Saturday 30 December 2023 01:10:08 PM IST #######    
+
+
+- works fine if switching to xorg
+- TODO: find out how to make it work with wayland
+	- connection is successful
+	- mouse and keyboard works
+	- screen is black, screenshot also captures a black screen
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #17- ubuntu - easy switch between xorg and wayland           
+####### Saturday 30 December 2023 01:10:08 PM IST #######    
+
+
+- [https://askubuntu.com/questions/961304/how-do-you-switch-from-wayland-back-to-xorg-in-ubuntu-17-10](https://askubuntu.com/questions/961304/how-do-you-switch-from-wayland-back-to-xorg-in-ubuntu-17-10)
+- there is a small gear icon that appears after the user for login is selected and password field appears
+- ![sample image for what the grear icon looks like](https://i.stack.imgur.com/6FtxL.jpg)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #18- flatpack - how to clean uninstall           
+####### Saturday 30 December 2023 12:45:17 AM IST #######    
+
+
+- [https://discourse.flathub.org/t/how-to-completely-uninstall-any-flatpak-app-on-ubuntu/709](https://discourse.flathub.org/t/how-to-completely-uninstall-any-flatpak-app-on-ubuntu/709)
+- seems to have a docker like approach for storing binaries
+- so the unused common part is left out as cache - may need to deleted to reclaim disc space
+- framework feels very neat
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #19- arangodb migrations to higher version           
+####### Wednesday 13 December 2023 08:45:05 PM IST #######    
+
+
+- suggested to go to highest patch version then to the next minor version
+	-  3.6.9 => 3.6.13 => 3.7.10
+	- what the heck ?!?
+- [https://github.com/arangodb/arangodb/issues/14138#issuecomment-831718441](https://github.com/arangodb/arangodb/issues/14138#issuecomment-831718441)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #19- chkdsk run from linux          
+####### Tuesday 21 November 2023 07:39:04 PM IST #######    
+
+
+- NTFS / FAT file system going bad in a system crash is a common occurrence.
+- trying to run chkdsk without having to boot into windows
+- TODO: find a way / build a way
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #20- fsck cannot be run from grub          
+####### Monday 20 November 2023 08:39:51 PM IST #######    
+
+
+- there should be an options to run fsck from grub 
+	- it is generally the most common problem 
+- TODO: find out if there is a way unmount the root `/` partition from grub menu
+- also, well ttys with `ctrl + alt + 1,2,3,4` in ubuntu is super helpful as well
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #21- why nvidea, why you no stable with linux ?         
+####### Monday 20 November 2023 05:27:41 PM IST #######    
+
+
+- at boot screen gets stuck after the output of fdisk
+	- `dev/<disc-id>: clean ....`
+	- boot does not proceed after this
+
+- [https://askubuntu.com/a/974910](https://askubuntu.com/a/974910)
+- don't know the root cause, it may very well be the linux kernel as well
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #22- redirecting outputs of bash file descriptors         
+####### Monday 20 November 2023 04:42:18 PM IST #######    
+
+- 1 - std-io, 2 - std-err and 3 - console
+- my favourite: 
+	- log to file and to console at the same time:
+	- `exec 3>&1 1>>${LOG_FILE} 2>&1`
+- look: [https://stackoverflow.com/a/18462920](https://stackoverflow.com/a/18462920)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #22- vfat and ext4 file size difference        
+####### Monday 20 November 2023 04:42:18 PM IST #######    
+
+- block size supported is very different - so for smaller files --> vfat will take more space
+- The du command measures file size in blocks, not bytes. Since vfat and ext4 use completely different block sizes, a size change of 2x or even 8x would not be even slightly surprising.
+
+ext4 typically uses 4k blocks but both ext4 and vfat use a variable block size set when the disk is formatted. vfat supports logical block sizes between 512b and 32k; ext4 supports block sizes between 1k and 4k.
+
+If it is an old disk, it could be 512b blocks or maybe 2k, depending on disk size and properties. If you have a lot of files that are below 2k, each of those could double in size on copy to a 4k block size ext4.
+
+- taken from: [https://unix.stackexchange.com/a/693819](https://unix.stackexchange.com/a/693819)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #23- linux find command - filter the errors        
+####### Monday 20 November 2023 04:42:18 PM IST #######    
+
+- it just takes a long time realize that the stream on the console is a combination of error and std-io
+	
+- ignore all errors:
+	- `find . 2>/dev/null > files_and_folders`
+	- This hides not just the Permission denied errors, of course, but all error messages.
+
+- If you really want to keep other possible errors, such as too many hops on a symlink, but not the permission denied ones, then you'd probably have to take a flying guess that you don't have many files called 'permission denied' and try:
+	- `find . 2>&1 | grep -v 'Permission denied' > files_and_folders`
+- If you strictly want to filter just standard error, you can use the more elaborate construction:
+	- `find . 2>&1 > files_and_folders | grep -v 'Permission denied' >&2`
+- taken from: [https://stackoverflow.com/a/762360](https://stackoverflow.com/a/762360)
+
+- handy pattern for concatenating stdio and error or any other streams too 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #24- AWS cli s3 sync - stupid shenanigans        
+####### Friday 17 November 2023 11:24:01 PM IST #######    
+
+- s3 bucket allows for linux characters - with is a super set of windows characters 
+	- so syncing to a FAT or NTFS file system can fail
+- [https://github.com/aws/aws-cli/issues/4543](https://github.com/aws/aws-cli/issues/4543)
+- [https://stackoverflow.com/questions/57786113/errno-22-when-downloading-multiple-files-from-s3-bucket-sub-folder/58576473#58576473](https://stackoverflow.com/questions/57786113/errno-22-when-downloading-multiple-files-from-s3-bucket-sub-folder/58576473#58576473)
+- possible solutions 
+	- exclude the files / directories with the forbidden characters
+	- or transform the filename to replace the forbidded characters with an allowed character
+
+- no space left on device error 28
+	- initiated a command from a nvme / ssd directory
+	- downloaded parts were getting stored on a temp in the ssd
+	- the write speeds to the long term storage (rotating drive) was slow
+	- temp gets full and errors start popping up !!
+	- come-on AWS devs you can do better than this
+	- solution 1 - either throttle manually estimating disk write speeds
+	- solution 2 - run from the ultimate destination folder
+	- did not see the issue online anywhere.
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #25- scrum is a cancer - but effective for managing inexperienced teams        
+####### Friday 17 November 2023 11:24:01 PM IST #######    
+
+- [https://devops.com/scrum-cancer-linux-6-5-richixbw/](https://devops.com/scrum-cancer-linux-6-5-richixbw/)
+- agree with the article
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #26- get the command associated with an alias in bash        
+####### Friday 17 November 2023 10:33:38 PM IST #######    
+
+- `type <alias-command>`
+- [https://askubuntu.com/a/103524](https://askubuntu.com/a/103524)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #27- django env - loading environment variables       
+####### Friday 13 October 2023 01:40:25 PM IST #######    
+
+- don't know why this is not included in django
+- with the batteries included philosophy
+- [https://codinggear.blog/django-environment-variables/#google_vignette](https://codinggear.blog/django-environment-variables/#google_vignette)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #28- vue3 and bootstrap re-usable elements       
+####### Saturday 30 September 2023 11:26:34 PM IST #######    
+
+- generic html and css starters 
+	- [https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp](https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp)
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #29- migrating to vue3 - setting up bootstrap-vue with vue compat       
+####### Saturday 30 September 2023 11:26:34 PM IST #######    
+
+- the confusion is real with this one :P  
+- Literally start from here:
+[https://bootstrap-vue.org/vue3#prerequisites](https://bootstrap-vue.org/vue3#prerequisites)
+	- install vue from a template with vite (`npm create vue@latest`)
+	- follow the migration guideline as applicable 
+		- [https://v3-migration.vuejs.org/migration-build.html](https://v3-migration.vuejs.org/migration-build.html)
+		- here that only means:
+		- install vue compat
+		- alias it 
+		- and set vue to mode: 2
+	- use bootstrap-vue latest  '^2.23.0'    
+	- use bootstrap '~4.0.0'   
+	- follow getting started of bootstrap vue then
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #30- django auth considerations - session, token, CSRF, XSS       
+####### Wednesday 20 september 2023 09:06:25 AM IST #######    
+
+- with django rest
+	- [https://www.django-rest-framework.org/api-guide/authentication/](https://www.django-rest-framework.org/api-guide/authentication/)
+- session vs token; CSRF, XSS
+	- [https://testdriven.io/blog/django-spa-auth/](https://testdriven.io/blog/django-spa-auth/)
+- where to store token
+	-  [https://web.archive.org/web/20230428094039/https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage](https://web.archive.org/web/20230428094039/https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage)
+- preventing csrf
+	- [https://portswigger.net/web-security/csrf/preventing](https://portswigger.net/web-security/csrf/preventing)
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #30- django gunicorn nginx - logging       
+####### Wednesday 20 september 2023 09:06:25 AM IST #######    
+
+- well written article
+	- [https://mattsegal.dev/django-gunicorn-nginx-logging.html](https://mattsegal.dev/django-gunicorn-nginx-logging.html)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #30- nginx proxy_pass to socket file linux       
+####### Wednesday 20 september 2023 09:06:25 AM IST #######    
+
+- cannot directly proxy pass to a unix socket and add a trailing slash
+	- quoting from: [https://dev.to/vearutop/using-nginx-as-a-proxy-to-multiple-unix-sockets-3c7a](https://dev.to/vearutop/using-nginx-as-a-proxy-to-multiple-unix-sockets-3c7a)
+	- `however it has an unwanted limitation that you can not add trailing / to proxy_pass. And this means that URL will be passed as is, e.g. soc1 will receive /soc1/foo instead of /foo.`
+- this absolutely stupid
+```
+server {
+    listen 80 default;
+
+    location /soc1/ {
+        proxy_pass http://soc1/;
+    }
+    location /soc2/ {
+        proxy_pass http://soc2/;
+    }
+}
+
+upstream soc1 {
+    server unix:/home/ubuntu/soc1;
+}
+
+upstream soc2 {
+    server unix:/home/ubuntu/soc2;
+}
+```
+
+- the comment `AARGH THE TRAILING SLASH`
+	-  [https://serverfault.com/questions/562756/how-to-remove-the-path-with-an-nginx-proxy-pass#comment976713_562850](https://serverfault.com/questions/562756/how-to-remove-the-path-with-an-nginx-proxy-pass#comment976713_562850)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #30- python syntax is so slick       
+####### Saturday 16 September 2023 09:53:16 AM IST #######    
+
+- start of day 
+```python
+datetime.combine(date, time, tz)
+
+from datetime import datetime, time
+
+start_of_day = datetime.combine(datetime.now(), time.min)
+print(start_of_day) # 2023-02-10 00:00:00
+
+
+end_of_day = datetime.combine(datetime.now(), time.max)
+print(start_of_day) # 2023-02-10 23:59:59.999999
+
+
+```
+- end of day
+
+- source:
+	- [https://how.wtf/how-to-get-start-or-end-of-a-day-in-python.html](https://how.wtf/how-to-get-start-or-end-of-a-day-in-python.html)
+
+-x-x-x-
++ getting a key from a dict nested at multiple levels
+```python
+example_dict.get('key1', {}).get('key2')
+```
++ source:
+	+ [https://stackoverflow.com/a/25833661](https://stackoverflow.com/a/25833661)
+	
+-x-x-x-
+- good sets example:
+	- source: [https://www.digitalocean.com/community/tutorials/get-unique-values-from-a-list-in-python](https://www.digitalocean.com/community/tutorials/get-unique-values-from-a-list-in-python)
+-x-x-x-
++ ipython: %cpaste
+-x-x-x-
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #31- vue dashboard templates       
+####### Wednesday 13 September 2023 04:57:50 PM IST #######    
+
+lists:
+- [https://vuejsexamples.com/tag/dashboard-tag/](https://vuejsexamples.com/tag/dashboard-tag/)
+- [https://vuejs.org/ecosystem/themes.html](https://vuejs.org/ecosystem/themes.html)
+- [https://medium.com/@appseed.us/vue-dashboards-open-source-templates-to-start-fast-f60d67277e9b](https://medium.com/@appseed.us/vue-dashboards-open-source-templates-to-start-fast-f60d67277e9b)
+
+templates:
+- [https://vuejsexamples.com/administrative-and-analytical-data-dashboard-built-in-vue-js/](https://vuejsexamples.com/administrative-and-analytical-data-dashboard-built-in-vue-js/)
+- [https://demos.creative-tim.com/vue-paper-dashboard/?_ga=2.177235045.1723538522.1694604114-1540783205.1694604114#/](https://demos.creative-tim.com/vue-paper-dashboard/?_ga=2.177235045.1723538522.1694604114-1540783205.1694604114#/)
+- [https://demos.wrappixel.com/free-admin-templates/vuejs/xtreme-vuejs-free/main/#/starterkit](https://demos.wrappixel.com/free-admin-templates/vuejs/xtreme-vuejs-free/main/#/starterkit)
+- [https://coreui.io/product/free-vue-admin-template/](https://coreui.io/product/free-vue-admin-template/)
+- [https://github.com/efthakhar/invextry?ref=vuejsexamples.com](https://github.com/efthakhar/invextry?ref=vuejsexamples.com)
+- [https://github.com/zuramai/mazer](https://github.com/zuramai/mazer)
+- [https://github.com/efthakhar/invextry?ref=vuejsexamples.com](https://github.com/efthakhar/invextry?ref=vuejsexamples.com)
+- [https://dashboardpack.com/live-demo-preview/?livedemo=1881](https://dashboardpack.com/live-demo-preview/?livedemo=1881)	
+- [https://primevue.org/datatable/](https://primevue.org/datatable/) - this is a very good library
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #32 - gitea installation tips and tricks       
+####### Tuesday 12 September 2023 02:30:03 PM IST #######    
+
+- install as binary
+	- [https://docs.gitea.com/installation/install-from-binary](https://docs.gitea.com/installation/install-from-binary)
+	- gives more control
+	- follow steps till below command can be run
+		- `GITEA_WORK_DIR=/var/lib/gitea/ /usr/local/bin/gitea web -c /etc/gitea/app.ini`
+		- 
+	
+- TODO: deploy with socket file listener and activation
+- run as service on linux:    
+(https://docs.gitea.com/installation/linux-service)[https://docs.gitea.com/installation/linux-service]
+	- try the command as the user created for this (git in this case)
+	- start and enable
+	- sample service file:    
+	[https://github.com/go-gitea/gitea/blob/release/v1.20/contrib/systemd/gitea.service](https://github.com/go-gitea/gitea/blob/release/v1.20/contrib/systemd/gitea.service)
+
+- not recommended to deploy as sub-path
+	- [https://docs.gitea.com/administration/reverse-proxies#general-sub-path-configuration](https://docs.gitea.com/administration/reverse-proxies#general-sub-path-configuration)
+- so deploy as sub-domain
+	- with nginx as reverse proxy 
+	[https://docs.gitea.com/administration/reverse-proxies#nginx](https://docs.gitea.com/administration/reverse-proxies#nginx)
+	
+- if config.ini is not found 
+	- `/etc/gitea/app.ini`
+	- first load of the web page presents a settings page
+	- configure the required options + create admin user
+	- else - the file can be added manually and the required options set manually
+	- and the admin user needs to be created via the cli
+		- [https://docs.gitea.com/administration/command-line](https://docs.gitea.com/administration/command-line)
+
+- once config.ini is created to revert to strict permissions for `/etc/gitea/config.ini` file and path
+	- [https://docs.gitea.com/installation/install-from-binary#create-required-directory-structure](https://docs.gitea.com/installation/install-from-binary#create-required-directory-structure)
+
+- if not set with web setup use the starter below
+	- [https://github.com/go-gitea/gitea/blob/main/custom/conf/app.example.ini](https://github.com/go-gitea/gitea/blob/main/custom/conf/app.example.ini)
+
+- backup philosophy --> take home directory backup and all data is preserved
+	- symlink `/var/lib/gitea` --> `~/other_deployments/gitea/gitea-working-dir`
+	- add operating main user say `myuser` to group say `git` created for running gitea
+
+- backup
+	- [https://docs.gitea.com/administration/backup-and-restore#backup-command-dump](https://docs.gitea.com/administration/backup-and-restore#backup-command-dump)
+	- along with other folders in var/lib; create --> /var/lib/gitea/backup with similar permissions as data
+	- `sudo su - git -s /bin/bash -c "cd /var/lib/gitea/backups && /usr/local/bin/gitea dump -c /etc/gitea/app.ini"`
+
+
++ also helpful:
+	+ [https://blog.inedo.com/self-hosted/gitea/](https://blog.inedo.com/self-hosted/gitea/)
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
+### #33 - best way to give nginx access to your folders        
+####### Sunday 10 September 2023 01:30:16 PM IST #######    
+
+- [https://stackoverflow.com/a/46083622](https://stackoverflow.com/a/46083622)
+- quoting
+```bash
+Since Nginx is handling the static files directly, it needs access to the appropriate directories. We need to give it executable permissions for our home directory.
+
+The safest way to do this is to add the Nginx user to our own user group. We can then add the executable permission to the group owners of our home directory, giving just enough access for Nginx to serve the files:
+
+CentOS / Fedora
+
+  sudo usermod -a -G your_user nginx
+
+  chmod 710 /home/your_user 
+Set SELinux to globally permissive mode, run:
+
+sudo setenforce 0
+
+for more info, please visit https://www.nginx.com/blog/using-nginx-plus-with-selinux/
+
+Ubuntu / Debian
+
+  sudo usermod -a -G your_user www-data
+
+  sudo chown -R :www-data /path/to/your/static/folder
+```
+
+-x-x-x-
+&nbsp;   
+&nbsp;   
+&nbsp;
+ 
 ### #33 - md5 util linux        
 ####### Tuesday 05 September 2023 09:11:19 PM IST #######    
 
@@ -181,7 +704,7 @@ work with `find --exec` since it is not a full fledged bash environment
 [https://dev.to/stephencweiss/write-your-own-javascript-contracts-and-docstrings-42ho](https://dev.to/stephencweiss/write-your-own-javascript-contracts-and-docstrings-42ho)
 
 - TLDR;
-```
+```javascript
 There’s // for a single line comment.
 
 There’s /* */ for single or multi-line comment.
@@ -209,7 +732,7 @@ Lastly, there’s /** */. This is a description. I think of it as Javascript’s
 &nbsp;   
 &nbsp;
  
-### #44 - google picked up a url for a variable in <script> not sure how       
+### #44 - google picked up a url for a variable in `<script>` not sure how       
 ####### Sunday 27 August 2023 06:56:59 AM IST #######    
 
 - not sure how this happened but google picked up url from code like below:    
@@ -231,7 +754,7 @@ const apiUrl = appDomain+"/lead/api/init-signup";
 ####### Thursday 24 August 2023 07:37:32 PM IST #######    
 
 - generally accepted    
-/wp-content/uploads/<your-project>-scripts/<script-name>.js 
+`/wp-content/uploads/<your-project>-scripts/<script-name>.js`
 
 -x-x-x-
 &nbsp;   
@@ -329,7 +852,7 @@ not working very well for migrations that use --> runpython; dunno why :(
 [https://www.reddit.com/r/berkeley/comments/ly5bce/i_made_a_chrome_extension_that_autofills_job_apps/](https://www.reddit.com/r/berkeley/comments/ly5bce/i_made_a_chrome_extension_that_autofills_job_apps/)
 
 - I am trying to make a plugin for auto-filling workday forms for job applications
-	- 
+	- TODO: complete this
 
 -x-x-x-
 &nbsp;   
@@ -366,7 +889,7 @@ not working very well for migrations that use --> runpython; dunno why :(
 	- `Object.keys(containerEle).find(key => key.includes('__reactProps'));`
 	- there will be onBlur, onChange, onFocus, onKeyPress,... etc implemented on the input element
 	- goto the definition of these functions in order of most likely (as listed above)
-		- find the event that has the .setState({data}) lines
+		- find the event that has the `.setState({data})` lines
 		- and understand the input data required for the function to setState correctly.
 		- one way to observe that is to add break points and trigger the functions as a user
 	- **IMP** events fired on the element have been buffered by react in the latest versions
@@ -501,8 +1024,16 @@ def create_default_warehouses(apps, schema_editor):
 	- the config system is a bit screwed up 
 		- path to config file is hard coded :D weird
 
+- reports quirks
+	- ####### Wednesday 20 September 2023 09:47:15 AM IST #######
+	- sends out an empty report without errors if the `report request` has error :face_palm
+	-  
+
+
 - TODO: generate a UML / ER diagram for the api
 	- look for swagger --> UML
+	- decent attempt
+		- [https://support.daasity.com/knowledge/integration-amazon-seller-central-reports-api-fba-inventory#schema-fba-fulfilled-inventory](https://support.daasity.com/knowledge/integration-amazon-seller-central-reports-api-fba-inventory#schema-fba-fulfilled-inventory)
 
 -x-x-x-
 &nbsp;   
@@ -1123,7 +1654,9 @@ all rolled into one
 
 -x-x-x-
 + choosing to try out [gitea](https://github.com/go-gitea/gitea) first
-
++ docs: [https://docs.gitea.com/](https://docs.gitea.com/) 
++ features: [https://docs.gitea.com/#features](https://docs.gitea.com/#features)
++ extensions and plugins: [https://gitea.com/gitea/awesome-gitea](https://gitea.com/gitea/awesome-gitea)
 
 -x-x-x-
 
