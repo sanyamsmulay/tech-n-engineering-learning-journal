@@ -196,6 +196,7 @@ continued from:
 - install:
 	- git
 	- nvm - wget script and run
+		- store script locally, help if reinstall is required
 	- through snap / app store - vlc, gimp, vscode, inkscape, obs-studio, 
 	remmina, slack, zoom
 	- through flatpak - chrome
