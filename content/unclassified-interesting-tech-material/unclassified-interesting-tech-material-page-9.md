@@ -232,7 +232,9 @@ continued from:
 		- remember last and use that to login next time (helps with update restarts)
 		- GRUB_DEFAULT=saved
 		- GRUB_SAVEDEFAULT=true
-	- 
+	- java, gradle 
+		- java: apt install
+		- gradle: manual install (https://gradle.org/install/)[https://gradle.org/install/]
 
 
 &nbsp;   
@@ -1581,6 +1583,13 @@ location / {
   try_files $uri /index.html;
 }
 ```
+
+- when two single page applications need to be combined
+	- [https://stackoverflow.com/questions/50810022/cant-get-two-single-page-applications-to-run-together-on-one-server-using-nginx](https://stackoverflow.com/questions/50810022/cant-get-two-single-page-applications-to-run-together-on-one-server-using-nginx)
+
+- some links for vue specific case
+	- [https://stackoverflow.com/questions/49072584/vue-router-nginx-and-direct-link](https://stackoverflow.com/questions/49072584/vue-router-nginx-and-direct-link)
+	
 
 -x-x-x-
 &nbsp;   

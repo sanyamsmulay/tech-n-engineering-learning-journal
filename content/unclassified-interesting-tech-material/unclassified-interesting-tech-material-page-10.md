@@ -20,6 +20,46 @@ continued from:
 
 
 
+### #97- Resolving spring boot properties using the AWS Parameter Store     
+####### Wed Jan 24 07:42:13 PM IST 2024 #######     
+
+- [https://rieckpil.de/resolving-spring-boot-properties-using-the-aws-parameter-store-ssm/](https://rieckpil.de/resolving-spring-boot-properties-using-the-aws-parameter-store-ssm/)
+- [https://zhangran1.medium.com/spring-boot-with-aws-parameter-store-and-aws-secret-manager-a45131bf9ac8](https://zhangran1.medium.com/spring-boot-with-aws-parameter-store-and-aws-secret-manager-a45131bf9ac8)
+- amazing articles both of them 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #98- git connection over ssh - debugging     
+####### Wed Jan 24 07:42:13 PM IST 2024 #######     
+
+- [https://askubuntu.com/questions/336907/really-verbose-way-to-test-git-connection-over-ssh](https://askubuntu.com/questions/336907/really-verbose-way-to-test-git-connection-over-ssh)
+- good test is to test the ssh access itself
+- `ssh -v`
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #98- ssh file and folder permissions    
+####### Wed Jan 24 07:42:13 PM IST 2024 #######     
+
+- very well written article on the topic:
+- [https://frankindev.com/2020/11/26/permissions-for-.ssh-folder-and-key-files/](https://frankindev.com/2020/11/26/permissions-for-.ssh-folder-and-key-files/)
+- quoted:
+
+```bash
+sudo chmod 700 ~/.ssh
+sudo chmod 644 ~/.ssh/id_example.pub
+sudo chmod 600 ~/.ssh/id_example
+```
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #99- Black screen after logout    
 ####### Tue Jan 23 08:43:32 PM IST 2024 #######     
 
