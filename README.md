@@ -18,7 +18,8 @@
 - take care of warning in the theme project
 	- `####### Fri Jan 26 05:33:04 PM IST 2024 #######`
 
-+ table of contents - remove sticky position - hopefully from the child project and not the theme libray project
++ table of contents
+	- get more space for the scroll-bar 
 
 + links without text associated, render with font-colour black, change to blue
 
