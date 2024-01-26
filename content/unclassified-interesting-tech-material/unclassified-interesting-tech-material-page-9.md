@@ -975,7 +975,7 @@ Lastly, there’s /** */. This is a description. I think of it as Javascript’s
 &nbsp;   
 &nbsp;
  
-### #44 - google picked up a url for a variable in <script> not sure how       
+### #44 - google picked up a url for a variable in `<script>` not sure how       
 ####### Sunday 27 August 2023 06:56:59 AM IST #######    
 
 - not sure how this happened but google picked up url from code like below:    
@@ -997,7 +997,7 @@ const apiUrl = appDomain+"/lead/api/init-signup";
 ####### Thursday 24 August 2023 07:37:32 PM IST #######    
 
 - generally accepted    
-/wp-content/uploads/<your-project>-scripts/<script-name>.js 
+`/wp-content/uploads/<your-project>-scripts/<script-name>.js` 
 
 -x-x-x-
 &nbsp;   
@@ -1132,7 +1132,7 @@ not working very well for migrations that use --> runpython; dunno why :(
 	- `Object.keys(containerEle).find(key => key.includes('__reactProps'));`
 	- there will be onBlur, onChange, onFocus, onKeyPress,... etc implemented on the input element
 	- goto the definition of these functions in order of most likely (as listed above)
-		- find the event that has the .setState({data}) lines
+		- find the event that has the `.setState({data})` lines
 		- and understand the input data required for the function to setState correctly.
 		- one way to observe that is to add break points and trigger the functions as a user
 	- **IMP** events fired on the element have been buffered by react in the latest versions

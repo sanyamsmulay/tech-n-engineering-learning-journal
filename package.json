@@ -16,7 +16,7 @@
     "gatsby": "^5.9.0",
     "gatsby-plugin-disqus": "^1.2.6",
     "gatsby-plugin-google-gtag": "^5.9.0",
-    "gatsby-theme-replica": "../../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica/gatsby-theme-replica-v0.0.1.tgz",
+    "gatsby-theme-replica": "../base_gatsby_blog_github_theme/gatsby-theme-replica/gatsby-theme-replica",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-node": "^10.9.1"
