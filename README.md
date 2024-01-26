@@ -1,9 +1,24 @@
 # My technology and engineering learning journal
 
 
+### build steps
+
+- install yarn globally or locally in 'parent directory' say: `projects`
+	- `npm install yarn`
+- `mkdir base_gatsby_blog_github_theme; cd $_`
+- clone plugin project [https://github.com/sanyamsmulay/gatsby-theme-replica](https://github.com/sanyamsmulay/gatsby-theme-replica)
+	- inside the plugin project run `yarn install`
+- clone this project
+	- inside: run `yarn install`
+	- to get a development version: `yarn develop`
+	
 ### TODO:
 
-+ table of contents - remove sticky position - hopefully from thechild project and not the theme libray project
+
+- take care of warning in the theme project
+	- `####### Fri Jan 26 05:33:04 PM IST 2024 #######`
+
++ table of contents - remove sticky position - hopefully from the child project and not the theme libray project
 
 + links without text associated, render with font-colour black, change to blue
 
