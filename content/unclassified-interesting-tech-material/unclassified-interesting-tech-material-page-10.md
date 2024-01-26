@@ -9,7 +9,7 @@ category: software-dev
 
 
 continued from:  
-[unclassified interesting tech material page 9](unclassified-interesting-tech-material-page-9.md)
+[unclassified interesting tech material page 9](/2023/05/10/unclassified-interesting-tech-material/unclassified-interesting-tech-material-page-9/)
 
 ---
 
