@@ -20,6 +20,70 @@ continued from:
 
 
 
+### #93- get/clone all repos for an org - github      
+####### Tue Feb 27 10:57:49 PM IST 2024 #######     
+
+- Get a token from github
+- Send curl request to github 
+```curl 
+  curl -L \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer $GITHUB_TOKEN" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/orgs/digbicode/repos?type=all&per_page=50&page=1
+```
+  
+- Store the json in a file
+- Use the json to construct a yaml in the vcstool compatible format
+- Add a virtual env for python - activate
+- Install vcs with pip
+- Run `vcs import < compatible.yaml` file
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #94- Launch a mac from an image     
+####### Wed Jan 24 07:42:13 PM IST 2024 #######     
+
+- TODO: nothing worth note so far, find out more
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #95- 12 factor app - criteria     
+####### Wed Jan 24 07:42:13 PM IST 2024 #######     
+
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #96- yarn cache local packages - need a better solution     
+####### Wed Jan 24 07:42:13 PM IST 2024 #######     
+
+- source [https://medium.com/hackernoon/node-js-yarning-for-local-packages-9a7970edea7](https://medium.com/hackernoon/node-js-yarning-for-local-packages-9a7970edea7)
+- development workflow:
+
+```bash 
+## add package
+yarn add path/to/code/my-npm-module
+
+## Remove the package and clean local cache
+yarn remove my-npm-mdule
+yarn cache clean
+
+## Re-install it
+yarn add path/to/code/my-npm-module
+```
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #97- Resolving spring boot properties using the AWS Parameter Store     
 ####### Wed Jan 24 07:42:13 PM IST 2024 #######     
 
