@@ -20,6 +20,17 @@ continued from:
 
 
 
+### #92- infra as code - options      
+####### Wed Feb 28 05:30:19 PM IST 2024 #######     
+
+- Pulumi - [https://www.pulumi.com/docs/concepts/how-pulumi-works/](https://www.pulumi.com/docs/concepts/how-pulumi-works/)
+	- multi-cloud support - AWS, Azure, Google Cloud, etc
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #93- get/clone all repos for an org - github      
 ####### Tue Feb 27 10:57:49 PM IST 2024 #######     
 

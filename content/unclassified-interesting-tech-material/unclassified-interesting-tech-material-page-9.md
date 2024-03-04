@@ -235,6 +235,11 @@ continued from:
 	- java, gradle 
 		- java: apt install
 		- gradle: manual install (https://gradle.org/install/)[https://gradle.org/install/]
+	- postgres server:
+		 - `sudo apt install postgresql-server-dev-15`
+		 - I generally like to keep the server down at startup
+		 - `sudo systemctl disable postgresql.service`
+	- 
 
 
 &nbsp;   
