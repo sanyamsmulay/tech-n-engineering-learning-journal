@@ -503,6 +503,7 @@ If it is an old disk, it could be 512b blocks or maybe 2k, depending on disk siz
 
 - [https://devops.com/scrum-cancer-linux-6-5-richixbw/](https://devops.com/scrum-cancer-linux-6-5-richixbw/)
 - agree with the article
+- "Scrum is not for developers; it’s another tool for managers to feel they are in control."
 
 &nbsp;   
 &nbsp;   
