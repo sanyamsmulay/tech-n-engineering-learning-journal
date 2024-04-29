@@ -464,6 +464,9 @@ If it is an old disk, it could be 512b blocks or maybe 2k, depending on disk siz
 
 - handy pattern for concatenating stdio and error or any other streams too 
 
+- limit recursion depth 
+	- `find . -maxdepth 1 -type d -exec ls -ld "{}" \;`
+
 &nbsp;   
 &nbsp;   
 &nbsp;

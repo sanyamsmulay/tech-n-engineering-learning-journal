@@ -18,6 +18,240 @@ continued from:
 
 
 
+### #74- reattaching a process to terminal       
+####### Sun Apr 28 05:41:49 PM IST 2024 #######     
+
+- reptyr 
+	- does not work in every case
+	- [https://github.com/nelhage/reptyr](https://github.com/nelhage/reptyr)
+- [https://www.baeldung.com/linux/running-process-reattach#:~:text=Reattach%20Using%20reptyr,to%20the%20process%20by%20reconnecting.](https://www.baeldung.com/linux/running-process-reattach#:~:text=Reattach%20Using%20reptyr,to%20the%20process%20by%20reconnecting.)
+	- TODO: try out again, did not work the first time
+- [https://stackoverflow.com/questions/715751/attach-to-a-processes-output-for-viewing](https://stackoverflow.com/questions/715751/attach-to-a-processes-output-for-viewing)
+- [https://www.baeldung.com/linux/attach-terminal-detached-process](https://www.baeldung.com/linux/attach-terminal-detached-process)
+- [https://unix.stackexchange.com/questions/31824/how-do-i-attach-a-terminal-to-a-detached-process](https://unix.stackexchange.com/questions/31824/how-do-i-attach-a-terminal-to-a-detached-process) 
+- 
+- nothing conclusive yet
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #75- docker / virtual machines / containers alternates       
+####### Sun Apr 28 05:41:49 PM IST 2024 #######     
+
+- list: [https://www.cloudzero.com/blog/docker-alternatives/](https://www.cloudzero.com/blog/docker-alternatives/)
+	- TODO: explore
+- list: [https://spacelift.io/blog/docker-alternatives](https://spacelift.io/blog/docker-alternatives)
+	- TODO: explore
+- need OCI 
+	- builders: buildah
+	- container registry: 
+	- runtime env: runc, containerd, 
+	- orchestration: kubernetes
+- qemu/kvm, libvirt --> combo
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #76- adding a volume to ec2 instance       
+####### Sun Apr 28 12:45:14 PM IST 2024 #######     
+
+- [https://docs.aws.amazon.com/ebs/latest/userguide/ebs-using-volumes.html](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-using-volumes.html)
+- device name patterns on linux aws instances:
+	- [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html)
+	- [https://docs.aws.amazon.com/ebs/latest/userguide/nvme-ebs-volumes.html](https://docs.aws.amazon.com/ebs/latest/userguide/nvme-ebs-volumes.html)
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #77- state-space as attention alternate in LLMs       
+####### Sun Apr 28 12:45:14 PM IST 2024 #######     
+
+- [https://www.datacamp.com/tutorial/introduction-to-the-mamba-llm-architecture](https://www.datacamp.com/tutorial/introduction-to-the-mamba-llm-architecture)
+- seems promising
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #77- passwordless sudo      
+####### Sun Apr 28 12:45:14 PM IST 2024 #######     
+
+- general sudo user creation 
+- [https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu)
+```
+sudo adduser <username>
+sudo adduser <username> sudo
+
+```
+- [https://timonweb.com/devops/how-to-enable-passwordless-sudo-for-a-specific-user-in-linux/](https://timonweb.com/devops/how-to-enable-passwordless-sudo-for-a-specific-user-in-linux/)
+```
+#Edit sudoers file: 
+sudo nano /etc/sudoers
+#Find a line which contains includedir /etc/sudoers.d
+#Below that line add: 
+username ALL=(ALL) NOPASSWD: ALL
+#where username is your passwordless sudo username; Save your changes
+```
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #78- GPU Monitors      
+####### Fri Apr 26 12:04:46 AM IST 2024 #######     
+
+- Great thread: 
+	- [https://askubuntu.com/questions/387594/how-to-measure-gpu-usage](https://askubuntu.com/questions/387594/how-to-measure-gpu-usage)
+- nvidia-smi - decent experience 
+- intel-gpu-tools - decent experience
+- conky - general cpu + gpu monitor
+- nvtop 
+- general monitoring tool: [Glances](https://github.com/nicolargo/glances)
+- for other platforms:
+- [https://www.cyberciti.biz/open-source/command-line-hacks/linux-gpu-monitoring-and-diagnostic-commands/](https://www.cyberciti.biz/open-source/command-line-hacks/linux-gpu-monitoring-and-diagnostic-commands/)
+- gpustat 
+- nvitop - python
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #79- Process Managers      
+####### Mon Apr 22 05:26:42 PM IST 2024 #######     
+
+- pm2 
+- supervisor
+	- [https://michael.stapelberg.ch/posts/2024-01-17-systemd-indefinite-service-restarts/](https://michael.stapelberg.ch/posts/2024-01-17-systemd-indefinite-service-restarts/)
+- systemd
+	- [https://systemd.io/](https://systemd.io/)
+	- [https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files](https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files)
+- some scripts:
+	- [https://smarden.org/runit/](https://smarden.org/runit/)
+	- [http://www.fefe.de/minit/](http://www.fefe.de/minit/)
+- c++
+	- [https://mmonit.com/monit/](https://mmonit.com/monit/)
+	- source: [https://bitbucket.org/tildeslash/monit/src/master/](https://bitbucket.org/tildeslash/monit/src/master/)
+	- this is the first one I would like to  try
+	- 
+- just bash:
+	- [https://stackoverflow.com/a/697064](https://stackoverflow.com/a/697064)
+	- 
+	```
+	until myserver; do
+    echo "Server 'myserver' crashed with exit code $?.  Respawning.." >&2
+    sleep 1
+	done
+	```
+	
+	Or to be able to stop it:
+	```
+	trap 'kill $(jobs -p)' EXIT; until myserver & wait; do
+		echo "ldap proxy crashed with exit code $?. Respawning.." >&2
+		sleep 1
+	done
+	```
+	- 
+	```
+	crontab -e
+	```
+	Then add a rule to start your monitor script:
+	```
+	@reboot /usr/local/bin/myservermonitor
+	```
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #80- screen to run a long running command      
+####### Tue Apr 16 04:06:34 PM IST 2024 #######     
+
+- [https://superuser.com/questions/454907/how-to-execute-a-command-in-screen-and-detach](https://superuser.com/questions/454907/how-to-execute-a-command-in-screen-and-detach)
+- complete thread is interesting
+- [https://superuser.com/a/454909](https://superuser.com/a/454909)
+- [https://superuser.com/a/1142911](https://superuser.com/a/1142911)
+```
+screen -dm sleep 10
+
+To run multiple commands, try:
+screen -dm bash -c "sleep 10; myscript.sh"
+
+Please note that when a program terminates, screen (per default) kills the window that contained it.
+If you don't want your session to get killed after script is finished, add exec sh at the end, e.g.:
+
+screen -dm bash -c 'sleep 5; exec sh'
+
+To list all your sessions, try:
+screen -list
+
+In order to start new session in background with name 'sleepy'
+screen -S sleepy -dm sleep 60
+
+In order to kill 'sleepy' session
+screen -S sleepy -X quit   
+```
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #81- video compression basics      
+####### Tue Apr 16 02:02:24 PM IST 2024 #######     
+
+- [https://www.youtube.com/watch?v=QoZ8pccsYo4](https://www.youtube.com/watch?v=QoZ8pccsYo4)
+- intra-frame 
+	- remove information not visible to the naked eye
+- inter-frame
+	- express the next frame as a diff - saves a lot when most of the frame does not change
+- frame by frame compression
+- block motion estimation
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #81- columnar databases      
+####### Mon Apr  8 08:45:39 PM IST 2024 #######     
+
+- [https://www.youtube.com/watch?v=8KGVFB3kVHQ](https://www.youtube.com/watch?v=8KGVFB3kVHQ)
+- good indexing and aggregation and some specifics of data analytics
+- always goes back to my quote:
+	- store data with retrieval in mind :)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #81- neural networks      
+####### Mon Apr  8 07:23:27 PM IST 2024 #######     
+
+- [https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+- gpt, trasnformers and attention
+	- [https://www.youtube.com/watch?v=wjZofJX0v4M](https://www.youtube.com/watch?v=wjZofJX0v4M)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #81- what does linux OS do when it runs out of memory      
+####### Mon Apr  8 06:17:21 PM IST 2024 #######     
+
+- [https://www.youtube.com/watch?v=Cm3-6cOwICU](https://www.youtube.com/watch?v=Cm3-6cOwICU)
+- processes killed by law:
+	- process memory / process runtime
+	- processes taking up memory very fast are killed
+	- good to know when you want to deal with large memory processes
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #82- postegres architecture - storage on disk     
 ####### Thu Apr  4 07:34:21 PM IST 2024 #######     
 
@@ -122,13 +356,19 @@ The keyboard shortcut to simulate clicking on the Use Current Pages button is Al
 &nbsp;   
 &nbsp;
 
-### #86- snakemake orchestration          
 ### #86- integrating sentry for php+code-igniter to catch all errors           
 ####### Wed Apr  3 01:10:45 AM IST 2024 #######      
 
 - override the base exceptions class of code igniter - log to sentry there 
 - [https://www.codeigniter.com/user_guide/general/errors.html#logging-exceptions](https://www.codeigniter.com/user_guide/general/errors.html#logging-exceptions)
 - latest version have very good ways of doing this 
+- a good example of overriding the base exception class for sending email  [https://github.com/mikedfunk/CodeIgniter-Email-PHP-Errors/blob/master/application/core/MY_Exceptions.php](https://github.com/mikedfunk/CodeIgniter-Email-PHP-Errors/blob/master/application/core/MY_Exceptions.php)
+- Custom class example:[https://www.codeigniter.com/user_guide/general/errors.html#custom-exception-handlers](https://www.codeigniter.com/user_guide/general/errors.html#custom-exception-handlers)
+- logging exceptions example by overriding base exception class: [https://www.codeigniter.com/user_guide/general/errors.html#logging-exceptions](https://www.codeigniter.com/user_guide/general/errors.html#logging-exceptions)
+- logging: [https://codeigniter4.github.io/CodeIgniter4/general/logging.html](https://codeigniter4.github.io/CodeIgniter4/general/logging.html)
+- code igniter architecture: [https://codeigniter.com/userguide3/overview/appflow.html](https://codeigniter.com/userguide3/overview/appflow.html)
+- general example for extending base classes: [https://codeigniter4.github.io/CodeIgniter4/extending/core_classes.html#extending-core-classes](https://codeigniter4.github.io/CodeIgniter4/extending/core_classes.html#extending-core-classes)
+
 
 &nbsp;   
 &nbsp;   
@@ -173,6 +413,21 @@ The keyboard shortcut to simulate clicking on the Use Current Pages button is Al
 	- this is **async** --> nobody tells this upfront
 	- [https://stackoverflow.com/questions/50156206/source-bash-profile-do-not-works-inside-a-bash-script](https://stackoverflow.com/questions/50156206/source-bash-profile-do-not-works-inside-a-bash-script)
 	- inside the script - 
+- bash command in interactive mode:
+	- if you need the .bashrc to setup the environment and then execute a script 
+	- start an interactive session:    
+	```bash -i </path/to/script-file``` 
+	- [https://stackoverflow.com/a/74250010](https://stackoverflow.com/a/74250010)
+	- OR:
+	- If you add the -i option to your hashbang(s) it will specify that the script runs in interactive mode
+	- [https://unix.stackexchange.com/a/569447](https://unix.stackexchange.com/a/569447)
+	- ` #!/bin/bash -i ` 
+	- sequentially running bash scripts:
+	- [https://stackoverflow.com/questions/58526460/sequentially-run-multiple-bash-scripts](https://stackoverflow.com/questions/58526460/sequentially-run-multiple-bash-scripts)
+- bash script accept arguments:
+	- very good starter: 
+	- [https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
+	- 
 
 &nbsp;   
 &nbsp;   
@@ -219,6 +474,7 @@ The keyboard shortcut to simulate clicking on the Use Current Pages button is Al
 	- turns out, we were looking in the wrong direction
 	- the process went to sleep as the bash session that invoked the command disconnected
 	- so just run it inside a screen :D 
+	- and detach from the screen: [https://superuser.com/a/1548574](https://superuser.com/a/1548574)
 	- dumb stuff
 
 to try:
@@ -262,6 +518,11 @@ to try:
 	- [boto python](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html)
 		- why is it called boto ? - after the boto dolphin in the Amazon forest
 	- mostly can interact with any AWS system !
+	- [aws simple systems manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html)
+		- good for system maintenance tasks
+		- can scale to thousands of agents in ec2 machines
+		- runs as an agent on an instance
+	
 
 &nbsp;   
 &nbsp;   
@@ -280,6 +541,8 @@ to try:
 - grafana:
 	- [https://grafana.com/blog/2022/05/31/grafana-for-business-intelligence-how-grafana-labs-uses-dashboards-for-more-than-observability-data/](https://grafana.com/blog/2022/05/31/grafana-for-business-intelligence-how-grafana-labs-uses-dashboards-for-more-than-observability-data/)
 	- public dashboards you can play around with: [https://play.grafana.org/dashboards](https://play.grafana.org/dashboards)
+- Looker studio
+- 
 
 &nbsp;   
 &nbsp;   
