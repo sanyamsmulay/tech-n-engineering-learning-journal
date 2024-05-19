@@ -18,6 +18,55 @@ continued from:
 
 
 
+### #70- python hot-reload       
+####### Wed May 15 02:23:25 AM IST 2024 #######     
+
+- jurigged - did not work as expected
+	- [https://github.com/breuleux/jurigged](https://github.com/breuleux/jurigged)
+- py-hot-reload
+	- []()
+- watchdog / watchmedo
+	- [https://pypi.org/project/watchdog/](https://pypi.org/project/watchdog/)
+	- not able to filter events, say, only modified events
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #71- serverless native       
+####### Sun May  5 03:16:08 PM IST 2024 #######     
+
+- [https://aws.github.io/chalice/index.html](https://aws.github.io/chalice/index.html)
+- write and deploy directly to AWS serverless
+- I don't get the motivation for this though, TODO: find out
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #72- mock AWS services for testing       
+####### Sun May  5 03:16:08 PM IST 2024 #######     
+
+- [https://docs.getmoto.org/en/latest/index.html](https://docs.getmoto.org/en/latest/index.html)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #73- AWS - observability and monitoring       
+####### Sun May  5 03:16:08 PM IST 2024 #######     
+
+- [https://aws-observability.github.io/observability-best-practices/guides/ec2/ec2-monitoring/#unified-cloudwatch-agent](https://aws-observability.github.io/observability-best-practices/guides/ec2/ec2-monitoring/#unified-cloudwatch-agent)
+- [https://docs.aws.amazon.com/wellarchitected/latest/management-and-governance-guide/observability.html](https://docs.aws.amazon.com/wellarchitected/latest/management-and-governance-guide/observability.html)
+- [https://aws.amazon.com/marketplace/solutions/devops/observability-and-monitoring](https://aws.amazon.com/marketplace/solutions/devops/observability-and-monitoring)
+- [https://docs.aws.amazon.com/whitepapers/latest/aws-caf-operations-perspective/observability.html](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-operations-perspective/observability.html)
+- [https://docs.aws.amazon.com/wellarchitected/latest/management-and-governance-guide/aws-observability-tools.html](https://docs.aws.amazon.com/wellarchitected/latest/management-and-governance-guide/aws-observability-tools.html)
+- []()
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #74- reattaching a process to terminal       
 ####### Sun Apr 28 05:41:49 PM IST 2024 #######     
 
@@ -548,12 +597,23 @@ to try:
 &nbsp;   
 &nbsp;
 
-### #92- infra as code - options      
+### #92- infrastructure as code - options      
 ####### Wed Feb 28 05:30:19 PM IST 2024 #######     
 
 - Pulumi - [https://www.pulumi.com/docs/concepts/how-pulumi-works/](https://www.pulumi.com/docs/concepts/how-pulumi-works/)
 	- multi-cloud support - AWS, Azure, Google Cloud, etc
-
+- Troposphere [https://github.com/cloudtools/troposphere](https://github.com/cloudtools/troposphere) 
+	- from config to aws cloud formation json 
+- Ansible: [https://github.com/ansible/ansible](https://github.com/ansible/ansible)
+- Terraform: [https://github.com/hashicorp/terraform](https://github.com/hashicorp/terraform)
+- Spectre: [https://docs.sceptre-project.org/latest/](https://docs.sceptre-project.org/latest/)
+	- config ---> cloud formation 
+- Cloud Formation: [https://aws.amazon.com/cloudformation/](https://aws.amazon.com/cloudformation/)
+	- AWS native tool for infra as code
+- puppet - checf - ansible [https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/](https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/) 
+- pulumi - terraform
+	- [https://medium.com/datamindedbe/pulumi-vs-terraform-choosing-your-iac-tool-6d17b5222545](https://medium.com/datamindedbe/pulumi-vs-terraform-choosing-your-iac-tool-6d17b5222545)
+- 
 
 &nbsp;   
 &nbsp;   
