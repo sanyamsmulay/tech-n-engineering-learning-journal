@@ -18,6 +18,29 @@ continued from:
 
 
 
+### #88- virtual env for php dependencies management       
+####### Thu Jun 13 03:45:43 PM IST 2024 #######     
+
+- [https://github.com/virtphp/virtphp](https://github.com/virtphp/virtphp)
+	- approx 500 stars, worth trying out
+- requirements / dependencies for a project:
+	- [https://getcomposer.org/doc/01-basic-usage.md](https://getcomposer.org/doc/01-basic-usage.md)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #89- open vpn on ubuntu 23.10 mantic minotaur       
+####### Wed May 15 02:23:25 AM IST 2024 #######     
+
+- ssh through open vpn  
+[https://superuser.com/questions/1103158/how-to-configure-ssh-to-connect-through-an-openvpn](https://superuser.com/questions/1103158/how-to-configure-ssh-to-connect-through-an-openvpn)
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #70- python hot-reload       
 ####### Wed May 15 02:23:25 AM IST 2024 #######     
 
