@@ -239,7 +239,23 @@ continued from:
 		 - `sudo apt install postgresql-server-dev-15`
 		 - I generally like to keep the server down at startup
 		 - `sudo systemctl disable postgresql.service`
-	- 
+	- android studio - for adb and other tools and may be java 
+		- [https://developer.android.com/studio/install](https://developer.android.com/studio/install)
+		- install libraries: `sudo apt-get install libc6-i386 libncurses6 libstdc++6-i386-cross lib32z1 libbz2-1.0`
+		- enable hardware acceleration with kvm
+		- `sudo apt install cpu-checker`
+		- `egrep -c '(vmx|svm)' /proc/cpuinfo` # should be > 1
+		- `sudo kvm-ok`
+		- `sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils`
+	- adb install and setup
+		- can run with sudo 
+		- setting current user to use it without sudo:
+		- 
+	- after 24.04 upgrade
+		- new issues: [https://extensions.gnome.org/extension/5282/alttab-scroll-workaround/](https://extensions.gnome.org/extension/5282/alttab-scroll-workaround/)
+		- only partially solves it
+		- switching between: slack and chrome still has the issue
+		- may be I can add to the extension.
 
 
 &nbsp;   
@@ -257,7 +273,6 @@ continued from:
 - grafana agent - inspired by terraform
 - many log stores supported - like cloud watch, etc. there are lots
 - good plugin ecosystem 
-- 
 
 
 &nbsp;   

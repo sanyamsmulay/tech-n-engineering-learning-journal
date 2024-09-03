@@ -18,6 +18,66 @@ continued from:
 
 
 
+### #81- almost like Onco's chatbot - Swiggy's dynamic UI framework         
+####### Tue Sep  3 04:29:18 PM IST 2024 #######     
+
+- [https://bytes.swiggy.com/a-deep-dive-into-dynamic-widget-swiggys-server-driven-ui-system-92cdc3b16ec6](https://bytes.swiggy.com/a-deep-dive-into-dynamic-widget-swiggys-server-driven-ui-system-92cdc3b16ec6)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #82- remove script tags and contents from html         
+####### Tue Aug 27 02:32:23 PM IST 2024 #######     
+
+- [https://stackoverflow.com/questions/6659351/removing-all-script-tags-from-html-with-js-regular-expression](https://stackoverflow.com/questions/6659351/removing-all-script-tags-from-html-with-js-regular-expression)
+```
+/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script\s*>/gi
+```
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #83- measuring developer productivity        
+####### Fri Jul  5 08:40:19 PM IST 2024 #######     
+
+- What to measure really ?
+- Effort > Output > Outcome > Impact cycle
+	- getting measurements early on is easier (Effort, Output)
+	- but that changes behaviour - mostly to game the system
+	- these cannot be measured in isolation
+	- but attribution of impact is hard
+
+- [https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity](https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #84- docker to run gui applications       
+####### Tue Jun 25 10:58:37 PM IST 2024 #######     
+
+- good to know that it is possible now
+- [https://medium.com/geekculture/run-a-gui-software-inside-a-docker-container-dce61771f9](https://medium.com/geekculture/run-a-gui-software-inside-a-docker-container-dce61771f9)
+
+- seems like there is a lot of curiosity about this:
+[https://www.google.com/search?q=docker+gui+with+wayland&oq=docker+gui+with+wayland](https://www.google.com/search?q=docker+gui+with+wayland&oq=docker+gui+with+wayland)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #85- java build tip       
+####### Tue Jun 25 06:16:07 PM IST 2024 #######     
+
+- if build errors have mention missing classes that are not remotely related to your project
+- likely cause is gradle / java version mismatch
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #88- virtual env for php dependencies management       
 ####### Thu Jun 13 03:45:43 PM IST 2024 #######     
 
@@ -119,8 +179,9 @@ continued from:
 	- builders: buildah
 	- container registry: 
 	- runtime env: runc, containerd, 
-	- orchestration: kubernetes
+	- deployment/orchestration: podman, kubernetes
 - qemu/kvm, libvirt --> combo
+- LXC: [https://linuxcontainers.org/](https://linuxcontainers.org/)
 
 &nbsp;   
 &nbsp;   
