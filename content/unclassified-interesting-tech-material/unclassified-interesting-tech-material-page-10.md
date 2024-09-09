@@ -18,6 +18,17 @@ continued from:
 
 
 
+### #80- battery percentage for connected bluetooth device     
+####### Tue Sep  3 04:29:18 PM IST 2024 #######     
+
+- [https://askubuntu.com/questions/1117563/check-bluetooth-headphones-battery-status-in-linux](https://askubuntu.com/questions/1117563/check-bluetooth-headphones-battery-status-in-linux)
+- was an issue earlier, glad to see this fixed
+- solved by default
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #81- almost like Onco's chatbot - Swiggy's dynamic UI framework         
 ####### Tue Sep  3 04:29:18 PM IST 2024 #######     
 
@@ -144,7 +155,7 @@ continued from:
 - [https://aws.amazon.com/marketplace/solutions/devops/observability-and-monitoring](https://aws.amazon.com/marketplace/solutions/devops/observability-and-monitoring)
 - [https://docs.aws.amazon.com/whitepapers/latest/aws-caf-operations-perspective/observability.html](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-operations-perspective/observability.html)
 - [https://docs.aws.amazon.com/wellarchitected/latest/management-and-governance-guide/aws-observability-tools.html](https://docs.aws.amazon.com/wellarchitected/latest/management-and-governance-guide/aws-observability-tools.html)
-- []()
+
 
 &nbsp;   
 &nbsp;   
@@ -176,12 +187,31 @@ continued from:
 - list: [https://spacelift.io/blog/docker-alternatives](https://spacelift.io/blog/docker-alternatives)
 	- TODO: explore
 - need OCI 
-	- builders: buildah
+	- builders: buildah, oci-builder
+		- buildah - build OCI compliant containers with any language from scratch
+		- [https://devtodevops.com/podman-build-vs-buildah/](https://devtodevops.com/podman-build-vs-buildah/)
+		- 
 	- container registry: 
 	- runtime env: runc, containerd, 
-	- deployment/orchestration: podman, kubernetes
+	- deployment/orchestration: podman, kubernetes, openTofu
+	- podman vs docker: [https://devtodevops.com/podman-vs-docker/](https://devtodevops.com/podman-vs-docker/)
+	- buildah example: [https://www.linode.com/docs/guides/using-buildah-oci-images/](https://www.linode.com/docs/guides/using-buildah-oci-images/)
+	- buildah example: [https://opensource.com/article/22/2/build-your-own-container-linux-buildah](https://opensource.com/article/22/2/build-your-own-container-linux-buildah)
+	- podaman: [https://docs.podman.io/en/latest/Introduction.html](https://docs.podman.io/en/latest/Introduction.html)
+	- container terminology: [https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#basic_vocabulary](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#basic_vocabulary)
+	- 
 - qemu/kvm, libvirt --> combo
 - LXC: [https://linuxcontainers.org/](https://linuxcontainers.org/)
+- containers from scratch:
+	-[https://medium.com/inside-sumup/containers-from-scratch-part-1-b719effd1e0a](https://medium.com/inside-sumup/containers-from-scratch-part-1-b719effd1e0a)
+	- namespaces, userspaces, cgroups 	
+- [https://earthly.dev/blog/docker-vs-buildah-vs-kaniko/](https://earthly.dev/blog/docker-vs-buildah-vs-kaniko/)
+- self hosted container registry:
+	- [https://www.reddit.com/r/selfhosted/comments/x6ftf1/self_hosted_container_registry/](https://www.reddit.com/r/selfhosted/comments/x6ftf1/self_hosted_container_registry/)
+	- gitea: [https://gitea.com/actions/upload-artifact#number-of-artifacts](https://gitea.com/actions/upload-artifact#number-of-artifacts)
+	- gitlab - on-prem
+	- docker - [https://hub.docker.com/_/registry](https://hub.docker.com/_/registry)
+- 
 
 &nbsp;   
 &nbsp;   
