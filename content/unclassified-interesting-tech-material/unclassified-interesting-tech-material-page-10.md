@@ -104,8 +104,17 @@ continued from:
 ### #89- open vpn on ubuntu 23.10 mantic minotaur       
 ####### Wed May 15 02:23:25 AM IST 2024 #######     
 
+- the openvpn3 package for this package source does not work
+- fixed in the next version for noble numbat 
 - ssh through open vpn  
 [https://superuser.com/questions/1103158/how-to-configure-ssh-to-connect-through-an-openvpn](https://superuser.com/questions/1103158/how-to-configure-ssh-to-connect-through-an-openvpn)
+- so this one works:
+[https://openvpn.net/cloud-docs/tutorials/configuration-tutorials/connectors/operating-systems/linux/tutorial--learn-to-install-and-control-the-openvpn-3-client.html](https://openvpn.net/cloud-docs/tutorials/configuration-tutorials/connectors/operating-systems/linux/tutorial--learn-to-install-and-control-the-openvpn-3-client.html) 
+- for improving speeds
+[https://openvpn.net/as-docs/openvpn-dco.html](https://openvpn.net/as-docs/openvpn-dco.html)
+	- linux kernel module dedicated to vpn performance improvement
+	
+- 
 
 
 &nbsp;   

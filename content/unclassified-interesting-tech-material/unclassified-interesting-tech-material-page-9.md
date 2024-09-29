@@ -220,6 +220,7 @@ continued from:
 		- oh-my-zsh -> script install
 		 
 	- system monitor widget - gnome 
+		- most reliable and feature complete for me: [https://extensions.gnome.org/extension/3010/system-monitor-next/](https://extensions.gnome.org/extension/3010/system-monitor-next/)
 		- has some pre-req packages that need installation
 		- (https://extensions.gnome.org/away/https%253A%252F%252Fgithub.com%252Fparadoxxxzero%252Fgnome-shell-system-monitor-applet)[https://extensions.gnome.org/away/https%253A%252F%252Fgithub.com%252Fparadoxxxzero%252Fgnome-shell-system-monitor-applet]
 		- not working
