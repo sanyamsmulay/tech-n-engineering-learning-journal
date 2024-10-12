@@ -16,7 +16,91 @@ continued from:
 ## Unclassified trinkets
 
 
+### #72- find running processes in a terminal      
+####### Sat Oct 12 05:52:28 PM IST 2024 #######     
 
+- useful to check before trying to close a terminal
+- [https://askubuntu.com/a/808615](https://askubuntu.com/a/808615)
+- `ps T`
+- 
+
+
+
+### #73- sqlite data browsers options     
+####### Sat Oct 12 05:52:28 PM IST 2024 #######     
+
+- [https://github.com/pawelsalawa/sqlitestudio](https://github.com/pawelsalawa/sqlitestudio)
+- [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
+	- has better search than other options
+
+
+### #74- django data migration from one database to another      
+####### Fri Oct 11 08:09:25 PM IST 2024 #######     
+
+- django-admin (manage.py)
+- dumpdata and loaddata pair
+- best to output as jsonl for large datasets
+	- can be processed line by line as each line represents a row in the db 
+
+
+### #75- buildah - getting started      
+####### Fri Oct 11 05:57:12 PM IST 2024 #######     
+
+- create a base ubuntu image
+	- [https://www.dbi-services.com/blog/creating-a-customized-postgresql-container-using-buildah/](https://www.dbi-services.com/blog/creating-a-customized-postgresql-container-using-buildah/)
+- use the above container as the base container for rest of the images
+
+### #76- podman - post installation      
+####### Fri Oct 11 05:57:12 PM IST 2024 #######     
+
+- need to add registries for search `[registries.search]`
+- [https://gist.github.com/isomorphisms/3114ab86960656a729a6b4653001aae2](https://gist.github.com/isomorphisms/3114ab86960656a729a6b4653001aae2)
+- like above
+- should have been a part of the install instructions
+- more details if the registries have auth:
+	- [https://devtodevops.com/podman-add-registry/](https://devtodevops.com/podman-add-registry/)
+- TODO: try below
+	- [https://stackoverflow.com/a/51116615](https://stackoverflow.com/a/51116615)
+- issues:
+	- unable to view or edit content from userspace outside the container:
+	- [https://podman.io/blogs/2018/10/03/podman-remove-content-homedir.html](https://podman.io/blogs/2018/10/03/podman-remove-content-homedir.html)
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #77- psql tips and tricks     
+####### Fri Oct 11 05:57:12 PM IST 2024 #######     
+
+- running commands via psql
+- if the string is very long/complex in bash `psql -c 'SQL COMMANDS;'`
+- `echo $LONG_QUERY_STR | psql`
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #78- very large line in a file     
+####### Thu Oct 10 08:55:49 PM IST 2024 #######     
+
+- best so far `less -S`
+- able to handle a file with 2GB data in 1 line
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #79- battery percentage for connected bluetooth device     
+####### Tue Sep  3 04:29:18 PM IST 2024 #######     
+
+- [https://askubuntu.com/questions/1117563/check-bluetooth-headphones-battery-status-in-linux](https://askubuntu.com/questions/1117563/check-bluetooth-headphones-battery-status-in-linux)
+- was an issue earlier, glad to see this fixed
+- solved by default
+
+&nbsp;   
+&nbsp;   
+&nbsp;
 
 ### #80- battery percentage for connected bluetooth device     
 ####### Tue Sep  3 04:29:18 PM IST 2024 #######     
@@ -205,6 +289,7 @@ continued from:
 	- deployment/orchestration: podman, kubernetes, openTofu
 	- podman vs docker: [https://devtodevops.com/podman-vs-docker/](https://devtodevops.com/podman-vs-docker/)
 	- buildah example: [https://www.linode.com/docs/guides/using-buildah-oci-images/](https://www.linode.com/docs/guides/using-buildah-oci-images/)
+	- buildah example: [https://www.dbi-services.com/blog/creating-a-customized-postgresql-container-using-buildah/](https://www.dbi-services.com/blog/creating-a-customized-postgresql-container-using-buildah/)
 	- buildah example: [https://opensource.com/article/22/2/build-your-own-container-linux-buildah](https://opensource.com/article/22/2/build-your-own-container-linux-buildah)
 	- podaman: [https://docs.podman.io/en/latest/Introduction.html](https://docs.podman.io/en/latest/Introduction.html)
 	- container terminology: [https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#basic_vocabulary](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#basic_vocabulary)

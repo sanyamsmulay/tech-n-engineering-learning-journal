@@ -1754,6 +1754,13 @@ location / {
 	- emerge - seems the most complete of all
 	- will try to contribute if required - hopefully
 	- 
+- ####### Tue Oct  8 06:13:21 PM IST 2024 #######
+	- diagramming tool
+	- I would like a infra as code plugin to generate the source for one of these visualisation platforms
+	- say: pulumi to plantuml
+	- list of architecture visualisation platforms
+	- [https://www.youtube.com/watch?v=jCd6XfWLZsg](https://www.youtube.com/watch?v=jCd6XfWLZsg)
+
 -x-x-x-
 &nbsp;   
 &nbsp;   
