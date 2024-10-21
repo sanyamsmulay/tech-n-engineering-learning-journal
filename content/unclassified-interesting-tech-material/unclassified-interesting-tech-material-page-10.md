@@ -16,15 +16,34 @@ continued from:
 ## Unclassified trinkets
 
 
-### #72- find running processes in a terminal      
+### #71- find running processes in a terminal      
 ####### Sat Oct 12 05:52:28 PM IST 2024 #######     
 
 - useful to check before trying to close a terminal
 - [https://askubuntu.com/a/808615](https://askubuntu.com/a/808615)
 - `ps T`
-- 
 
 
+### #72- configure promtail      
+####### Sat Oct 19 12:46:14 PM IST 2024 #######     
+
+- promtail config:
+	- [https://grafana.com/docs/loki/latest/send-data/promtail/configuration/](https://grafana.com/docs/loki/latest/send-data/promtail/configuration/)
+- running promtail 
+	- [https://grafana.com/docs/loki/latest/send-data/promtail/cloud/ec2/](https://grafana.com/docs/loki/latest/send-data/promtail/cloud/ec2/)
+- only I personally prefer to run it as a service in the user space
+- so my recommended process is:
+	- download the executable - (go!)
+		- zip from the github builds
+		- unzip
+	- make executable for the user running the application
+	- add a config file
+		- have a wait for 30 seconds
+		- ExecStartPre=/usr/bin/sleep 30
+		- to allow for other services to start logging
+	- dry-run
+	- if all works out well
+	- set it up as a service
 
 ### #73- sqlite data browsers options     
 ####### Sat Oct 12 05:52:28 PM IST 2024 #######     
