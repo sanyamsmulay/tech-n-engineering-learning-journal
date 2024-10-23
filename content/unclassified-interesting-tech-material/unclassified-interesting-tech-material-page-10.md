@@ -16,6 +16,13 @@ continued from:
 ## Unclassified trinkets
 
 
+### #70- disk and network stats on terminal linux      
+####### Wed Oct 23 04:53:00 PM IST 2024 #######     
+
+- `iotop` for disk usage stats
+- `iftop` for network usage stats
+	- `nethogs` never tried it yet
+
 ### #71- find running processes in a terminal      
 ####### Sat Oct 12 05:52:28 PM IST 2024 #######     
 
