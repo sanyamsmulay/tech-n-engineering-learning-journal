@@ -16,6 +16,79 @@ continued from:
 ## Unclassified trinkets
 
 
+### #66- ERD generation for postgres db     
+####### Wed Dec 25 08:44:37 AM IST 2024 #######     
+
+- pgAdmin4 has a good tool for ERD generation
+- [https://www.enterprisedb.com/blog/create-erd-pgadmin-4#section-1](https://www.enterprisedb.com/blog/create-erd-pgadmin-4#section-1)
+- [https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html](https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html)
+- works well
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #66- SIEM solution candidates     
+####### Sat Dec 21 06:12:55 PM IST 2024 #######     
+
+- Sumo Logic
+	- [https://www.sumologic.com/pricing/](https://www.sumologic.com/pricing/)
+- Open  source - self hosted
+	- [https://github.com/aws-samples/siem-on-amazon-opensearch-service](https://github.com/aws-samples/siem-on-amazon-opensearch-service)
+- AWS recommended:
+	-  [https://aws.amazon.com/marketplace/solutions/security/siem?aws-marketplace-cards.sort-by=item.additionalFields.sortOrder&aws-marketplace-cards.sort-order=asc](https://aws.amazon.com/marketplace/solutions/security/siem?aws-marketplace-cards.sort-by=item.additionalFields.sortOrder&aws-marketplace-cards.sort-order=asc)
+- Most are 1k USD per month in general
+	- Sumo Logic is the most modular
+- Comparisons:
+	- [https://www.cyberlands.io/newrelicvsarcsight](https://www.cyberlands.io/newrelicvsarcsight)
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #67- note taking - Obsidian         
+####### Mon Oct 28 11:27:49 PM IST 2024 #######     
+
+- [https://www.youtube.com/watch?v=5ht8NYkU9wQ](https://www.youtube.com/watch?v=5ht8NYkU9wQ)
+- TODO: explore once
+- although not so different from what I am doing currently
+- [https://www.youtube.com/watch?v=DgKI4hZ4EEI](https://www.youtube.com/watch?v=DgKI4hZ4EEI)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #68- grex command - get regex to cover all inputs         
+####### Mon Oct 28 11:27:49 PM IST 2024 #######     
+
+- grex
+- [https://www.youtube.com/shorts/_3aj2tRpQz4](https://www.youtube.com/shorts/_3aj2tRpQz4)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #69- get postges running queries         
+####### Wed Oct 23 04:53:00 PM IST 2024 #######     
+
+- [https://repost.aws/knowledge-center/rds-postgresql-running-queries](https://repost.aws/knowledge-center/rds-postgresql-running-queries)
+You can also modify this command to view the list of running queries. The queries are ordered by when the connections were established:
+
+```SELECT * FROM pg_stat_activity ORDER BY backend_start;```
+If the xact_start column value is null, then there's no transaction opened in that session:
+
+```SELECT * FROM pg_stat_activity ORDER BY xact_start;```
+Or, view the same list of running queries ordered by when the last query started:
+
+```SELECT * FROM pg_stat_activity ORDER BY query_start;```
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #70- disk and network stats on terminal linux      
 ####### Wed Oct 23 04:53:00 PM IST 2024 #######     
 
@@ -30,6 +103,9 @@ continued from:
 - [https://askubuntu.com/a/808615](https://askubuntu.com/a/808615)
 - `ps T`
 
+&nbsp;   
+&nbsp;   
+&nbsp;
 
 ### #72- configure promtail      
 ####### Sat Oct 19 12:46:14 PM IST 2024 #######     
@@ -52,6 +128,10 @@ continued from:
 	- if all works out well
 	- set it up as a service
 
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #73- sqlite data browsers options     
 ####### Sat Oct 12 05:52:28 PM IST 2024 #######     
 
@@ -59,6 +139,9 @@ continued from:
 - [https://sqlitebrowser.org/](https://sqlitebrowser.org/)
 	- has better search than other options
 
+&nbsp;   
+&nbsp;   
+&nbsp;
 
 ### #74- django data migration from one database to another      
 ####### Fri Oct 11 08:09:25 PM IST 2024 #######     
@@ -68,6 +151,9 @@ continued from:
 - best to output as jsonl for large datasets
 	- can be processed line by line as each line represents a row in the db 
 
+&nbsp;   
+&nbsp;   
+&nbsp;
 
 ### #75- buildah - getting started      
 ####### Fri Oct 11 05:57:12 PM IST 2024 #######     
@@ -184,6 +270,12 @@ continued from:
 
 - seems like there is a lot of curiosity about this:
 [https://www.google.com/search?q=docker+gui+with+wayland&oq=docker+gui+with+wayland](https://www.google.com/search?q=docker+gui+with+wayland&oq=docker+gui+with+wayland)
+
+- on wayland 
+[https://unix.stackexchange.com/questions/330366/how-can-i-run-a-graphical-application-in-a-container-under-wayland](https://unix.stackexchange.com/questions/330366/how-can-i-run-a-graphical-application-in-a-container-under-wayland)
+
+- run a VNC server in docker and expose the GUI - very clever
+[https://stackoverflow.com/questions/16296753/can-you-run-gui-applications-in-a-linux-docker-container](https://stackoverflow.com/questions/16296753/can-you-run-gui-applications-in-a-linux-docker-container)
 
 &nbsp;   
 &nbsp;   
@@ -305,13 +397,14 @@ continued from:
 	- TODO: explore
 - list: [https://spacelift.io/blog/docker-alternatives](https://spacelift.io/blog/docker-alternatives)
 	- TODO: explore
+- list [https://www.geeksforgeeks.org/docker-alternatives/](https://www.geeksforgeeks.org/docker-alternatives/)
 - need OCI 
-	- builders: buildah, oci-builder
+	- builders: buildah, oci-builder, buildkit
 		- buildah - build OCI compliant containers with any language from scratch
 		- [https://devtodevops.com/podman-build-vs-buildah/](https://devtodevops.com/podman-build-vs-buildah/)
-		- 
+		- docker build uses buildkit from version 23 [https://github.com/moby/buildkit](https://github.com/moby/buildkit)
 	- container registry: 
-	- runtime env: runc, containerd, 
+	- runtime env: runc, runc, crun, runv 
 	- deployment/orchestration: podman, kubernetes, openTofu
 	- podman vs docker: [https://devtodevops.com/podman-vs-docker/](https://devtodevops.com/podman-vs-docker/)
 	- buildah example: [https://www.linode.com/docs/guides/using-buildah-oci-images/](https://www.linode.com/docs/guides/using-buildah-oci-images/)
@@ -319,7 +412,8 @@ continued from:
 	- buildah example: [https://opensource.com/article/22/2/build-your-own-container-linux-buildah](https://opensource.com/article/22/2/build-your-own-container-linux-buildah)
 	- podaman: [https://docs.podman.io/en/latest/Introduction.html](https://docs.podman.io/en/latest/Introduction.html)
 	- container terminology: [https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#basic_vocabulary](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction#basic_vocabulary)
-	- 
+	- CRI-O vs docker
+	- Containerd vs docker
 - qemu/kvm, libvirt --> combo
 - LXC: [https://linuxcontainers.org/](https://linuxcontainers.org/)
 - containers from scratch:
@@ -331,6 +425,8 @@ continued from:
 	- gitea: [https://gitea.com/actions/upload-artifact#number-of-artifacts](https://gitea.com/actions/upload-artifact#number-of-artifacts)
 	- gitlab - on-prem
 	- docker - [https://hub.docker.com/_/registry](https://hub.docker.com/_/registry)
+- ZeroVM: [https://www.zerovm.org/principles.html](https://www.zerovm.org/principles.html)
+	- a good candidate to try out
 - 
 
 &nbsp;   
@@ -847,6 +943,8 @@ to try:
 - puppet - checf - ansible [https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/](https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/) 
 - pulumi - terraform
 	- [https://medium.com/datamindedbe/pulumi-vs-terraform-choosing-your-iac-tool-6d17b5222545](https://medium.com/datamindedbe/pulumi-vs-terraform-choosing-your-iac-tool-6d17b5222545)
+- OpenTofu: [https://opentofu.org/docs/intro/](https://opentofu.org/docs/intro/)
+	- [https://www.pulumi.com/docs/iac/concepts/vs/opentofu/](https://www.pulumi.com/docs/iac/concepts/vs/opentofu/)
 - 
 
 &nbsp;   
