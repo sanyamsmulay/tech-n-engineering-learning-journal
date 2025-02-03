@@ -16,6 +16,113 @@ continued from:
 ## Unclassified trinkets
 
 
+### #58- Google Chrome extension samples      
+####### Mon Feb  3 10:49:42 PM IST 2025 #######     
+
+- [https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/tabs/inspector](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/tabs/inspector)
+- Very good sample library.
+- It can be a starter for all sorts of plugins
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #59- A primer on sftp / ftp      
+####### Fri Jan 24 02:40:49 PM IST 2025 #######     
+
+- [https://linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files/](https://linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files/)
+- [https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
+	- digital ocean tutorials are really very good
+	- all the generally useful stuff in one page
+- [https://filezilla-project.org/](https://filezilla-project.org/)
+	- good GUI product, used it a while back
+	- does the job
+	- fairly stable
+- ftp has some funny business about using two ports, very interested in knowing the thought process behind this design decision
+	- [https://www.geeksforgeeks.org/linux-sftp-command-with-example/](https://www.geeksforgeeks.org/linux-sftp-command-with-example/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #60- AWS Trasnfer Family - a well made product      
+####### Thu Jan 23 09:05:07 PM IST 2025 #######     
+
+
+- addresses all the pain points so well
+- [https://aws.amazon.com/blogs/aws/new-aws-transfer-for-sftp-fully-managed-sftp-service-for-amazon-s3/](https://aws.amazon.com/blogs/aws/new-aws-transfer-for-sftp-fully-managed-sftp-service-for-amazon-s3/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #61- Gatsby get sitemap styling     
+####### Sun Jan 19 04:25:10 PM IST 2025 #######     
+
+- [https://www.felixparadis.com/posts/pretty-sitemaps-with-gatsby-plugin-sitemap-and-xsl-stylesheets/](https://www.felixparadis.com/posts/pretty-sitemaps-with-gatsby-plugin-sitemap-and-xsl-stylesheets/)	
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #62- Web Assembly     
+####### Sat Jan 18 01:49:10 PM IST 2025 #######     
+
+- Web assembly from various languages:
+	- [https://webassembly.org/getting-started/developers-guide/](https://webassembly.org/getting-started/developers-guide/)
+- most convenient for someone from javascript background:
+	- [https://www.assemblyscript.org/](https://www.assemblyscript.org/)
+	- [https://www.assemblyscript.org/introduction.html#from-a-webassembly-perspective](https://www.assemblyscript.org/introduction.html#from-a-webassembly-perspective)
+	- [https://webassembly.org/docs/use-cases/](https://webassembly.org/docs/use-cases/)
+	
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #63- Chrome Plugin/Extension     
+####### Sat Jan 18 01:49:54 PM IST 2025 #######     
+
+- [https://developer.chrome.com/docs/extensions/get-started](https://developer.chrome.com/docs/extensions/get-started)
+- Chrome tabs and windows API:
+	- [https://developer.chrome.com/docs/extensions/get-started/tutorial/popup-tabs-manager](https://developer.chrome.com/docs/extensions/get-started/tutorial/popup-tabs-manager)
+	- [https://developer.chrome.com/docs/extensions/reference/api/tabs#method-query](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-query)
+	- [https://dev.to/rimutaka/chrome-extension-with-rust-and-wasm-by-example-5cbh](https://dev.to/rimutaka/chrome-extension-with-rust-and-wasm-by-example-5cbh)
+	- [https://stackoverflow.com/questions/49611290/using-webassembly-in-chrome-extension](https://stackoverflow.com/questions/49611290/using-webassembly-in-chrome-extension)
+	- 
+- Web Assembly for Chrome Extension
+	- [https://github.com/inflatablegrade/Extension-with-WASM](https://github.com/inflatablegrade/Extension-with-WASM)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #64- Tips for managing white spaces HTML, CSS     
+####### Sun Jan 12 05:36:21 PM IST 2025 #######     
+
+- [https://www.dhiwise.com/post/react-line-break-techniques-for-better-text-formatting](https://www.dhiwise.com/post/react-line-break-techniques-for-better-text-formatting)
+- white-space styling property !
+- very well thought feature
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #65- SSL certificates with Let's Encrypt     
+####### Mon Dec 30 07:15:02 PM IST 2024 #######     
+
+- install certbot as a snap / apt package
+- generate the certificates for ngnix
+- add to your site
+- setup automated refresh in 90 days
+- Links:
+	- [https://letsencrypt.org/getting-started/](https://letsencrypt.org/getting-started/)
+	- [https://certbot.eff.org/instructions?ws=nginx&os=snap](https://certbot.eff.org/instructions?ws=nginx&os=snap)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #66- ERD generation for postgres db     
 ####### Wed Dec 25 08:44:37 AM IST 2024 #######     
 
@@ -23,7 +130,8 @@ continued from:
 - [https://www.enterprisedb.com/blog/create-erd-pgadmin-4#section-1](https://www.enterprisedb.com/blog/create-erd-pgadmin-4#section-1)
 - [https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html](https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html)
 - works well
-
+- bit slow and can do better with picking up description of each field from the db
+- postgres should have filed meta-data like description
 
 &nbsp;   
 &nbsp;   
@@ -940,7 +1048,7 @@ to try:
 	- config ---> cloud formation 
 - Cloud Formation: [https://aws.amazon.com/cloudformation/](https://aws.amazon.com/cloudformation/)
 	- AWS native tool for infra as code
-- puppet - checf - ansible [https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/](https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/) 
+- puppet - chef - ansible [https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/](https://www.veritis.com/blog/chef-vs-puppet-vs-ansible-comparison-of-devops-management-tools/) 
 - pulumi - terraform
 	- [https://medium.com/datamindedbe/pulumi-vs-terraform-choosing-your-iac-tool-6d17b5222545](https://medium.com/datamindedbe/pulumi-vs-terraform-choosing-your-iac-tool-6d17b5222545)
 - OpenTofu: [https://opentofu.org/docs/intro/](https://opentofu.org/docs/intro/)
@@ -979,6 +1087,11 @@ to try:
 ####### Wed Jan 24 07:42:13 PM IST 2024 #######     
 
 - TODO: nothing worth note so far, find out more
+- [https://itsfoss.com/macos-linux-vm/](https://itsfoss.com/macos-linux-vm/)
+	- seems to be pretty simple
+- Made possible with:
+	- [https://github.com/quickemu-project/quickemu](https://github.com/quickemu-project/quickemu)
+	- 
 
 &nbsp;   
 &nbsp;   
