@@ -8,6 +8,16 @@ category: software-dev
 # Android phones - page 1
 
 
+### #96- remotely control your android phone - without root      
+####### Sat Feb  8 01:53:29 AM IST 2025 #######     
+
+- [https://github.com/Genymobile/scrcpy](https://github.com/Genymobile/scrcpy)
+- [https://kdeconnect.kde.org/](https://kdeconnect.kde.org/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #97- dual boot android      
 ####### Sat Jul 20 03:49:55 PM IST 2024 #######     
 

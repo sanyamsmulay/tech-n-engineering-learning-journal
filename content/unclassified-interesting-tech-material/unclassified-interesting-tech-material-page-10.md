@@ -16,10 +16,102 @@ continued from:
 ## Unclassified trinkets
 
 
+### #49- Model training with LORA and ollama       
+####### Tue Feb 18 03:52:33 AM IST 2025 #######     
+
+- 
+- [https://www.youtube.com/watch?v=pxhkDaKzBaY](https://www.youtube.com/watch?v=pxhkDaKzBaY)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #50- get all columns of a postgres table       
+####### Sat Feb 15 11:46:28 PM IST 2025 #######     
+
+- Tested below, works
+- [https://dba.stackexchange.com/a/22368](https://dba.stackexchange.com/a/22368)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #52- PDF merging in linux       
+####### Sat Feb 15 10:26:18 PM IST 2025 #######     
+
+- CLI: pdfunite
+	- super simple
+	- mostly included with distros
+- [https://www.omglinux.com/merge-pdf-files-on-linux/](https://www.omglinux.com/merge-pdf-files-on-linux/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #53- Run models with Ollama       
+####### Thu Feb 13 01:52:03 PM IST 2025 #######     
+
+- Ollama 
+	- [https://github.com/ollama/ollama](https://github.com/ollama/ollama)
+	- running models on Raspberry Pi [https://www.youtube.com/watch?v=Y2ldwg8xsgE](https://www.youtube.com/watch?v=Y2ldwg8xsgE)
+- Raspberry Pi running LLMs with OLLMA
+	- [https://www.youtube.com/watch?v=Y2ldwg8xsgE](https://www.youtube.com/watch?v=Y2ldwg8xsgE)
+- Agents with Ollama
+	- [https://github.com/premthomas/Ollama-and-Agents?tab=readme-ov-file](https://github.com/premthomas/Ollama-and-Agents?tab=readme-ov-file)
+		- crewai - tools, Agent, Task, Crew
+		- langchain - tools 
+	- [https://www.digitalocean.com/community/tutorials/local-ai-agents-with-langgraph-and-ollama](https://www.digitalocean.com/community/tutorials/local-ai-agents-with-langgraph-and-ollama)
+		- lang graph 
+		- nvidia-smi
+	- [https://www.youtube.com/watch?v=pxhkDaKzBaY](https://www.youtube.com/watch?v=pxhkDaKzBaY)
+		- ollama 
+		- langflow
+- GUI competitors:
+	- [https://lmstudio.ai/docs](https://lmstudio.ai/docs)
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #55- Ionic app development - without any framework      
+####### Thu Feb 13 01:52:03 PM IST 2025 #######     
+
+- Sample implementation:
+- [https://github.com/dolthead/ionic6-sans-framework/blob/main/index.html](https://github.com/dolthead/ionic6-sans-framework/blob/main/index.html)
+	- issue: app build is not configured
+	- TO TRY: may be start with a framework starter(say, react) and strip it down to the minimum requirements and insert the above examples
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #56- Android Emulator on Linux as a container      
+####### Wed Feb 12 08:31:27 PM IST 2025 #######     
+
+- Open source:
+- [https://waydro.id/](https://waydro.id/)
+- Repo: [https://github.com/waydroid/waydroid](https://github.com/waydroid/waydroid)
+- Licensing is slightly complicated, due to various components needed to make it work
+- but an awesome project none the less
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #57- Build web UI for ML models user testing      
+####### Sun Feb  9 05:02:34 PM IST 2025 #######     
+
+- [https://github.com/gradio-app/gradio](https://github.com/gradio-app/gradio)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #58- Google Chrome extension samples      
 ####### Mon Feb  3 10:49:42 PM IST 2025 #######     
 
-- [https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/tabs/inspector](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/tabs/inspector)
+-  [https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/tabs/inspector](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api-samples/tabs/inspector)
 - Very good sample library.
 - It can be a starter for all sorts of plugins
 
