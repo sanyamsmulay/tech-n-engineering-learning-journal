@@ -16,6 +16,227 @@ continued from:
 ## Unclassified trinkets
 
 
+### #43- AI code generation challenges in real life workflows       
+####### Thu May  1 04:51:12 PM IST 2025 #######     
+
+- [https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
+
+	
+
+### #44- Running Windows 10 on a VM in Linux      
+####### Tue Apr  1 05:13:52 PM IST 2025 #######     
+
+- I want to run Prepare3D on the Windows instance
+- Options:
+- KVM and QEMU 
+	- [https://nmanzi.com/posts/windows-guest-on-linux-mint/](https://nmanzi.com/posts/windows-guest-on-linux-mint/)
+	- I am expecting that this will not work well, at Prepare3D and graphics acceleration level
+	- But trying it first
+	- This is a better guide for KVM installation.
+		- [https://phoenixnap.com/kb/ubuntu-install-kvm](https://phoenixnap.com/kb/ubuntu-install-kvm)
+- using virtual box
+	- [https://itsfoss.com/install-windows-10-virtualbox-linux/](https://itsfoss.com/install-windows-10-virtualbox-linux/)
+	- This is a very interesting way of a doing this, using the existing windows drive for the virtual box drive.
+	- [https://opensource.com/article/21/1/virtualbox-windows-linux](https://opensource.com/article/21/1/virtualbox-windows-linux)
+
+- Using incus:
+	- [https://blog.simos.info/how-to-run-a-windows-virtual-machine-on-incus-on-linux/](https://blog.simos.info/how-to-run-a-windows-virtual-machine-on-incus-on-linux/)
+	- LXD - community alternative 
+- The windows downloaded itself is taking so long that I think I will end up installing all the available options.
+	
+
+### #45- Using paraquet file format for large datasets with SQLite     
+####### Tue Apr  1 05:13:52 PM IST 2025 #######     
+
+- [https://tech.marksblogg.com/billion-nyc-taxi-rides-sqlite-parquet-hdfs.html](https://tech.marksblogg.com/billion-nyc-taxi-rides-sqlite-parquet-hdfs.html)
+- very well written, great comparison
+- a very good experiment 
+
+- a good pros and cons with paarquet and rdbms
+- frequent writes and updates become a problem with Paraquet
+- [https://stackoverflow.com/questions/57994758/why-parquet-over-some-rdbms-like-postgres](https://stackoverflow.com/questions/57994758/why-parquet-over-some-rdbms-like-postgres)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #46- Mobbin - design inspiration          
+####### Sat Mar 15 03:06:40 PM IST 2025 #######     
+
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #47- Jira to Excel, Google sheets Integration          
+####### Fri Mar 14 04:05:38 PM IST 2025 #######     
+
+- Only tool that seemed promising and worth the effort for trying out
+	- [https://unito.io/blog/how-to-integrate-google-sheets-and-jira/](https://unito.io/blog/how-to-integrate-google-sheets-and-jira/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #48- AI tools for code generation         
+####### Fri Mar 14 12:33:37 PM IST 2025 #######     
+
+- From text to front end / product
+	- Lovable [https://lovable.dev/](https://lovable.dev/)
+		- [Demo](https://www.youtube.com/watch?v=N7elVVD7crw)
+	- Banani: 
+		- Text to UI
+		- [https://www.figma.com/community/plugin/1362707561583059094/ai-design-copilot-text-to-ui-generator](https://www.figma.com/community/plugin/1362707561583059094/ai-design-copilot-text-to-ui-generator)
+	- Gallelio AI:
+		- Text to UI and front-end code - HTML+Tailwind
+		- [https://www.usegalileo.ai/explore](https://www.usegalileo.ai/explore)
+	- Visily
+		- text, image, sketch  to click through prototype
+		- [https://www.visily.ai/ai-prototype-generator](https://www.visily.ai/ai-prototype-generator)
+		- code generation not available
+	- UIZard
+		- [https://uizard.io/](https://uizard.io/)
+		- same as Visily
+	- UXPilot
+		- 
+	- Codia AI
+		- wireframe to code
+	- Wiregen 
+		- text to wireframe 
+- Code generators / AI pair programmers
+	- Claude Sonnet:
+	- OpenAI
+	- Github Co-pilot
+	- AmazonQ
+	- Gemini
+		- canvas
+		- 
+	- Replit
+		- demo for a real life app
+		- [https://www.youtube.com/watch?v=n5oBmmBkW6A](https://www.youtube.com/watch?v=n5oBmmBkW6A)
+	- Zencoder
+	- CodeComplete 
+	- Cursor
+		- IDE
+		- capabilities / tips: [https://www.youtube.com/shorts/Kr4MGyPXS_0](https://www.youtube.com/shorts/Kr4MGyPXS_0)
+	- list: [https://www.stepsize.com/blog/best-ai-tools-for-software-developers](https://www.stepsize.com/blog/best-ai-tools-for-software-developers)
+	- list: [https://www.pluralsight.com/resources/blog/software-development/generative-ai-code-generation-tools](https://www.pluralsight.com/resources/blog/software-development/generative-ai-code-generation-tools)
+	- list with rating: [https://www.pragmaticcoders.com/resources/ai-developer-tools](https://www.pragmaticcoders.com/resources/ai-developer-tools)
+	- CodyAI 
+		- seems like it has a VS code plugin
+	- Tabnine
+		- the most secure
+		- focus on auto-complete
+	- Mutable AI
+		- also, seems to have a VS code plugin
+	- Codium AI:
+		- Windsurf IDE and code generation
+	- PearAI
+		- code editor, IDE with integrated AI
+	- NinjaTech
+		- IDE with integration for most AI code generators
+	- Keploy
+		- for test writing
+		- [https://keploy.io/blog/community/best-free-ai-code-generators](https://keploy.io/blog/community/best-free-ai-code-generators)
+	- Mintlify Writed:
+		- for writing documentation
+	- Grit.io:
+		- technical debt - 
+		- tech migration 
+		- dependency migration
+	- WhatTheDiff
+		- code review
+	- Bugasura
+		- bug tracking
+		- identification / similarity detection
+	
+- Comparison for working on a fresh project:
+	- [https://medium.com/@xinranma/i-tested-4-ai-tools-to-generate-ui-from-the-same-prompt-0d2113736cce](https://medium.com/@xinranma/i-tested-4-ai-tools-to-generate-ui-from-the-same-prompt-0d2113736cce)
+	- Bolt vs. Cursor vs. Replit vs Lovable:
+		- [https://www.youtube.com/watch?v=Ojk51mNOUow](https://www.youtube.com/watch?v=Ojk51mNOUow)
+		- ranked by user control on code
+		- how technical you need to be to comfortably use a tool
+	- Cursor vs. Windsurf vs. Lovable vs. v0 vs. Bolt vs. Replit
+		- creating a linktree app:
+		- [https://www.youtube.com/watch?v=HSnJrXWETfM](https://www.youtube.com/watch?v=HSnJrXWETfM)
+- Pricing comparison - 
+	- Cursor vs lovable vs vercel vs windsurf
+	- [https://www.youtube.com/watch?v=XcVj8zzK4ss](https://www.youtube.com/watch?v=XcVj8zzK4ss)
+- Comparing for working on a existing project
+	- Cursor vs Claude:
+		- [https://www.youtube.com/watch?v=usDE1z2z_MA](https://www.youtube.com/watch?v=usDE1z2z_MA)
+	- 
+	
+- Trae
+	- IDE that integrates all 
+	- seems to neatly tie everything together
+	- 
+- Ninja Code AI
+	- 
+- Demos:
+	- [https://designwithai.substack.com/p/how-i-built-an-seo-tool-with-ai](https://designwithai.substack.com/p/how-i-built-an-seo-tool-with-ai)
+	- [https://designwithai.substack.com/p/how-i-built-a-tool-from-scratch-with-ai](https://designwithai.substack.com/p/how-i-built-a-tool-from-scratch-with-ai)
+	
+- Notebook LM
+	- get query your knowledge-base
+
+####### Sun Mar 16 01:04:30 AM IST 2025 #######
+- Final try out:
+	- VSCode - as editor
+		- AI as a plugin:
+			- Codeium
+		- Amazon Q plugin - VS Code
+		- Amazon Q CLI plugin
+	- Replit
+		- 
+	- Cursor
+		- 
+		- tips and tricks and feature showcase : [https://www.youtube.com/shorts/Fqi58225Uqg](https://www.youtube.com/shorts/Fqi58225Uqg)
+			- YOLO mode (agent)
+			- with claude-sonnet 3.5
+		- 
+			
+	- Calude Code
+		- [https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)
+	- Windsurf
+		- 
+	- Zencoder
+		- VS Code plugin exists
+		- good features: context aware completion, internet access for API docs etc, multi-mode engagement - chat, search etc..
+	- Code GPT
+		- VS code extension 
+		- various agents from the marketplace that can be used
+		- wrapper on top - mostly builds the prompt for various models from the code base
+		- cons 
+	- UI generators
+		- Lovable
+		- 
+
+####### Sun Mar 30 11:57:37 AM IST 2025 #######
+Comparing prompts for code gen / editing
+- problem at hand: 
+	- Library for streaming changes from postgres to AWS Kinesis:
+	- https://github.com/disneystreaming/pg2k4j.git
+	- lacking the functionality to handle large change sets generated in transactions
+- prompts to try:
+	- very open ended
+		- create a custom parser to generate a stream of slotMessage objects with changeList objects with a maximum of 10 objects in the list 
+		
+	
+	- specific and procedural
+		- convert the output of the getslotmessage function in streamReaderKinesisWriter file to a stream of type SlotMessages
+		- in the getslotmessage function process the bytebuffer msg - using the jackson library 
+	
+	- try highlighting and instructing
+		- process bytebuffer function - pass byte buffer msg directly to getslotmessage function
+		- 
+	- test generation
+		- generate data for inserting 108 entries into one of the test tables in the project and check if slot messages with 10 changes get emitted to kinesis
+&nbsp;   
+&nbsp;   
+&nbsp;
+
 ### #49- Model training with LORA and ollama       
 ####### Tue Feb 18 03:52:33 AM IST 2025 #######     
 
@@ -457,6 +678,33 @@ Or, view the same list of running queries ordered by when the last query started
 	- but attribution of impact is hard
 
 - [https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity](https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity)
+####### Fri Mar 14 02:13:35 PM IST 2025 #######
+- part 2 of the above article:
+	- [https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity-part-2](https://newsletter.pragmaticengineer.com/p/measuring-developer-productivity-part-2)
+
+####### Fri Mar 14 02:07:14 PM IST 2025 #######
+- every non-programmer leader's wet dream:
+	- measure developer productivity
+	- [https://getaugur.ai/](https://getaugur.ai/)
+	
+- I remember reading somewhere: that the 7th circle in hell reserved for Agile creators 
+	- then a good discussion about
+	- Agile works well with low motivation, low ownership and low context teams
+	- and it is a horrible idea for opposite kind of teams, it is just managers making themselves feel better
+	- I remember it to be a forum discussion somewhere
+	- TODO: find the forum discussion / article /  or whatever it was
+- Good cartoon for developer hell: [https://toggl.com/blog/seven-levels-developer-hell](https://toggl.com/blog/seven-levels-developer-hell)
+- Another good humorous take on this hell for programmers: 
+	- [https://medium.com/@alexdh359/agiles-inferno-navigating-the-nine-circles-of-transformation-turmoil-1b97d2cc52ed](https://medium.com/@alexdh359/agiles-inferno-navigating-the-nine-circles-of-transformation-turmoil-1b97d2cc52ed)
+	
+- general bottlenecks I have observed
+	- a complete requirements brief 
+		- when is brief complete ?
+		- no scenario undefined - UI, transition, error message, edge-case
+		- all questions answered 
+	- architecture brief - this is an internal issues
+	- stuck deployments 
+	- writing good quality documentation
 
 &nbsp;   
 &nbsp;   
