@@ -15,13 +15,180 @@ continued from:
 
 ## Unclassified trinkets
 
+### #38- remote desktop setup home network to public networks       
+####### Wed May 28 01:18:33 PM IST 2025 #######     
+
+- servers list:
+	- [https://help.ubuntu.com/community/VNC/Servers](https://help.ubuntu.com/community/VNC/Servers)
+- RDP
+	- 
+- VNC
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #39- using VPN to access home network via a public server       
+####### Wed May 28 01:18:33 PM IST 2025 #######     
+
+
+- setup a private network with wireguard
+	- can be done with openvpn as well
+	- but seems like CPU usage is higher for open VPN
+- best blog so far on this topic:
+	- [https://www.qovery.com/blog/build-your-own-network-with-linux-and-wireguard/](https://www.qovery.com/blog/build-your-own-network-with-linux-and-wireguard/)
+	- Don't need the last part and I think it is not a good idea, security wise
+	- should not forward traffic to local server unless hardened 
+- types of VPN setups
+	- site-to-site vs remote-access
+	- [https://www.fortinet.com/resources/cyberglossary/remote-access-vpn](https://www.fortinet.com/resources/cyberglossary/remote-access-vpn)
+- honourable mentions:
+	- [https://blog.kronis.dev/blog/how-to-publicly-access-your-homelab-behind-nat](https://blog.kronis.dev/blog/how-to-publicly-access-your-homelab-behind-nat) 
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+
+### #40- Weird but useful data structures       
+####### Wed May 28 01:18:33 PM IST 2025 #######     
+
+- ok not weird.
+	- special usecase data structures
+	- inclusive language
+- [https://www.youtube.com/watch?v=6fnmXX8RK0s](https://www.youtube.com/watch?v=6fnmXX8RK0s)
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+
+### #41- getting a blog ready for a non-tech user       
+####### Sat May 10 02:46:37 PM IST 2025 #######     
+
+- Ghost
+	- uses mysql
+	- too opinionated 
+- Python / Django + some postgres or even Sqlite
+	- django-cms
+	- mezzanine
+	- wagtail
+- Mezzanine 
+	- [https://www.youtube.com/watch?v=3I5nrcsy7RI](https://www.youtube.com/watch?v=3I5nrcsy7RI)
+	- turns out, has a simple starter for blogs,
+	- will try mezzanine before wagtail
+	- dev experience
+		- ####### Fri May 23 06:02:28 PM IST 2025 #######
+		- python version lagging behind
+		- not compatible with python3.12
+		- install and run are not user friendly
+		- I think they should add a container environment for development and usage for better dev experience
+- Wagtail
+	- for coders: 
+	- [https://www.youtube.com/watch?v=mbUFWkZAm8w](https://www.youtube.com/watch?v=mbUFWkZAm8w)
+	- [https://docs.wagtail.org/en/stable/getting_started/the_zen_of_wagtail.html](https://docs.wagtail.org/en/stable/getting_started/the_zen_of_wagtail.html)
+	- [create a blog with wagtail](https://www.youtube.com/watch?v=3aVvAGj1joo)
+	- [starter template](https://github.com/pupattan/wagtail-blog-simple)
+	- Demo: [https://github.com/wagtail/bakerydemo](https://github.com/wagtail/bakerydemo)
+		- overkill for a blog
+		- is a very good starter for a generic website
+	- Trying wagtail:
+		- ####### Fri May 23 06:11:56 PM IST 2025 #######
+		- the news app starter is great starting point for a blog
+		- works well with the latest python tools
+		- started using it regularly
+		- the news-template is a good  starting point for almost anything:
+			- [https://github.com/wagtail/news-template](https://github.com/wagtail/news-template)
+			- very good for blog
+		- good documentation available
+			- [https://docs.wagtail.org/en/stable/advanced_topics/third_party_tutorials.html](https://docs.wagtail.org/en/stable/advanced_topics/third_party_tutorials.html)
+			- [https://docs.wagtail.org/en/stable/deployment/under_the_hood.html](https://docs.wagtail.org/en/stable/deployment/under_the_hood.html)
+		- honourable mentions:
+			- Too old: [https://gitlab.com/thelabnyc/wagtail_blog](https://gitlab.com/thelabnyc/wagtail_blog)
+			- [https://github.com/neon-jungle/wagtailnews](https://github.com/neon-jungle/wagtailnews)
+			- [https://github.com/wagtail/wagtail-live](https://github.com/wagtail/wagtail-live)
+		- ecosystem:
+			- [https://github.com/springload/awesome-wagtail?tab=readme-ov-file#bloggingnews](https://github.com/springload/awesome-wagtail?tab=readme-ov-file#bloggingnews)
+			- 
+- django-cms:
+	- looks great as of now
+	- will try this first 
+		- ####### Thu May 15 05:21:01 PM IST 2025 #######
+		- scratch that
+	- [https://djangocms-blog.readthedocs.io/en/latest/index.html](https://djangocms-blog.readthedocs.io/en/latest/index.html)
+	- seems like the one starter to try
+	- but seems like there are no starter templates / projects / databases
+- Bloggy
+	- Seems like a small effort by an individual
+	- but good platform in general
+
+- Odoo
+	- also provides a blog app for django
+	- but has limited features.
+	
+&nbsp;   
+- Nodejs options:
+
+-x-x-x-
+
+- options: [javascript blogging tool with wiswag editor](https://www.reddit.com/r/node/comments/2h4931/whats_a_good_nodejs_based_blogging_platform/)
+- very old post though (11 years)
+
+- did not find anything simple and worthwhile 
+- vibe code it may be ?
+- 
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #41- Postgres, wal2json, pg2k4j saga       
+####### Sat May 10 01:19:49 PM IST 2025 #######     
+
+- So the story is that a Disney library, pg2k4k can be used for maintaining real-time replication of a postgers database to build a real time index.
+- Basically converting database updates into an event-based system.
+- Very handy setup
+- Uses replication slots to read write-ahead-logs, converts them to JSON, publishes to AWS Kinesis and then these events can be used to build an event based system which, processes all the database updates (full CRUD)
+
+- Issue:
+	- It has not been maintained since 5 years. 
+	- Plus there are some issues with the library. 
+	- Example: SSL is difficult to be implemented with the JDBC version the the library has.
+	- The library uses the wal2JSON format-1 which is very unsuitable for large updates:
+		- since it clubs all the updates into one large JSON for transactions.
+		- Format 2 could also be used which writes like a JSON-L, and each event is one line.
+			- The only downside is that transaction information has to be processed slightly differently as compared to format 1.
+
+- some learnings when exploring this issue:
+	- [https://www.crunchydata.com/blog/postgres-wal-files-and-sequuence-numbers](https://www.crunchydata.com/blog/postgres-wal-files-and-sequuence-numbers)
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #42- SDLC Primer       
+####### Thu May  1 04:51:12 PM IST 2025 #######     
+
+- [https://medium.productcoalition.com/a-comprehensive-guide-to-the-software-development-life-cycle-sdlc-15b7892e1d44](https://medium.productcoalition.com/a-comprehensive-guide-to-the-software-development-life-cycle-sdlc-15b7892e1d44)
+- [https://raygun.com/blog/software-development-life-cycle/#sdlc-infographic-modal](https://raygun.com/blog/software-development-life-cycle/#sdlc-infographic-modal)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
 
 ### #43- AI code generation challenges in real life workflows       
 ####### Thu May  1 04:51:12 PM IST 2025 #######     
 
 - [https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
 
-	
+&nbsp;   
+&nbsp;   
+&nbsp;	
 
 ### #44- Running Windows 10 on a VM in Linux      
 ####### Tue Apr  1 05:13:52 PM IST 2025 #######     
@@ -34,6 +201,7 @@ continued from:
 	- But trying it first
 	- This is a better guide for KVM installation.
 		- [https://phoenixnap.com/kb/ubuntu-install-kvm](https://phoenixnap.com/kb/ubuntu-install-kvm)
+	- [https://github.com/quickemu-project/quickemu](https://github.com/quickemu-project/quickemu)
 - using virtual box
 	- [https://itsfoss.com/install-windows-10-virtualbox-linux/](https://itsfoss.com/install-windows-10-virtualbox-linux/)
 	- This is a very interesting way of a doing this, using the existing windows drive for the virtual box drive.
@@ -43,7 +211,10 @@ continued from:
 	- [https://blog.simos.info/how-to-run-a-windows-virtual-machine-on-incus-on-linux/](https://blog.simos.info/how-to-run-a-windows-virtual-machine-on-incus-on-linux/)
 	- LXD - community alternative 
 - The windows downloaded itself is taking so long that I think I will end up installing all the available options.
-	
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
 
 ### #45- Using paraquet file format for large datasets with SQLite     
 ####### Tue Apr  1 05:13:52 PM IST 2025 #######     
@@ -160,13 +331,14 @@ continued from:
 	- Cursor vs. Windsurf vs. Lovable vs. v0 vs. Bolt vs. Replit
 		- creating a linktree app:
 		- [https://www.youtube.com/watch?v=HSnJrXWETfM](https://www.youtube.com/watch?v=HSnJrXWETfM)
+	- Bolt (#1), Cursor (#2), Windsrf (#3), Aid (#4), and Replit (#5)
+		- [https://www.youtube.com/watch?v=WVhJSUtGbYM](https://www.youtube.com/watch?v=WVhJSUtGbYM)
 - Pricing comparison - 
 	- Cursor vs lovable vs vercel vs windsurf
 	- [https://www.youtube.com/watch?v=XcVj8zzK4ss](https://www.youtube.com/watch?v=XcVj8zzK4ss)
 - Comparing for working on a existing project
 	- Cursor vs Claude:
-		- [https://www.youtube.com/watch?v=usDE1z2z_MA](https://www.youtube.com/watch?v=usDE1z2z_MA)
-	- 
+		- [https://www.youtube.com/watch?v=usDE1z2z_MA](https://www.youtube.com/watch?v=usDE1z2z_MA) 
 	
 - Trae
 	- IDE that integrates all 
@@ -180,6 +352,17 @@ continued from:
 	
 - Notebook LM
 	- get query your knowledge-base
+	
+- Neovim
+	- Avante Video - [https://www.youtube.com/watch?v=pVlxaHYJIYM](https://www.youtube.com/watch?v=pVlxaHYJIYM)
+	- Copilot-cmp - https://github.com/zbirenbaum/copilot...
+	- Nithin's Blog - https://nithinbekal.com/posts/copilot...
+	- Code Companion - https://github.com/olimorris/codecomp...
+	- MCPHub - https://github.com/ravitemer/mcphub.n...
+	- Comment.nvim - https://github.com/numToStr/Comment.nvim
+	- Noice - https://github.com/folke/noice.nvim
+	- Neoscroll - https://github.com/karb94/neoscroll.nvim
+
 
 ####### Sun Mar 16 01:04:30 AM IST 2025 #######
 - Final try out:
@@ -188,6 +371,7 @@ continued from:
 			- Codeium
 		- Amazon Q plugin - VS Code
 		- Amazon Q CLI plugin
+		- opinion: not great, very much seems like last generation tech as compared to Cursor/Windsurf
 	- Replit
 		- 
 	- Cursor
@@ -358,7 +542,7 @@ Comparing prompts for code gen / editing
 &nbsp;   
 &nbsp;
 
-### #60- AWS Trasnfer Family - a well made product      
+### #60- AWS Transfer Family - a well made product      
 ####### Thu Jan 23 09:05:07 PM IST 2025 #######     
 
 
