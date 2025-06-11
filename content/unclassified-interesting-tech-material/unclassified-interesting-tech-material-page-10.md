@@ -15,6 +15,31 @@ continued from:
 
 ## Unclassified trinkets
 
+### #36- Building a system image for Mecha Comet      
+####### Tue Jun 10 02:07:07 PM IST 2025 #######     
+
+- [https://linuxcontainers.org/distrobuilder/docs/latest/tutorials/use/](https://linuxcontainers.org/distrobuilder/docs/latest/tutorials/use/)
+	- [https://linuxcontainers.org/distrobuilder/docs/latest/](https://linuxcontainers.org/distrobuilder/docs/latest/) 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+
+### #37- Super light weight inter-process-communication      
+####### Wed May 28 01:18:33 PM IST 2025 #######     
+
+- [Zmq](https://zguide.zeromq.org/docs/chapter1/)
+- has built-in most of the messaging patterns covered 
+- sockets, pub-sub, request-reply, push-pull, etc
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+
+
 ### #38- remote desktop setup home network to public networks       
 ####### Wed May 28 01:18:33 PM IST 2025 #######     
 
@@ -190,7 +215,7 @@ continued from:
 &nbsp;   
 &nbsp;	
 
-### #44- Running Windows 10 on a VM in Linux      
+### #44- Running Windows 10/11 on a VM in Linux      
 ####### Tue Apr  1 05:13:52 PM IST 2025 #######     
 
 - I want to run Prepare3D on the Windows instance
@@ -206,7 +231,10 @@ continued from:
 	- [https://itsfoss.com/install-windows-10-virtualbox-linux/](https://itsfoss.com/install-windows-10-virtualbox-linux/)
 	- This is a very interesting way of a doing this, using the existing windows drive for the virtual box drive.
 	- [https://opensource.com/article/21/1/virtualbox-windows-linux](https://opensource.com/article/21/1/virtualbox-windows-linux)
-
+	- very straight forward
+	- just add the windows drive to the virtual box drive
+	- windows 11
+		- [https://blogs.oracle.com/virtualization/post/install-microsoft-windows-11-on-virtualbox](https://blogs.oracle.com/virtualization/post/install-microsoft-windows-11-on-virtualbox)
 - Using incus:
 	- [https://blog.simos.info/how-to-run-a-windows-virtual-machine-on-incus-on-linux/](https://blog.simos.info/how-to-run-a-windows-virtual-machine-on-incus-on-linux/)
 	- LXD - community alternative 

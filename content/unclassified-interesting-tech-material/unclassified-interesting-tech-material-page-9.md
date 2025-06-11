@@ -1760,7 +1760,8 @@ location / {
 	- say: pulumi to plantuml
 	- list of architecture visualisation platforms
 	- [https://www.youtube.com/watch?v=jCd6XfWLZsg](https://www.youtube.com/watch?v=jCd6XfWLZsg)
-
+	- Chat GPT suggestions:
+		- [https://chatgpt.com/c/67f7fafe-eee4-8008-b69b-121771c221d5](https://chatgpt.com/c/67f7fafe-eee4-8008-b69b-121771c221d5)
 -x-x-x-
 &nbsp;   
 &nbsp;   
