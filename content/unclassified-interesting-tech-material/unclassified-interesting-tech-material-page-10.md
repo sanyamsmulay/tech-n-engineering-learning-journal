@@ -15,6 +15,49 @@ continued from:
 
 ## Unclassified trinkets
 
+### #34- Rust desk setup - windows and linux      
+####### Wed Jun 18 08:27:35 AM IST 2025 #######     
+
+- 
+- on VPN 
+	- enable ip based access
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #34- UFW firewall setup      
+####### Mon Jun 16 10:35:12 AM IST 2025 #######     
+
+- [https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #35- WireGuard setup      
+####### Mon Jun 16 10:35:12 AM IST 2025 #######     
+
+- cute one liner for generating public and private keys
+	- `wg genkey | tee privatekey | wg pubkey | tee publickey`
+- [https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04](https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04)
+- if the routing is being done as a site to site setup:
+	- [https://wiki.teltonika-networks.com/view/Wireguard_Peer_To_Peer_Configuration_example](https://wiki.teltonika-networks.com/view/Wireguard_Peer_To_Peer_Configuration_example)
+
+- if the packets are going to go through the public server
+	- need to enable forwarding and iptables firewall to allow those packets
+	
+- wireguard on windows:
+	- [https://vpncentral.com/wireguard-windows-config/](https://vpncentral.com/wireguard-windows-config/)
+- point to site example and explanation
+	- [https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/](https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/)
+- special shout out to Pro Custodibus
+	- great product fit for security and admin
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
 ### #36- Building a system image for Mecha Comet      
 ####### Tue Jun 10 02:07:07 PM IST 2025 #######     
 
@@ -43,13 +86,57 @@ continued from:
 ### #38- remote desktop setup home network to public networks       
 ####### Wed May 28 01:18:33 PM IST 2025 #######     
 
+- My requirements:
+	- unsupervised, remote desktop access 
+	- secure
+
+
 - servers list:
 	- [https://help.ubuntu.com/community/VNC/Servers](https://help.ubuntu.com/community/VNC/Servers)
 - RDP
-	- 
-- VNC
-	- 
+	- Windows RDP needs a windows pro license
+	- none found
 
+- Mesh central 
+	- apparently the team and thus project was killed by Intel
+	- [https://github.com/Ylianst/MeshCentral](https://github.com/Ylianst/MeshCentral)
+	- looks like the most promising software for my purpose
+	- is nodejs based so would be easily cross platformed
+	- very elaborate 
+
+Options
+- [https://medevel.com/18-remote-desktop/](https://medevel.com/18-remote-desktop/)
+
+- Rust desk
+	- the licensing seems a bit complicated
+	- also, don’t know if the use-case I am thinking of fits
+
+
+- GitHub - miroslavpejic85/p2p: 🖥️ P2P Remote Desktop - Portable, No Configuration or Installation Needed.
+	- promising candidate - but will need some work to make it usable
+	- [https://github.com/miroslavpejic85/p2p#p2p-remote-desktop](https://github.com/miroslavpejic85/p2p#p2p-remote-desktop)
+
+- GitHub - boonkerz/teamscreen: It should be an Teamviewer/Vnc/Something replacement
+	- promising candidate - but will need some work to make it usable
+	- [https://github.com/boonkerz/teamscreen](https://github.com/boonkerz/teamscreen)
+
+VNC options 
+	- Tight VNC
+		- seems chinese in origin and maintenance
+		- will skip
+
+
+	- Tiger VNC
+		- apparently of western origin and maintenance
+		- only xorg xserver support
+		- windows no longer maintained
+
+	- ultra VNC 
+		- seems like a feasible option to try
+	- RealVNC
+		- not open source
+
+	
 &nbsp;   
 &nbsp;   
 &nbsp;	

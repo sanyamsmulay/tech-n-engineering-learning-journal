@@ -1,7 +1,7 @@
 ---
 title: Android Phones - Software and Hardware
 date: 2024-07-10 18:17:10
-tags: [classified, tech]
+tags: [classified, tech, android]
 category: software-dev
 ---
 
