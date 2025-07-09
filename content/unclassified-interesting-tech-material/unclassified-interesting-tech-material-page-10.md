@@ -15,12 +15,222 @@ continued from:
 
 ## Unclassified trinkets
 
+
+### #26- Linux - fetch which process is using a disk or path busy     
+####### Wed Jul  9 10:32:18 AM IST 2025 #######     
+- `lsof <path>`
+- [https://stackoverflow.com/questions/624154/linux-which-process-is-causing-device-busy-when-doing-umount](https://stackoverflow.com/questions/624154/linux-which-process-is-causing-device-busy-when-doing-umount)
+- [https://stackoverflow.com/a/624171](https://stackoverflow.com/a/624171)
+      
+
+
+
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #27- Geany snippets for inserting strings      
+####### Wed Jul  9 10:32:18 AM IST 2025 #######    
+
+- saves a lot of time for repeated strings
+	-  [https://www.geany.org/manual/current/index.html#user-definable-snippets](https://www.geany.org/manual/current/index.html#user-definable-snippets)
+	- [https://wiki.geany.org/snippets/start](https://wiki.geany.org/snippets/start)
+- plugin system is not very user friendly
+	- especially when you want to do some light scripting like this use case
+	
+- my current solution: 
+	- add a snippet for a mdurl: `mdurl=[%cursor%](%cursor%)`
+	- add a keyboard shortcut in the snippets keybindings: `mdurl=<Alt>u`
+	- and move through the cursor points
+
+- useful reads:
+	- [https://stackoverflow.com/questions/53269999/can-i-create-key-binding-for-my-snippet-in-geany](https://stackoverflow.com/questions/53269999/can-i-create-key-binding-for-my-snippet-in-geany)
+	
+- Personal note: I better start learning vim / neo vim
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #28- Upgrading to windows 11     
+####### Wed Jul  9 10:32:18 AM IST 2025 #######    
+- Amazon.in : windows 11 pro 64 bit product key
+	- approx 1k should be the cost
+
+- bypass tpm requirement ?
+	- [https://www.tomshardware.com/how-to/bypass-windows-11-tpm-requirement](https://www.tomshardware.com/how-to/bypass-windows-11-tpm-requirement)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #29- P-25ii canon       
+####### Saturday 05 July 2025 11:05:25 AM IST #######
+
+- https://www.canon-europe.com/support/consumer/products/scanners/imageformula/p-series/imageformula-p-215ii.html?type=download&language=EN&os=all
+- no software for linux, check if the driver can be reverse engineered for linux from the mac drivers
+	- https://sg.canon/en/support/P-215ii/model
+	- https://in.canon/en/support/CC0000047?model=9705B
+	- linux driver depends on an old library 
+	- can try to upgrade when I get time - well not likely soon
+
+- someone got it to work:
+	- https://windowsclosed.blogspot.com/2016/07/p-215ii-in-ubuntu-1404-32bit.html
+- old issues:
+	- https://gitlab.com/sane-project/backends/-/issues/41
+
+- helped get the debug log for canon sane backend:
+	- http://www.sane-project.org/man/sane-canon_dr.5.html
+
+- the insanity of sane and scanner integration:
+	- https://www.linuxfromscratch.org/blfs/view/svn/pst/sane.html
+
+- did not work with VueScan
+	- https://www.hamrick.com/purchase-vuescan.html
+
+- xsane failed to start scanner invalid argument
+	- basically was giving the top and bottom positions not supported by the scanner
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #30- Canon 1130N - auto document feed scanner      
+####### Saturday 05 July 2025 11:17:55 AM IST #######
+
+- fi-faq.pfu.ricoh.com/hc/en-us/articles/15390789234585-SP-1120N-SP-1125N-SP-1130N-SP-1425#linux
+- 1130N - tested - works really well - very good fast scans with ~ 50 per minute when dealing with photos 
+- https://www.fujitsu.com/us/imagesgig5/SP-1120N%20SP-1130N%20Operator's%20Guide.pdf	
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #31- Wake on LAN      
+####### Wed Jul  9 09:55:52 AM IST 2025 #######     
+
+- TODO: find out more
+- test this: [https://rustdesk.com/docs/en/self-host/client-configuration/advanced-settings/](https://rustdesk.com/docs/en/self-host/client-configuration/advanced-settings/)
+- TODO: find out any other way to initiate and send this packet
+	
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #31- Tracepath vs Traceroute      
+####### Wed Jul  9 08:59:24 AM IST 2025 #######     
+
+- short read, well explained
+- [https://www.redhat.com/en/blog/traceroute-tracepath-network-troubleshooting](https://www.redhat.com/en/blog/traceroute-tracepath-network-troubleshooting)
+	
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #32- Trying to build a model Stewart Platform      
+####### Fri Jul  4 09:35:49 PM IST 2025 #######     
+
+- Approach: Buy a kit
+	- Actuonix Motion Devices
+		- [https://www.youtube.com/watch?v=rf9NKQCQ6HY](https://www.youtube.com/watch?v=rf9NKQCQ6HY)
+		- perfectly fits what I was looking to build
+		- also fits the price range I was looking for perfectly
+		- but: their team is working on the product, it is not available for sale yet
+		-
+		- try2: their online store has the required parts individually listed to build this
+		- store: 
+			- actuators: [https://www.actuonix.com/actuators-by-model](https://www.actuonix.com/actuators-by-model)
+			- controllers: [https://www.actuonix.com/control-boards-switches-potentiometers](https://www.actuonix.com/control-boards-switches-potentiometers)
+			- 
+		- asked them to put together a cart / BOM so that I can directly buy it
+		- 
+		- try3: I will try to put together a cart with the required materials 
+	
+
+
+- Approach: Use a software model to represent / animate the platform
+-
+- Approach: Put together some 3d printed parts with off-the shelf motors + actuators
+	
+	- stepper motor driver board:
+		- TB6600: 
+		- [https://www.youtube.com/watch?v=idVcItHfGS4](https://www.youtube.com/watch?v=idVcItHfGS4)
+	- 2 x (CNC / 3D printer kits) - have the required parts, electronics wise
+	
+	- lead screws:
+		- t8 150mm should be good
+		- 
+	- some coupler to attach lead screw to the motor
+	- guide:
+		- like this one:
+		- [https://www.youtube.com/watch?v=3CXg9WTjNEA](https://www.youtube.com/watch?v=3CXg9WTjNEA)
+		- also in the "How to Mechatronics" video below
+	- linear actuators: 
+		- complete construction:
+		- How to Mechatronics:
+		- [https://www.youtube.com/watch?v=R-YsDK6M-hk](https://www.youtube.com/watch?v=R-YsDK6M-hk)
+			- uses a servo motor, that uses:
+			- a magnetic encoder
+				- mostly this one:
+				- [https://www.instructables.com/AS5600-Magnetic-Angle-Encoder/](https://www.instructables.com/AS5600-Magnetic-Angle-Encoder/)
+			- feedback loop
+			- don't want to complicate my setup
+			- so will switch the motor with a 2 phase stepper
+			- with the steps --> gear ratio --> pitch for a say T8 lead screw
+	- phase 2 of the construction:
+		- limit switches
+		- add push buttons for safety
+		- circuit breakers - once the push button is hit on both sides
+		- each switch breaks the circuit only in 1 direction (of side where the limit is reached)
+		- the opposite side of the motion is still connected
+	- 
+	- platform base, top plate and connecting rods:
+		- Platform 3d printable: [https://www.myminifactory.com/object/3d-print-stewart-platform-267334](https://www.myminifactory.com/object/3d-print-stewart-platform-267334)
+			- modeled with universal joints
+		- Platform: [https://www.printables.com/model/16121-6dof-stewart-platform](https://www.printables.com/model/16121-6dof-stewart-platform)
+		- modeled with linear actuators:
+			- [https://www.thingiverse.com/thing:2038246](https://www.thingiverse.com/thing:2038246)
+		- universal joints: 
+		-  [https://roboticsdna.in/product/universal-joint-6-x-8-mm-1-pcs/](https://roboticsdna.in/product/universal-joint-6-x-8-mm-1-pcs/)
+	
+
+- my comments:
+	- Damn ! linear actuators are expensive :sweat_on_forehead_emoji
+	- for a stewart platform - costs multiply by 6
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #33- Game engine comparison      
+####### Fri Jun 27 10:22:02 AM IST 2025 #######     
+
+- [https://www.youtube.com/watch?v=Eu8hgORScd0](https://www.youtube.com/watch?v=Eu8hgORScd0)
+	- Unity
+	- PyGame
+	- Construct
+	- GoDot
+	- Board Game
+	- Construct
+	
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
 ### #34- Rust desk setup - windows and linux      
 ####### Wed Jun 18 08:27:35 AM IST 2025 #######     
 
 - 
 - on VPN 
 	- enable ip based access
+	- disable ip based access on public interface
 
 &nbsp;   
 &nbsp;   
@@ -38,6 +248,7 @@ continued from:
 ### #35- WireGuard setup      
 ####### Mon Jun 16 10:35:12 AM IST 2025 #######     
 
+- 
 - cute one liner for generating public and private keys
 	- `wg genkey | tee privatekey | wg pubkey | tee publickey`
 - [https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04](https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04)
@@ -49,10 +260,19 @@ continued from:
 	
 - wireguard on windows:
 	- [https://vpncentral.com/wireguard-windows-config/](https://vpncentral.com/wireguard-windows-config/)
+	- running as a service:
+		- apparently once the tunnel is activated it will be maintained across restarts
+		- [https://www.reddit.com/r/WireGuard/comments/101eob8/wg_as_service_windows/](https://www.reddit.com/r/WireGuard/comments/101eob8/wg_as_service_windows/)
 - point to site example and explanation
 	- [https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/](https://www.procustodibus.com/blog/2021/01/wireguard-endpoints-and-ip-addresses/)
+	
 - special shout out to Pro Custodibus
 	- great product fit for security and admin
+	
+- Setting up a firewall with UFW:
+	-  [https://www.procustodibus.com/blog/2021/05/wireguard-ufw/](https://www.procustodibus.com/blog/2021/05/wireguard-ufw/)
+	- [https://www.cyberciti.biz/faq/how-to-set-up-wireguard-firewall-rules-in-linux/](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-firewall-rules-in-linux/)
+- 
 
 &nbsp;   
 &nbsp;   
@@ -103,6 +323,7 @@ continued from:
 	- looks like the most promising software for my purpose
 	- is nodejs based so would be easily cross platformed
 	- very elaborate 
+	- TODO: install and evaluate once
 
 Options
 - [https://medevel.com/18-remote-desktop/](https://medevel.com/18-remote-desktop/)
@@ -136,7 +357,10 @@ VNC options
 	- RealVNC
 		- not open source
 
-	
+- Remotely 
+	- [https://www.youtube.com/watch?v=t-TFvr7sZ6M](https://www.youtube.com/watch?v=t-TFvr7sZ6M)
+	- [https://github.com/immense/Remotely](https://github.com/immense/Remotely)
+
 &nbsp;   
 &nbsp;   
 &nbsp;	
