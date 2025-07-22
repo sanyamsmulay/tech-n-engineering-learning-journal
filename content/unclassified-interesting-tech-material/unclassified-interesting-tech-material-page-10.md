@@ -16,16 +16,62 @@ continued from:
 ## Unclassified trinkets
 
 
+### #25- Technical doc tools      
+####### Thu Jul 10 03:20:05 PM IST 2025 #######     
+
+- need: 
+	- diagrams - hopefully text input, 
+	- code exec embedd snippets in docs, 
+	- simple text input - preferably mark down
+	- output: html/pdf
+	
+- options:
+	- Quarto:  [https://quarto.org/docs/get-started/hello/vscode.html](https://quarto.org/docs/get-started/hello/vscode.html)
+	- [Jupyter](https://jupyter.org/install)
+		- cons: diffs are not great
+	- MkDocs is also a great option
+		- given that it is built on Jinja templates
+			- more details: [https://github.com/mkdocs/mkdocs/issues/692](https://github.com/mkdocs/mkdocs/issues/692)
+		- becomes very versatile
+		- use with other languages (code) can be simulated with bash
+- Just treat the md file as a template:
+	- markdown-exec: [https://github.com/pawamoy/markdown-exec?tab=readme-ov-file](https://github.com/pawamoy/markdown-exec?tab=readme-ov-file)
+		- cons: too entrenched into the mkdocs system
+	- markdown-code-runner
+		- [https://github.com/basnijholt/markdown-code-runner?tab=readme-ov-file#book-examples](https://github.com/basnijholt/markdown-code-runner?tab=readme-ov-file#book-examples)
+		- simple and versatile
+- Diagrams options:
+	- Mermaid
+	- plant uml
+	- D2 - go
+	- Graph/Viz
+	- D3 js 
+	- ascii art for diagrams ? :surprised_emoji
+	- html, css - canvas ?
+	- [svgBob](https://github.com/ivanceras/svgbob)
+		- very seriously considering this
+		- pros: both versions visually are diagrams: ascii art, svg
+
+
+Final system:
+	- markdown-code-runner
+	- pandoc
+		- needs xelatex for good math rendering support
+	- preview in vscode / windsurf
+	- build with a bash shortcut to html and pdf
+	- mermaid for diagrams
+
+Will update if changes were needed.
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
 ### #26- Linux - fetch which process is using a disk or path busy     
 ####### Wed Jul  9 10:32:18 AM IST 2025 #######     
 - `lsof <path>`
 - [https://stackoverflow.com/questions/624154/linux-which-process-is-causing-device-busy-when-doing-umount](https://stackoverflow.com/questions/624154/linux-which-process-is-causing-device-busy-when-doing-umount)
 - [https://stackoverflow.com/a/624171](https://stackoverflow.com/a/624171)
-      
-
-
-
-
 
 &nbsp;   
 &nbsp;   
@@ -360,6 +406,16 @@ VNC options
 - Remotely 
 	- [https://www.youtube.com/watch?v=t-TFvr7sZ6M](https://www.youtube.com/watch?v=t-TFvr7sZ6M)
 	- [https://github.com/immense/Remotely](https://github.com/immense/Remotely)
+
+- Remote desktop options for windows:
+
+	- My requirements:
+	- unsupervised, remote desktop access 
+
+- Options
+	- [https://medevel.com/18-remote-desktop/](https://medevel.com/18-remote-desktop/)
+
+
 
 &nbsp;   
 &nbsp;   
