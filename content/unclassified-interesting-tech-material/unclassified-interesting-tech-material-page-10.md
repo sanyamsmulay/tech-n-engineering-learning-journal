@@ -16,6 +16,23 @@ continued from:
 ## Unclassified trinkets
 
 
+### #24- Draw free-body diagram drawing with code      
+####### Sat Aug  2 08:47:50 PM IST 2025 #######     
+
+- [https://docs.manim.community/en/stable/examples.html#advanced-projects](https://docs.manim.community/en/stable/examples.html#advanced-projects)
+	- library started by 3Blue1Brown
+- [https://asymptote.sourceforge.io/](https://asymptote.sourceforge.io/)
+- [https://math.uchicago.edu/~cstaats/Charles_Staats_III/Notes_and_papers_files/asymptote_tutorial.pdf](https://math.uchicago.edu/~cstaats/Charles_Staats_III/Notes_and_papers_files/asymptote_tutorial.pdf)
+
+- Vpython:
+- [https://vpython.org/](https://vpython.org/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+
+
 ### #25- Technical doc tools      
 ####### Thu Jul 10 03:20:05 PM IST 2025 #######     
 
@@ -716,6 +733,14 @@ VNC options
 	- Bugasura
 		- bug tracking
 		- identification / similarity detection
+	- New candidate: Kilo Code
+		- ####### Fri Aug  1 02:48:46 PM IST 2025 #######
+		- [https://kilocode.ai/](https://kilocode.ai/)
+
+Open Source:     
+- ####### Fri Aug  1 02:50:12 PM IST 2025 #######     
+- Roo Code
+- Cline
 	
 - Comparison for working on a fresh project:
 	- [https://medium.com/@xinranma/i-tested-4-ai-tools-to-generate-ui-from-the-same-prompt-0d2113736cce](https://medium.com/@xinranma/i-tested-4-ai-tools-to-generate-ui-from-the-same-prompt-0d2113736cce)
