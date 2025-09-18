@@ -16,6 +16,77 @@ continued from:
 ## Unclassified trinkets
 
 
+
+
+### #20- Nvidia GPU drivers/tools on Linux       
+####### Thu Sep 18 07:14:30 PM IST 2025 #######     
+
+- [https://manpages.ubuntu.com/manpages/questing/en/man1/nvidia-settings.1.html](https://manpages.ubuntu.com/manpages/questing/en/man1/nvidia-settings.1.html)
+- nvidia-smi: [https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/](https://www.cyberciti.biz/faq/ubuntu-linux-install-nvidia-driver-latest-proprietary-driver/)
+- do not forget to restart after the driver install
+	- I went down an unnecessary rabbit hole after I forgot to restart
+	- currently not enabled secure boot
+	- [https://forums.developer.nvidia.com/t/nvidia-driver-successfully-installs-but-will-not-load/269611/2](https://forums.developer.nvidia.com/t/nvidia-driver-successfully-installs-but-will-not-load/269611/2)
+- [https://askubuntu.com/questions/68028/how-do-i-check-if-ubuntu-is-using-my-nvidia-graphics-card](https://askubuntu.com/questions/68028/how-do-i-check-if-ubuntu-is-using-my-nvidia-graphics-card)
+- [https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/index.html#heading--manual-driver-installation-using-apt](https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/index.html#heading--manual-driver-installation-using-apt)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #21- (Ubuntu RDP on Xorg x11) / (RustDesk)       
+####### Tue Sep 16 07:46:48 PM IST 2025 #######     
+
+- so many issues !!
+- need of having a monitor connected on the hardware port
+- Rust desk not able to capture ctrl + alt + up / down combo
+	- alt + tab combo
+	- TODO: contribute; may be..
+	- will get to experience rust and solve a genuine problem
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #22- Using Intel Integrated GPU (Iris Xe)       
+####### Tue Sep 16 11:15:22 AM IST 2025 #######     
+
+- Intel® Iris® Xe Graphics (RPL-P)
+- I don't remember the drivers install / upgrade etc 
+	- I am assuming, the ubuntu repos took care of that
+	- TODO: inspect and add which drivers I am using
+- [https://docs.pytorch.org/docs/stable/notes/get_start_xpu.html](https://docs.pytorch.org/docs/stable/notes/get_start_xpu.html)
+	- it seems the ARC series has the structure of Iris Xe
+	- and can use the same drivers
+	- [https://www.intel.com/content/www/us/en/developer/articles/tool/pytorch-prerequisites-for-intel-gpu/2-8.html#driver-installation](https://www.intel.com/content/www/us/en/developer/articles/tool/pytorch-prerequisites-for-intel-gpu/2-8.html#driver-installation)
+	
+	- verify the installation of drivers
+	- [https://dgpu-docs.intel.com/driver/client/overview.html#verifying-installation](https://dgpu-docs.intel.com/driver/client/overview.html#verifying-installation)
+	- install in a venv: `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/xpu`
+	- works with python 3.12.3
+- Check availability code:
+```
+import torch
+print(torch.xpu.is_available())  # torch.xpu is the API for Intel GPU support
+```
+
+- this worked
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #23- Network design for a small multi-subnet network       
+####### Sat Aug 30 01:12:08 PM IST 2025 #######     
+
+- [https://networklessons.com/switching/intervlan-routing](https://networklessons.com/switching/intervlan-routing)
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
 ### #24- Draw free-body diagram drawing with code      
 ####### Sat Aug  2 08:47:50 PM IST 2025 #######     
 
@@ -27,11 +98,18 @@ continued from:
 - Vpython:
 - [https://vpython.org/](https://vpython.org/)
 
+- OpenScad
+
+- TikZ:
+	- by far the best looking and most capable I found
+	- Latex ! of-course
+	- [https://github.com/pgf-tikz/pgf](https://github.com/pgf-tikz/pgf)
+	- some examples: [https://texample.net/rotatedsphere/](https://texample.net/rotatedsphere/)
+	- [https://texample.net/network-topology/](https://texample.net/network-topology/)
+
 &nbsp;   
 &nbsp;   
 &nbsp;	
-
-
 
 ### #25- Technical doc tools      
 ####### Thu Jul 10 03:20:05 PM IST 2025 #######     
@@ -58,16 +136,52 @@ continued from:
 		- [https://github.com/basnijholt/markdown-code-runner?tab=readme-ov-file#book-examples](https://github.com/basnijholt/markdown-code-runner?tab=readme-ov-file#book-examples)
 		- simple and versatile
 - Diagrams options:
+	- TikZ 
+		- king of the hill
 	- Mermaid
+		- [network diagram example](https://mermaid.live/edit#pako:eNqFVF1vmzAU_SvIT61WiO1APlBUaUuiqlJaRUk0TVv2YMBNrBJjGViXJfnvu5ACIbD1wcL3-p7jc66ND8iPAo5ctNFMbY3VZC2NUMjXZbIPuRHwF5aGiSFkwrWKQpZww2OxiKHqjUnyY-TzbOl-spwZBOMOwcaTN_L0fTYItiAHg1pk1Hmv_Gmapo5SmB4K8DTY8EWeMr9dYCm2uvgCeYJNhbq5KWBZ2eO8AJRlt7em9b4DAAIZ1xGT5-UHEDBGS2Oz1dRwcIfWfA3BUG9gkVZbwHCeQOYI_p-8I1Ml32Jlfh4TinHDaLfiqlM8eEfllx7m42aLhriy0sDGbyLxt6WA1cxcPhDsTBs0tCYgTr3zldA8IBAzBT3y2Y6USsZsxzVrqumTmpoCSD8G0iZQbSPJK_NZ1OK_ZUehS9TjogkZ1FvGZXDlmWZx3rrqHJWo3C_mwuh-aRI7deILiuwcBb0i-NTCQP7FkIuQvypnz19brPX_pyBkKolUSTDLw5aO0uv2oDt4IkSA3ESn_A7BCe5YFqIDrBtrlGz5jq-RC9OA6dc1WssTYBST36NoV8Dgam62yH1hYQxRqgJ4USaCQdfLknNyGogk0kWOpUm03Eu_pAFBXI-jVCbIdfJdkHtAv5Gb_Zc90rexTWlvaA9gcQ8ltmX37S7tOcPuAD70dIf-5LKwNeg7p7_tZZVp)
+		- some issues mermaid had with network diagrams:
+			- [https://github.com/mermaid-js/mermaid/issues/1227](https://github.com/mermaid-js/mermaid/issues/1227)
+		- my main issue is the colouring connection lines is by manually addressing the number of the lines in order of appearance in the file. Bad for future editing and maintenance
+		- [sim system example](https://mermaid.live/edit#pako:eNqFU21r2zAQ_iuHoGVjade8NYk_DEqSboMMQl02WLwPqq3EorYuyPJSL_S_72TZTusmWyBwvuc53XNvexZiJJjH1gnuwphrA_ezQAGcncHnBB944sE9bsEgzHCnKmTOwxg07kBmwCHLHzaab2PYSRPDQqyNpd_JTWwgklqERiJFVrF3FNb14Kva5gYWvBDaAs0bBHdXL8BfFoXDO7C4c54pKqMxyVYBW8oETeMIWBVz85v4MrSM2oSPcJuUwqaYUg5K7thCRa8U9jzwZZon3OU8JrO3ajNOal3GReaEVBbM1UYq0Uj9LrOcl7U4C_wiMyJtcB9zFdk68kjia7CtvO_BNyyzVw05rr6_OsY6WYEj-z9IQyvOx7XZcX2oxedrYYqS6kw4h4VMpclOKB54cBOa_B-tHqxahP9tRSL0G6Xkg3czfwmoYbmYvj8IFipDXU4HM1mGnMMt6lDU0AnhQ2q1oKOhzeIn2jxctRknpbsSnZAvRaR5nsiQFnaeEFGT2RAa5UvavjXq1LbaiJ293toFH6ju8HErzRHx1BHlstP9hhqzzF5zZtH6iuDi4lNzQRZoTsgC1Rpbf73R1l2tcdtdbm_bWW-U9de2Y1f7Y4HaLoHDHF8ItVMtpTbNUc1E3-RpSK6IqlWBYh220TJintG56LBU6JTbT7a3UQEzsUhpwT0yI64fAxaoZ4rZcvUTMa3DNOabmHlr6gB95duIGzGTnHahoTjnPJIkovbx3KBfqLB5hiYl9JR6Zpg3LLMwb8-emNe_Hl2Ox4NRfzSZDK57_d51hxXknlz2u73BaDKi_6Q7GT932J9S19XleDS8evHrPv8Ft5D6cw)
+		- don't know how long this one will be live
+		
 	- plant uml
+		- [https://plantuml.com/nwdiag](https://plantuml.com/nwdiag)
+		- [https://crashedmind.github.io/PlantUMLHitchhikersGuide/NetworkUsersMachines/NetworkUsersMachines.html](https://crashedmind.github.io/PlantUMLHitchhikersGuide/NetworkUsersMachines/NetworkUsersMachines.html)
+		
 	- D2 - go
+		- [https://d2lang.com/examples/elk/](https://d2lang.com/examples/elk/)
+		- seems like a very good layout engine for grid like placement
+		
 	- Graph/Viz
+		- [https://takyanagida.com/graphviz-network-diagram.html](https://takyanagida.com/graphviz-network-diagram.html)
+		- [https://graphviz.org/gallery/](https://graphviz.org/gallery/)
+		- Simpler example: [https://mikegriffin.ie/blog/20110308-a-graphviz-tutorial](https://mikegriffin.ie/blog/20110308-a-graphviz-tutorial)
+		
+		
 	- D3 js 
 	- ascii art for diagrams ? :surprised_emoji
 	- html, css - canvas ?
 	- [svgBob](https://github.com/ivanceras/svgbob)
 		- very seriously considering this
 		- pros: both versions visually are diagrams: ascii art, svg
+	- [go draw the net](https://github.com/cidrblock/drawthe.net)
+	- [https://github.com/mingrammer/diagrams](https://github.com/mingrammer/diagrams)
+	- [go diagrams](https://github.com/blushft/go-diagrams?tab=readme-ov-file)
+	- Netgraph (seemd old and not maintained): [https://netgraphp.sourceforge.io/#Examples](https://netgraphp.sourceforge.io/#Examples)
+	
+	
+	- ####### Sun Aug 31 07:02:56 PM IST 2025 #######
+	- GoJS
+		- built for grid
+		- [https://gojs.net/latest/samples/LinkLabelRouter.html](https://gojs.net/latest/samples/LinkLabelRouter.html)
+		- closest to my usecase
+	- 
+	- 
+- reviews multiple:
+	- [https://riux.home.blog/2019/07/21/making-a-schema-diagram-of-network-and-wiring-for-homelab/](https://riux.home.blog/2019/07/21/making-a-schema-diagram-of-network-and-wiring-for-homelab/)
+	- 
 
 
 Final system:
@@ -76,9 +190,24 @@ Final system:
 		- needs xelatex for good math rendering support
 	- preview in vscode / windsurf
 	- build with a bash shortcut to html and pdf
-	- mermaid for diagrams
+	- mermaid for diagrams - 
 
 Will update if changes were needed.
+
+####### Sun Aug 31 06:59:06 PM IST 2025 #######
+- my review after use
+	- my usecase: grid - need control over left to right and top to bottom to be strictly followed 
+	- manual placement is okay
+	- Graphviz - not very good for grid 
+		- Chat GPT: feels like working against the system - I agree
+- Plant UML - chat-gpt could not generate code without errors
+	- anyway it is Java so not putting in too much effort
+- Mermaid
+	- flowchart --> some weird behaviour 
+	- but loose - grid possible
+- So now: D2, Tikz or GoJS to be explored
+	- in the mean-time continuing building with Graphviz 
+	- getting okay results
 
 &nbsp;   
 &nbsp;   
