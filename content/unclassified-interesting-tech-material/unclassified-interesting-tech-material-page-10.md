@@ -16,6 +16,50 @@ continued from:
 ## Unclassified trinkets
 
 
+### #17- gpu passthrough from linux host to windows guest         
+####### Tue Sep 23 07:29:35 PM IST 2025 #######     
+
+- QEMU / KVM and Looking glass method
+	- [https://www.youtube.com/watch?v=Wf-1_djUnyc](https://www.youtube.com/watch?v=Wf-1_djUnyc)
+- what I am looking for is to be able to build Unreal Windows in a VM
+	- to compensate for the lack of cross-compile - :emoji_shocked !
+- Looking glass:
+	- [https://looking-glass.io/press](https://looking-glass.io/press)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #18- Unreal Engine on Linux       
+####### Fri Sep 19 06:05:48 PM IST 2025 #######     
+
+Epic Games Launcher alternatives on Linux  
+
+- Epic Asset Manager
+	- More downloads on flatpak
+	- Seems to be the older project of the list
+	- [https://github.com/AchetaGames/Epic-Asset-Manager](https://github.com/AchetaGames/Epic-Asset-Manager)
+	- [https://flathub.org/en/apps/io.github.achetagames.epic_asset_manager](https://flathub.org/en/apps/io.github.achetagames.epic_asset_manager)
+- Rare
+	- seems to be the more active project of the list
+	- [https://github.com/RareDevs/Rare?tab=readme-ov-file](https://github.com/RareDevs/Rare?tab=readme-ov-file)
+	- [https://flathub.org/en/apps/io.github.dummerle.rare](https://flathub.org/en/apps/io.github.dummerle.rare)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #19- Winboat - run windows in a container       
+####### Fri Sep 19 06:05:48 PM IST 2025 #######     
+
+- [https://www.xda-developers.com/winboat-free-open-source-runs-windows-app-on-linux/](https://www.xda-developers.com/winboat-free-open-source-runs-windows-app-on-linux/)
+- but space requirements almost the same as virtualbox
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
 
 
 ### #20- Nvidia GPU drivers/tools on Linux       
@@ -72,6 +116,11 @@ print(torch.xpu.is_available())  # torch.xpu is the API for Intel GPU support
 ```
 
 - this worked
+
+-x-x-x-
+
+- open source repos: [https://www.youtube.com/watch?v=FtZsb16rmgQ](https://www.youtube.com/watch?v=FtZsb16rmgQ)
+
 
 &nbsp;   
 &nbsp;   
