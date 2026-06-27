@@ -18,11 +18,7 @@ continued from:
 
 
 
-
-
-
-
-### #12- s3 reduce the size of a bucket              
+### #-3 - s3 reduce the size of a bucket              
 ####### Thursday 04 April 2024 01:09:47 AM IST #######     
 
 - reduce the number of copies in a versioned
@@ -41,7 +37,7 @@ continued from:
 &nbsp;   
 &nbsp;
 
-### #12- reduce the size of the primary volume of the ec2 instance             
+### #-2- reduce the size of the primary volume of the ec2 instance             
 ####### Thursday 04 April 2024 01:09:47 AM IST #######     
 
 
@@ -59,7 +55,7 @@ continued from:
 &nbsp;   
 &nbsp;
 
-### #12- get all open urls in firefox            
+### #-1 - get all open urls in firefox            
 ####### Thursday 04 April 2024 01:09:47 AM IST #######     
 
 
@@ -82,13 +78,248 @@ The keyboard shortcut to simulate clicking on the Use Current Pages button is Al
 &nbsp;
 
 
+### #0- snap vs flatpak    
+####### Mon Jan 22 11:23:57 PM IST 2024 #######     
 
 
+- [https://itsfoss.com/flatpak-vs-snap/](https://itsfoss.com/flatpak-vs-snap/)
+- good balanced comparison
+- [https://www.reddit.com/r/linuxmasterrace/comments/u4te9z/flatpak_or_snap/](https://www.reddit.com/r/linuxmasterrace/comments/u4te9z/flatpak_or_snap/)
+	- good discussion from users that maintain both kind of packages
+	
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #1- some new ideas about reducing the clutter of frameworks    
+####### Fri Jan 19 01:14:00 PM IST 2024 #######     
 
 
+- [https://dev.to/paulgordon/after-using-rawjs-im-never-touching-react-again-or-any-framework-vanilla-javascript-is-the-future-3ac1](https://dev.to/paulgordon/after-using-rawjs-im-never-touching-react-again-or-any-framework-vanilla-javascript-is-the-future-3ac1)
+- the ideas are good
+- but sensationalising can work for a non-thinking audience in the long term
+	- but serves as click bait and rage comments from people who use their head 
+- but some of the ideas are good
+	- use DOM as the state store
+	- lifecycle can be tied to the element's lifecycle
+	
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #2- check if grub is installed on a device linux    
+####### Thu Jan 18 07:32:08 PM IST 2024 #######     
 
 
-#########################################################################################
+- `file -s` or `dd` - first few bytes of the drive
+- [https://serverfault.com/questions/61400/how-do-i-tell-if-grub-is-installed-on-a-device](https://serverfault.com/questions/61400/how-do-i-tell-if-grub-is-installed-on-a-device)
+- GRUB on AWS linux instance
+	- [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/grub.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/grub.html)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #3- python for infra and config management     
+####### Mon Jan 15 09:06:18 PM IST 2024 #######     
+
+
+- [https://medium.com/@etherservices.mohandgm/python-and-infrastructure-as-code-accelerating-devops-practices-b924f0148e50](https://medium.com/@etherservices.mohandgm/python-and-infrastructure-as-code-accelerating-devops-practices-b924f0148e50)
+- [https://github.com/pulumi/pulumi](https://github.com/pulumi/pulumi)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #4- aws s3 - misc     
+####### Mon Jan 15 03:21:24 PM IST 2024 #######     
+
+
+- size not matching 
+	-  [https://stackoverflow.com/questions/57201659/s3-bucket-size-differs-while-using-console-and-cli](https://stackoverflow.com/questions/57201659/s3-bucket-size-differs-while-using-console-and-cli) 
+- more objects in the bucket than before after deleting files
+	- [https://repost.aws/knowledge-center/s3-console-metric-discrepancy](https://repost.aws/knowledge-center/s3-console-metric-discrepancy)
+	
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #4- rsync over ssh - adding ssh options     
+####### Mon Jan 15 03:21:24 PM IST 2024 #######     
+
+
+- rsync --> `-e` flag
+	- Example: `rsync -Pav -e "ssh -i $HOME/.ssh/somekey" username@hostname:/from/dir/ /to/dir/`
+	- [https://unix.stackexchange.com/a/127355](https://unix.stackexchange.com/a/127355)
+- using ssh configs can also help do this if this is usual command you execute 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #5- ubuntu 23.10 bug - audio device selector pop-up not working     
+####### Mon Jan 15 03:21:24 PM IST 2024 #######     
+
+
+- working manually from cli
+	- `gdbus call --session --dest org.gnome.Shell.AudioDeviceSelection --object-path /org/gnome/Shell/AudioDeviceSelection --method org.gnome.Shell.AudioDeviceSelection.Open "['HEADPHONES', 'HEADSET', 'MICROPHONE']"`
+- not working as an auto-popup when a headphone is plugged in
+- TODO: find a solution
+	- could be an issue with my hardware
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #6- Zig Programming Language     
+####### Sat Jan 13 09:27:28 PM IST 2024 #######     
+
+
+- Zig Lang intro
+	- [https://www.youtube.com/watch?v=zFELcHTki9U](https://www.youtube.com/watch?v=zFELcHTki9U)
+	- above assembly, below C
+	- simpler than rust
+	- reads like python
+	- safety built-in
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #7- terminal based editors to try              
+####### Thu Jan 11 09:20:21 PM IST 2024 #######     
+
+
+- neovim + kickstart.nvim = instant IDE
+	- [https://www.youtube.com/watch?v=stqUbv-5u2s](https://www.youtube.com/watch?v=stqUbv-5u2s)
+	- the video title is click bait, it is in favour of neovim mostly: [https://www.youtube.com/watch?v=Ric2wHzPfcM](https://www.youtube.com/watch?v=Ric2wHzPfcM)
+	- 
+- tmux + neovim --> want to try
+- 
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #8- nixos - docker and flatpak applied to linux os distro              
+####### Thu Jan 11 09:20:21 PM IST 2024 #######     
+
+
+- [https://www.youtube.com/watch?v=BVDNByTMOp0](https://www.youtube.com/watch?v=BVDNByTMOp0)
+- single configuration file for complete OS state
+- versioning of the system changes 
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #9- shout out to Json.stringiyfy             
+10.01.2024     
+
+
+- the pretty printing options are amazing and very handy
+- [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #10- package managers, flatpak, apt, snap            
+10.01.2024     
+
+
+- [https://itsfoss.com/what-is-flatpak/?ref=learnubuntu.com](https://itsfoss.com/what-is-flatpak/?ref=learnubuntu.com)
+- 
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #11- ubuntu 23.10 - fresh install bullets            
+08.01.2024     
+
+- may be can make a system image with these pre-installed tools I generally use
+	- or a script to install all of them in one shot
+- remember to disable secure boot before making config changes for dual boot
+	- can dual boot with secure boot but currently not worth the effort
+- install:
+	- git
+	- nvm - wget script and run
+		- store script locally, help if reinstall is required
+	- through snap / app store - vlc, gimp, vscode, inkscape, obs-studio, 
+	remmina, slack, zoom
+	- through flatpak - chrome
+		- deb file install, snap version - not working, no error logs in terminal even
+	- copy ssh from old pc
+	- geany, geany-plugin-treebrowser, 
+		- set keyboard shortcut for open last closed file - overwrite a symbol lookup shortcut
+		- spell check - apt install geany-plugin-spellcheck
+	- python3-venv - apt
+	- docker - using docker apt repos; 
+		- docker compose via pip failed
+		- docker adding own user to docker group for permissions
+			- [https://stackoverflow.com/questions/47854463/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke](https://stackoverflow.com/questions/47854463/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke)
+			- `newgrp docker` --> no need to restart machine 
+	- gnome-browser-connector + workspace matrix
+		- `gnome-extensions prefs wsmatrix@martin.zurowietz.de`
+		- connector works but fails when trying to communicate the success of the installation
+		- also I guess needs a restart for the permissions to propagate
+	- zsh, oh-my-zsh 
+		- zsh - apt install 
+		- oh-my-zsh -> script install
+		 
+	- system monitor widget - gnome 
+		- most reliable and feature complete for me: [https://extensions.gnome.org/extension/3010/system-monitor-next/](https://extensions.gnome.org/extension/3010/system-monitor-next/)
+		- has some pre-req packages that need installation
+		- (https://extensions.gnome.org/away/https%253A%252F%252Fgithub.com%252Fparadoxxxzero%252Fgnome-shell-system-monitor-applet)[https://extensions.gnome.org/away/https%253A%252F%252Fgithub.com%252Fparadoxxxzero%252Fgnome-shell-system-monitor-applet]
+		- not working
+		- TODO: need to get an alternate - or move to a terminal based ticker
+	- alt-tab 
+		- for multiple monitor management of alt+tab switcher preview
+	- time stamp banner print shortcut
+		- ydotool - apt install, needs restart
+	- grub config
+		- remember last and use that to login next time (helps with update restarts)
+		- GRUB_DEFAULT=saved
+		- GRUB_SAVEDEFAULT=true
+	- java, gradle 
+		- java: apt install
+		- gradle: manual install (https://gradle.org/install/)[https://gradle.org/install/]
+	- postgres server:
+		 - `sudo apt install postgresql-server-dev-15`
+		 - I generally like to keep the server down at startup
+		 - `sudo systemctl disable postgresql.service`
+	- android studio - for adb and other tools and may be java 
+		- [https://developer.android.com/studio/install](https://developer.android.com/studio/install)
+		- install libraries: `sudo apt-get install libc6-i386 libncurses6 libstdc++6-i386-cross lib32z1 libbz2-1.0`
+		- enable hardware acceleration with kvm
+		- `sudo apt install cpu-checker`
+		- `egrep -c '(vmx|svm)' /proc/cpuinfo` # should be > 1
+		- `sudo kvm-ok`
+		- `sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils`
+	- adb install and setup
+		- can run with sudo 
+		- setting current user to use it without sudo:
+		- 
+	- after 24.04 upgrade
+		- new issues: [https://extensions.gnome.org/extension/5282/alttab-scroll-workaround/](https://extensions.gnome.org/extension/5282/alttab-scroll-workaround/)
+		- only partially solves it
+		- switching between: slack and chrome still has the issue
+		- may be I can add to the extension.
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
 
 
 ### #12- grafana and related ecosystem            
@@ -102,7 +333,6 @@ The keyboard shortcut to simulate clicking on the Use Current Pages button is Al
 - grafana agent - inspired by terraform
 - many log stores supported - like cloud watch, etc. there are lots
 - good plugin ecosystem 
-- 
 
 
 &nbsp;   
@@ -226,7 +456,10 @@ The keyboard shortcut to simulate clicking on the Use Current Pages button is Al
 
 - NTFS / FAT file system going bad in a system crash is a common occurrence.
 - trying to run chkdsk without having to boot into windows
-- TODO: find a way / build a way
+- TODO: find a way / build a way\
+- very limited options as per the internet:
+	- [https://superuser.com/questions/853699/chkdsk-f-r-alternative-in-ubuntu-linux](https://superuser.com/questions/853699/chkdsk-f-r-alternative-in-ubuntu-linux)
+	- if source code is open may be we can build and pack of linux 
 
 &nbsp;   
 &nbsp;   
@@ -306,6 +539,9 @@ If it is an old disk, it could be 512b blocks or maybe 2k, depending on disk siz
 
 - handy pattern for concatenating stdio and error or any other streams too 
 
+- limit recursion depth 
+	- `find . -maxdepth 1 -type d -exec ls -ld "{}" \;`
+
 &nbsp;   
 &nbsp;   
 &nbsp;
@@ -330,6 +566,11 @@ If it is an old disk, it could be 512b blocks or maybe 2k, depending on disk siz
 	- solution 1 - either throttle manually estimating disk write speeds
 	- solution 2 - run from the ultimate destination folder
 	- did not see the issue online anywhere.
+	
+- syncing a large file > 4GB etc
+	- split it into chunks 
+	- [https://unix.stackexchange.com/questions/1588/break-a-large-file-into-smaller-pieces](https://unix.stackexchange.com/questions/1588/break-a-large-file-into-smaller-pieces)
+	- rebuild the original file
 
 &nbsp;   
 &nbsp;   
@@ -340,6 +581,7 @@ If it is an old disk, it could be 512b blocks or maybe 2k, depending on disk siz
 
 - [https://devops.com/scrum-cancer-linux-6-5-richixbw/](https://devops.com/scrum-cancer-linux-6-5-richixbw/)
 - agree with the article
+- "Scrum is not for developers; it’s another tool for managers to feel they are in control."
 
 &nbsp;   
 &nbsp;   
@@ -817,7 +1059,7 @@ Lastly, there’s /** */. This is a description. I think of it as Javascript’s
 &nbsp;   
 &nbsp;
  
-### #44 - google picked up a url for a variable in <script> not sure how       
+### #44 - google picked up a url for a variable in `<script>` not sure how       
 ####### Sunday 27 August 2023 06:56:59 AM IST #######    
 
 - not sure how this happened but google picked up url from code like below:    
@@ -839,7 +1081,7 @@ const apiUrl = appDomain+"/lead/api/init-signup";
 ####### Thursday 24 August 2023 07:37:32 PM IST #######    
 
 - generally accepted    
-/wp-content/uploads/<your-project>-scripts/<script-name>.js 
+`/wp-content/uploads/<your-project>-scripts/<script-name>.js` 
 
 -x-x-x-
 &nbsp;   
@@ -974,7 +1216,7 @@ not working very well for migrations that use --> runpython; dunno why :(
 	- `Object.keys(containerEle).find(key => key.includes('__reactProps'));`
 	- there will be onBlur, onChange, onFocus, onKeyPress,... etc implemented on the input element
 	- goto the definition of these functions in order of most likely (as listed above)
-		- find the event that has the .setState({data}) lines
+		- find the event that has the `.setState({data})` lines
 		- and understand the input data required for the function to setState correctly.
 		- one way to observe that is to add break points and trigger the functions as a user
 	- **IMP** events fired on the element have been buffered by react in the latest versions
@@ -1404,6 +1646,7 @@ find DIR_NAME -type f | wc -l
 - AWS trying to make cost optimization cumbersome for devs
 - [https://stackoverflow.com/a/57191286](https://stackoverflow.com/a/57191286)
   - do check out the comments as well on the post
+  - original question: [https://stackoverflow.com/questions/56869952/what-is-ec2-other-filter-in-cost-explorer-dashboard-mean](https://stackoverflow.com/questions/56869952/what-is-ec2-other-filter-in-cost-explorer-dashboard-mean)
 
 -x-x-x-
 &nbsp;   
@@ -1424,6 +1667,13 @@ location / {
   try_files $uri /index.html;
 }
 ```
+
+- when two single page applications need to be combined
+	- [https://stackoverflow.com/questions/50810022/cant-get-two-single-page-applications-to-run-together-on-one-server-using-nginx](https://stackoverflow.com/questions/50810022/cant-get-two-single-page-applications-to-run-together-on-one-server-using-nginx)
+
+- some links for vue specific case
+	- [https://stackoverflow.com/questions/49072584/vue-router-nginx-and-direct-link](https://stackoverflow.com/questions/49072584/vue-router-nginx-and-direct-link)
+	
 
 -x-x-x-
 &nbsp;   
@@ -1501,8 +1751,76 @@ location / {
 - want to do it for Onco's codebase for visualization
 - will look into the tools in this point:
   - will dedicate a full page to the process and comments on the available tools
-  - link: 
-
+- ####### Sat Jan 13 09:34:52 PM IST 2024 ####### 
+ - free and open source:
+	- [Emerge](https://github.com/glato/emerge)
+		- sounds like it have everything needed in this regard
+	- [Pyan](https://github.com/davidfraser/pyan)
+		- only for python
+	- [Code2Flow](https://github.com/scottrogowski/code2flow)
+		- for dynamically typed language
+		- works for Javascript, Ruby, Php, Python
+	- [CodeFlower](https://www.redotheweb.com/CodeFlower/)
+		- not exactly code visualization
+		- only file-tree as a graph
+	- dependency visualization
+		- [Bazle](https://blog.bazel.build/2015/06/17/visualize-your-build.html)
+			- multi-language builder
+		- [Maven Degraph](https://github.com/ferstl/depgraph-maven-plugin)
+		- Python: [Pip dep tree](https://pypi.org/project/pipdeptree/)
+	- [App Map](https://appmap.io/pricing) - Freemium
+	- [Grapple - code as Google Maps city](https://marketplace.visualstudio.com/items?itemName=grappl.grappl)
+		- only code composition, no interrelationships  
+	- [Github repo-visualization](https://githubnext.com/projects/repo-visualization/)
+		- only code composition, no interrelationships  
+	- [Sourcetrail](https://github.com/CoatiSoftware/Sourcetrail)
+		- not in active development
+		- users say that it still works alright
+	- [Graph Buddy](https://plugins.jetbrains.com/plugin/13467-graph-buddy)
+		- Java, Scala
+	- [Doxygen](https://www.doxygen.nl/manual/features.html)
+		- a documentation tool
+		- has a diagrams feature built-in
+	- [Codevis](https://invent.kde.org/sdk/codevis)
+		- for c++
+	- 
+ - paid:
+	- [Code See](https://www.codesee.io/shipping-code-faster)
+	- [Code Map. app](https://codemap.app/pricing)
+	- [Embold](https://embold.io/)
+	- [Understand by SciTools](https://scitools.com/pricing)
+		- so expensive - that pricing is a contact us form :D
+		- but the writeup is super friendly 
+	- [Sourcegraph](https://about.sourcegraph.com/pricing)
+		- not really code visualization, code editor + search + LLM for code analysis QnA
+	- [Code Scene](https://codescene.com/)
+		- important significant features:
+		- cost of change 
+		- developer on-boarding and off-boarding
+		- free for open source projects 
+	
+	 - 
+- source mentions:
+	- [https://hashdork.com/greatest-code-visualization-tools-for-developers/](https://hashdork.com/greatest-code-visualization-tools-for-developers/)
+	- [https://lmy.medium.com/7-tools-for-visualizing-a-codebase-41b7cddb1a14](https://lmy.medium.com/7-tools-for-visualizing-a-codebase-41b7cddb1a14)
+	
+- some desired features that were not seen in any of them
+	- git blame conversion --> knowledge and off-boarding of developer
+		- answers the question - how much of this code base is maintained by a single developer
+		- we can go back say last 6 months of code diffs and build the knowledge / influence map of a developer on a project
+		- git diff conversion for fan-out / fan-in based files location maps and dependency maps
+- which one I am going to try first
+	- emerge - seems the most complete of all
+	- will try to contribute if required - hopefully
+	- 
+- ####### Tue Oct  8 06:13:21 PM IST 2024 #######
+	- diagramming tool
+	- I would like a infra as code plugin to generate the source for one of these visualisation platforms
+	- say: pulumi to plantuml
+	- list of architecture visualisation platforms
+	- [https://www.youtube.com/watch?v=jCd6XfWLZsg](https://www.youtube.com/watch?v=jCd6XfWLZsg)
+	- Chat GPT suggestions:
+		- [https://chatgpt.com/c/67f7fafe-eee4-8008-b69b-121771c221d5](https://chatgpt.com/c/67f7fafe-eee4-8008-b69b-121771c221d5)
 -x-x-x-
 &nbsp;   
 &nbsp;   
@@ -1820,7 +2138,15 @@ thread:
 ### #97 - termux is awesome: time to switch ?       
 ####### Saturday 13 May 2023 12:09:27 AM IST #######
 
-[tmux demo youtube link](https://www.youtube.com/watch?v=DzNmUNvnB04)
+- [tmux demo youtube link](https://www.youtube.com/watch?v=DzNmUNvnB04)
+- other terminal and shell options:
+	- pretzo 
+	- the console used by the chip igniter program presenter - Matt Venn
+		- loved the one he used in the analog design tool introduction video
+		- TODO: find out the name and theme
+	- fish-shell
+	- anti-gen
+	- 
 
 ### #98 - gatsby-plugin-mdx bug:    
 ####### Saturday 13 May 2023 12:07:16 AM IST #######
