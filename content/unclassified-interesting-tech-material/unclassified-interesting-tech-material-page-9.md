@@ -18,6 +18,64 @@ continued from:
 
 
 
+### #-3 - s3 reduce the size of a bucket              
+####### Thursday 04 April 2024 01:09:47 AM IST #######     
+
+- reduce the number of copies in a versioned
+- s3 bucket behaviour when deleting objects from a versioned bucket
+	- path points to a null / delete marker
+	- [https://docs.aws.amazon.com/AmazonS3/latest/userguide/DeleteMarker.html](https://docs.aws.amazon.com/AmazonS3/latest/userguide/DeleteMarker.html) 
+- s3 lifecycle actions:
+	- [https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html#intro-lifecycle-rules-actions](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html#intro-lifecycle-rules-actions)
+- tips:
+	- delete versions / keep only one
+	- delete incomplete / partial files
+- 
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #-2- reduce the size of the primary volume of the ec2 instance             
+####### Thursday 04 April 2024 01:09:47 AM IST #######     
+
+
+- incomplete answers
+	- [https://serverfault.com/questions/1114803/decrease-size-of-ebs-volume-attached-to-ec2-instance](https://serverfault.com/questions/1114803/decrease-size-of-ebs-volume-attached-to-ec2-instance)
+	- [https://medium.com/@andtrott/how-to-downsize-a-root-ebs-volume-on-aws-ec2-amazon-linux-727c00148f61](https://medium.com/@andtrott/how-to-downsize-a-root-ebs-volume-on-aws-ec2-amazon-linux-727c00148f61)
+	- 
+	- this does not reformat / update the grub entries for the new disk, will get stuck at boot, as reported by someone later
+- this one is more likely to work
+	- [https://medium.com/@m.yunan.helmy/decrease-the-size-of-ebs-volume-in-your-ec2-instance-ea326e951bce](https://medium.com/@m.yunan.helmy/decrease-the-size-of-ebs-volume-in-your-ec2-instance-ea326e951bce)
+	
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #-1 - get all open urls in firefox            
+####### Thursday 04 April 2024 01:09:47 AM IST #######     
+
+
+- [https://superuser.com/a/464774](https://superuser.com/a/464774)
+- this actually works !! :rofl 
+```
+
+
+Go to Tools > Options.
+
+In the General tab look for the Use Current Pages button in the Startup section. When you click on the Use Current Pages button, all the URLs of the pages open in different tabs are copied to the Home Page text box with a pipe delimiter. Copy the text to get all the URLs.
+
+The keyboard shortcut to simulate clicking on the Use Current Pages button is Alt+T+O+C (tested in Firefox 14)
+
+```
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;
 
 
 ### #0- snap vs flatpak    
@@ -262,6 +320,7 @@ continued from:
 &nbsp;   
 &nbsp;   
 &nbsp;
+
 
 ### #12- grafana and related ecosystem            
 ####### Thursday 04 January 2024 06:49:45 PM IST #######     
