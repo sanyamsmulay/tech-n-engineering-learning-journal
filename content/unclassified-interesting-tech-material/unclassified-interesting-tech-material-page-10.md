@@ -1,6 +1,6 @@
 ---
 title: Unclassified Interesting Tech Material - page 10
-date: 2024-01-20 20:77:10
+date: 2024-01-20 20:47:10
 tags: [unclassified, tech]
 category: software-dev
 ---
@@ -15,6 +15,240 @@ continued from:
 
 ## Unclassified trinkets
 
+
+### #-1- screen annotation for wayland      
+####### Fri Jun 12 11:36:15 AM IST 2026 #######     
+
+- wayscriber:
+- [https://www.youtube.com/watch?v=JpZ2FDDIOyw](https://www.youtube.com/watch?v=JpZ2FDDIOyw)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+
+### #0- changing excel online edit cell shortcut      
+####### Sat Apr 18 06:09:32 PM IST 2026 #######     
+
+- TODO: try
+[https://learn.microsoft.com/en-us/answers/questions/5182860/edit-mode-with-enter-key-instead-of-f2#:~:text=1%20answer&text=Dear%20GaXve%2C,will%20become%20%22Edit%22%20mode.&text=Regarding%20to%20macro%2DVBA%20code,are%20keeping%20safe%20and%20well!&text=5%20people%20found%20this%20answer%20helpful.](https://learn.microsoft.com/en-us/answers/questions/5182860/edit-mode-with-enter-key-instead-of-f2#:~:text=1%20answer&text=Dear%20GaXve%2C,will%20become%20%22Edit%22%20mode.&text=Regarding%20to%20macro%2DVBA%20code,are%20keeping%20safe%20and%20well!&text=5%20people%20found%20this%20answer%20helpful.)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #1- onedrive / sharepoint client for linux      
+####### Sat Apr 18 06:09:32 PM IST 2026 #######     
+
+- good tool for cloud data replication / copy / transfer 
+- basically rsync of the cloud world
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #2- rclone tool for cloud sync         
+####### Sat Apr 18 06:09:32 PM IST 2026 #######     
+
+- good tool for cloud data replication / copy / transfer 
+- basically rsync of the cloud world
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #3- 3d gaussian splatting        
+####### Thu Feb 12 06:50:50 PM IST 2026 #######     
+
+- video to 3d model
+- [https://www.youtube.com/watch?v=Tnij_xHEnXc](https://www.youtube.com/watch?v=Tnij_xHEnXc)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #4- how to use youtube as a data store        
+####### Thu Feb 12 06:50:50 PM IST 2026 #######     
+
+- I am sure I have logged this one once
+- [https://www.youtube.com/watch?v=l03Os5uwWmk](https://www.youtube.com/watch?v=l03Os5uwWmk)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #5- how to avoid go daddy redemption charge        
+####### Fri Dec 12 12:16:09 PM IST 2025 #######     
+
+- [https://www.reddit.com/r/godaddy/comments/fegcar/how_to_not_pay_absurd_redemption_fee_to_godaddy/](https://www.reddit.com/r/godaddy/comments/fegcar/how_to_not_pay_absurd_redemption_fee_to_godaddy/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #6- even windows is no guarantee of stable gaming performance       
+####### Fri Dec 12 12:16:09 PM IST 2025 #######     
+
+- [https://www.windowslatest.com/2025/11/20/nvidia-confirms-windows-11-25h2-24h2-update-is-hurting-gaming-performance-releases-a-new-driver/](https://www.windowslatest.com/2025/11/20/nvidia-confirms-windows-11-25h2-24h2-update-is-hurting-gaming-performance-releases-a-new-driver/)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #7- gitea issue with rootless container      
+####### Wed Dec  3 07:22:44 PM IST 2025 #######     
+
+- user permissions don't correctly stack up
+- still exists 2 years later
+- [https://github.com/go-gitea/gitea/issues/22322](https://github.com/go-gitea/gitea/issues/22322)
+- [https://gitea.com/gitea/helm-gitea/pulls/266](https://gitea.com/gitea/helm-gitea/pulls/266)
+```
+mkdir: can't create directory '/var/lib/gitea/git': Permission denied
+/var/lib/gitea/git is not writable
+docker setup failed
+```
+
+- [https://docs.gitea.com/installation/install-with-docker](https://docs.gitea.com/installation/install-with-docker)
+	- works okay, except for the above issue
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #8- windsurf introduced an issue in on of their releases      
+####### Wed Dec  3 07:22:44 PM IST 2025 #######     
+
+The latest update has introduced an annoying feature.
+Where an up arrow navigates to the previous message in the cascade chat.
+It is super annoying when it lands me to the top of the previous message and I have to scroll all the way back down to get to the current message I am typing.
+would like to disable this behaviour or add an alternate key combination like Alt+UpArrow for the functionality.
+
+- I submitted this feedback
+- it was fixed in the next release
+- I did not even have to check their response to my support ticket
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #9- running bash scripts in windows     
+####### Wed Dec  3 07:22:44 PM IST 2025 #######     
+
+- good, but not great
+	- paths do not work as seamlessly as one might expect
+- [https://bashcommands.com/run-bash-script-on-windows](https://bashcommands.com/run-bash-script-on-windows)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #10- price tracking on chrome     
+####### Thu Nov  6 09:19:36 PM IST 2025 #######     
+
+- google products are getting worse !!!!
+- now hiding feature settings in obscure locations
+	- slow clap google, bad documentation
+- [https://www.reddit.com/r/chrome/comments/1ib65wt/disabling_the_track_price_feature_on_the_bookmark/](https://www.reddit.com/r/chrome/comments/1ib65wt/disabling_the_track_price_feature_on_the_bookmark/)
+
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #11- google sheets importrange     
+####### Thu Nov  6 09:19:36 PM IST 2025 #######     
+
+- Does not work with Excel Sheets !!!!
+- such an important caveat should the in bold letters in the documentation !
+	- slow clap google, bad documentation
+- [https://www.reddit.com/r/googlesheets/comments/1hy4bji/comment/m6fngk2/](https://www.reddit.com/r/googlesheets/comments/1hy4bji/comment/m6fngk2/)
+
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #12- windows to go     
+####### Thu Nov  6 09:19:36 PM IST 2025 #######     
+
+- [https://www.youtube.com/watch?v=0TKK8Hl1-cA](https://www.youtube.com/watch?v=0TKK8Hl1-cA)
+- this worked:
+	- windows iso
+	- meadia creation tool -> iso
+	- rufus write iso to usb
+	- boot with the usb drive rufus wrote to
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #13- windows partition expansion blocked by recovery partition     
+####### Thu Nov  6 11:21:20 AM IST 2025 #######     
+
+- [https://woshub.com/extend-volume-blocked-by-windows-recovery-partition/](https://woshub.com/extend-volume-blocked-by-windows-recovery-partition/)
+- [https://superuser.com/questions/1130840/extending-primary-partition-that-is-blocked-by-an-adjacent-recovery-partition](https://superuser.com/questions/1130840/extending-primary-partition-that-is-blocked-by-an-adjacent-recovery-partition)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #14- running multiple 4k monitors on a graphics card     
+####### Wed Oct  1 08:31:43 PM IST 2025 #######     
+
+- [https://www.reddit.com/r/nvidia/comments/1jxsfkz/rtx_5090_question_regarding_multiple_monitors/](https://www.reddit.com/r/nvidia/comments/1jxsfkz/rtx_5090_question_regarding_multiple_monitors/)
+- [https://www.reddit.com/r/nvidia/comments/1jxsfkz/comment/mmuyd0p/](https://www.reddit.com/r/nvidia/comments/1jxsfkz/comment/mmuyd0p/)
+- 
+```
+It's basically impossible to give a concrete answer unless someone already has an identical setup. This is because Nvidia gives such cryptic info in their specs and I can't see any proper support page that actually specifies the bandwidth of each internal display head and how its affected by DSC.
+
+Explanation in case you're not familiar with display heads: The display limits aren't about the physical ports on the card. Nvidia consumer GPU's only have 4 internal display heads that each have a bandwidth limit (i.e. max resolution times refresh rate times bit depth). It can assign 2 of these to a single monitor for higher bandwidth but then you can only use 3 monitors (or 2 if both are using 2 display heads).
+
+All we can really go on is the spec that says it supports "4 independent displays at 4K 165Hz using DP or HDMI". If this is 12bit like the other specs use then it might work since the 4k240 would use 2 display heads, while the other 2 use 1 each.
+
+The issue is the 1440p360 is right on the edge in terms of bandwidth and we don't know if there's any DSC overhead.
+
+It may be more complicated then that if the display heads aren't all the same, and the 4 monitors at 4k165 might not be 12 bit, which would mean notably lower bandwidth.
+
+You could try asking nvidia support for some better info since they really should just list this stuff somewhere.
+
+Worst case, you should be able to turn the 1440p monitor down to 240hz and that should work.
+```
+
+- 5090 capability:
+	- [https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fwill-the-5090-run-3-monitors-at-3840x2160-above-144hz-the-v0-xwpypca26yie1.png%3Fwidth%3D1322%26auto%3Dwebp%26s%3Da4a6ebfd15e213a605ccc8f2345858cd22eb1d8a](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fwill-the-5090-run-3-monitors-at-3840x2160-above-144hz-the-v0-xwpypca26yie1.png%3Fwidth%3D1322%26auto%3Dwebp%26s%3Da4a6ebfd15e213a605ccc8f2345858cd22eb1d8a)
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #15- geo data to visuals          
+####### Fri Sep 26 07:53:27 PM IST 2025 #######     
+
+- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
+
+### #16- running ZephyrOS on Raspberry Pi         
+####### Fri Sep 26 01:30:32 PM IST 2025 #######     
+
+- requirements:
+	- need RTOS
+	- motor control - EtherCAT
+	- data input - ethernet / serial / UART
+	- display HDMI
+	- keyboard, mouse input
+	- 
+- reading material
+	- [https://www.hackster.io/cdwilson/zephyr-rtos-on-raspberry-pi-pico-2-part-1-cf39f0](https://www.hackster.io/cdwilson/zephyr-rtos-on-raspberry-pi-pico-2-part-1-cf39f0)
+	- [https://docs.zephyrproject.org/latest/boards/raspberrypi/rpi_5/doc/index.html#programming-and-debugging](https://docs.zephyrproject.org/latest/boards/raspberrypi/rpi_5/doc/index.html#programming-and-debugging)
+	- 
+
+&nbsp;   
+&nbsp;   
+&nbsp;	
 
 ### #17- gpu passthrough from linux host to windows guest         
 ####### Tue Sep 23 07:29:35 PM IST 2025 #######     
@@ -298,11 +532,24 @@ Will update if changes were needed.
 
 ### #28- Upgrading to windows 11     
 ####### Wed Jul  9 10:32:18 AM IST 2025 #######    
+- not sure if upgrade is the right word for this
 - Amazon.in : windows 11 pro 64 bit product key
 	- approx 1k should be the cost
 
-- bypass tpm requirement ?
+- bypass tpm, cpu, ram requirement ?
 	- [https://www.tomshardware.com/how-to/bypass-windows-11-tpm-requirement](https://www.tomshardware.com/how-to/bypass-windows-11-tpm-requirement)
+		- Option 1: rufus based
+			- similar: [https://www.youtube.com/watch?v=MHkrC6_21qk](https://www.youtube.com/watch?v=MHkrC6_21qk)
+		- Option 2: Manual, changing of registry values - my preferred method 
+			- similar: [https://www.youtube.com/watch?v=TM643p--xno](https://www.youtube.com/watch?v=TM643p--xno)
+		- Option 3: bypass check from windows update - I would like to try it out - but need to move my installation to a more spacious drive 
+		
+	- Ventoy linux based workflow: [https://masoncb.medium.com/using-ventoy-to-install-windows-11-from-a-linux-device-ead91ce729d3](https://masoncb.medium.com/using-ventoy-to-install-windows-11-from-a-linux-device-ead91ce729d3)
+		- open source: [https://github.com/ventoy/Ventoy](https://github.com/ventoy/Ventoy)
+	- 
+	
+- ####### Thu Oct  9 06:43:34 PM IST 2025 #######
+- 
 
 &nbsp;   
 &nbsp;   
