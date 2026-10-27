@@ -17,10 +17,116 @@ continued from:
 ## Unclassified trinkets
 
 
+### #5- ydotool - type date-time timestamp via keyboard shortcut
+####### Tue Oct 27 03:00:00 PM IST 2026 #######
+
+- ydotool --> `type` subcommand, bound to a keyboard shortcut in Wayland desktop settings
+	- Shortcut name: `type date n timestamp to input`
+	- Command:
+	  `bash -c 'sleep 0.5 && ydotool type --delay 300 --key-delay 30 "####### $(date) #######"'`
+	- Types a `####### ... #######` timestamp banner into whichever input/document has cursor focus.
+- `--delay 300` sets delay before typing starts (ms), `--key-delay 30` sets per-key delay (ms) — tweak if keys get dropped
+- the leading `sleep 0.5` lets the shortcut's own keypress finish before typing begins
+- requires `ydotoold` daemon running (e.g. `systemctl --user enable --now ydotoold`)
+- alternative: compose the shortcut via `key` subcommand or use `wtype`/`xdotool` equivalents on other setups
+- [https://github.com/ReimuNotMoe/ydotool](https://github.com/ReimuNotMoe/ydotool)
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+### #89- rust-desk - toggle keyboard binding between local and remote     
+####### Thu Oct 15 07:07:10 PM IST 2026 #######     
+
+- running issue, not merged yet
+- [https://github.com/rustdesk/rustdesk/issues/1098](https://github.com/rustdesk/rustdesk/issues/1098)
+- [https://github.com/rustdesk/rustdesk/pull/16173](https://github.com/rustdesk/rustdesk/pull/16173)
+	- may be build and use this branch
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #90- better deployment for AI     
+####### Sat Sep 12 07:14:19 PM IST 2026 #######     
+
+- [https://www.youtube.com/watch?v=Y5rSSvXfL4g](https://www.youtube.com/watch?v=Y5rSSvXfL4g)
+	- Ollama
+	- 9router
+	- Headroom
+	- Diffy
+	- OpenHands
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #91- GeoLibre - Qgis alternative     
+####### Tue Sep  1 11:43:07 AM IST 2026 #######     
+
+- [https://geolibre.app/](https://geolibre.app/)
+	- TODO: explore capabilities
 
 
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #92- Brownout illusion helicopter examples     
+####### Mon Aug 17 02:08:30 PM IST 2026 #######     
 
 
+- [https://www.youtube.com/shorts/KWWdtNQmgT4](https://www.youtube.com/shorts/KWWdtNQmgT4)
+- [https://www.youtube.com/shorts/3IVhaOxBZbU](https://www.youtube.com/shorts/3IVhaOxBZbU)
+	- good rising rain effect
+- [https://www.youtube.com/watch?v=5yanHiNMm7s](https://www.youtube.com/watch?v=5yanHiNMm7s)
+	- soft cloud effect
+- [https://www.youtube.com/shorts/Hw7R0MAqx4s](https://www.youtube.com/shorts/Hw7R0MAqx4s)
+	- soft cloud effect outside
+- [https://www.youtube.com/shorts/MslacdsIN_8](https://www.youtube.com/shorts/MslacdsIN_8)
+	- soft cloud and rising rain effect
+- [https://www.youtube.com/watch?v=2lxRCx2YVk0](https://www.youtube.com/watch?v=2lxRCx2YVk0)
+	- vection + brownout 
+- [https://www.youtube.com/watch?v=CPLU00-EnEs](https://www.youtube.com/watch?v=CPLU00-EnEs)
+	- reverse rain + soft cloud
+- [https://www.youtube.com/watch?v=C3MbeCyGckQ](https://www.youtube.com/watch?v=C3MbeCyGckQ)
+	- old video but: reverse rain curtain + soft cloud 
+- [https://www.youtube.com/watch?v=y1u3Mp2E3a0](https://www.youtube.com/watch?v=y1u3Mp2E3a0)
+	- soft cloud + upward rain
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #93- GUI for embedded projects     
+####### Wed Aug 12 03:10:38 PM IST 2026 #######     
+
+
+- [https://lvgl.io/docs/open/8.3/intro/index.html](https://lvgl.io/docs/open/8.3/intro/index.html)
+- runs almost anywhere.
+- works with ZephyrOS - hence the interest
+
+&nbsp;   
+&nbsp;   
+&nbsp;
+
+### #94- Version control for Gaming projects     
+####### Tue Aug 11 05:26:17 PM IST 2026 #######     
+
+
+- [https://www.reddit.com/r/gamedev/comments/11e15ei/version_control_for_assets/](https://www.reddit.com/r/gamedev/comments/11e15ei/version_control_for_assets/)
+- my general conclusion:
+	- keep your code in git + assets in lfs
+	- git + lfs --> if your assets are not going to be very big chunks or change repeatedly
+		- git + lfs grows very fast for assets changing very fast
+	- perfect for large projects:
+		- git for code + svn for assets
+
+	
+
+&nbsp;   
+&nbsp;   
+&nbsp;
 
 ### #95- Visualization engine     
 ####### Sat Jul 11 02:16:45 PM IST 2026 #######     
